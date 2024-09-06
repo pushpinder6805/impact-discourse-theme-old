@@ -161,9 +161,13 @@ body {
 .event-right {
     padding: 20px;
     display: flex;
-    flex-direction: column;
+    flex-direction: column;  /* Ensures vertical stacking */
     justify-content: space-between;
     flex-grow: 1;
+}
+
+.event-header {
+    margin-bottom: 20px; /* Adds space between header and speakers */
 }
 
 .event-header h3 {
@@ -179,8 +183,7 @@ body {
 }
 
 .speakers {
-    display: flex;
-    margin-top: 20px;
+    display: flex; /* Speakers are aligned side by side */
 }
 
 .speaker {
