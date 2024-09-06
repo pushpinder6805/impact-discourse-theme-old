@@ -7,7 +7,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Start Here</title>
   <style>
-   
+   .card-description {
+    font-family: montserrat;
+    font-size: 12.5px;
+    color: #000000;
+    line-height: 1.6;
+}
 
     .container0 {
       max-width: 900px;
@@ -16,10 +21,12 @@
       background-color: #fff;
       border-radius: 10px;
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      position: relative;
     }
 
     .section0 {
       margin: 20px 0;
+      position: relative;
     }
 
     .section0-header {
@@ -30,7 +37,7 @@
     }
 
     .card {
-      background-color: #f6f2ee;
+      background-color: #f8f8f8;
       border-radius: 10px;
       padding: 20px;
       margin: 15px 0;
@@ -45,6 +52,11 @@
       font-size: 2em;
       margin-right: 15px;
       color: #b09d5e;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     .card-content {
@@ -58,12 +70,7 @@
       margin-bottom: 10px;
     }
 
-    .card-description {
-    font-family: montserrat;
-    font-size: 12.5px;
-    color: #000000;
-    line-height: 1.6;
-}
+   
 
     .intro-button {
       padding: 12px 25px;
@@ -112,9 +119,44 @@
       list-style: disc;
       margin-left: 20px;
     }
+
+    /* Scroll line with dots */
+    .scroll-line {
+      position: absolute;
+      left: -50px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background-color: #b09d5e;
+    }
+
+    .scroll-dot {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: #b09d5e;
+      border-radius: 50%;
+      left: -5px;
+    }
+
+    .scroll-dot.dot1 { top: 20px; }
+    .scroll-dot.dot2 { top: 120px; }
+    .scroll-dot.dot3 { top: 240px; }
+    .scroll-dot.dot4 { top: 360px; }
+    .scroll-dot.dot5 { top: 480px; }
   </style>
 </head>
 <body>
+
+  <!-- Scroll Line with Dots -->
+  <div class="scroll-line"></div>
+  <div class="scroll-dot dot1"></div>
+  <div class="scroll-dot dot2"></div>
+  <div class="scroll-dot dot3"></div>
+  <div class="scroll-dot dot4"></div>
+  <div class="scroll-dot dot5"></div>
+
+  <a id="top"></a> <!-- Anchor for "Back to Top" -->
 
   <div class="container0">
     <h1>Start Here</h1>
@@ -123,6 +165,9 @@
     <div class="section0">
       <div class="section0-header">1. Let them know you are in! Introduce yourself to the community.</div>
       <div class="card">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16" width="24" height="24"><path d="M8 0a8 8 0 1 0 8 8A8 8 0 0 0 8 0zm0 3a2 2 0 1 1-2 2 2 2 0 0 1 2-2zm0 10.6a6.24 6.24 0 0 1-5-2.59c0-2.58 5-3.99 5-3.99s5 1.42 5 3.99a6.24 6.24 0 0 1-5 2.59z"/></svg>
+        </div>
         <div class="card-content">
           <div class="card-title">Welcome to the community! We're thrilled to have you here.</div>
           <div class="card-description">
@@ -145,6 +190,9 @@
       <div class="section0-header">2. Explore what’s inside our community.</div>
 
       <div class="card">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16" width="24" height="24"><path d="M6.5 5.5v5l4-2.5z"/></svg>
+        </div>
         <div class="card-content">
           <div class="card-title">Watch Free Educational Videos</div>
           <div class="card-description">
@@ -154,6 +202,9 @@
       </div>
 
       <div class="card">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16" width="24" height="24"><path d="M8.5 1h-7a.5.5 0 0 0-.5.5v2a.5.5 0 0 0 .5.5H3v10.5A.5.5 0 0 0 3.5 15H8v-1H4v-9h4v2.5L10.5 6 8 3.5V1zm1 2.5l3 3V15h2V5.5l-3-3H9.5z"/></svg>
+        </div>
         <div class="card-content">
           <div class="card-title">Discover Investment Opportunities</div>
           <div class="card-description">
@@ -163,6 +214,9 @@
       </div>
 
       <div class="card">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16" width="24" height="24"><path d="M3 2a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H3zm0-1h10a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2z"/><path d="M8 11.5a.5.5 0 0 1-.5-.5v-5a.5.5 0 0 1 1 0v5a.5.5 0 0 1-.5.5zm0 1a.5.5 0 1 0 0 1h0a.5.5 0 0 0 0-1zm2-1.5a.5.5 0 0 1-.5-.5v-3a.5.5 0 0 1 1 0v3a.5.5 0 0 1-.5.5zm0 1a.5.5 0 1 0 0 1h0a.5.5 0 0 0 0-1z"/></svg>
+        </div>
         <div class="card-content">
           <div class="card-title">Forums</div>
           <div class="card-description">
@@ -172,6 +226,9 @@
       </div>
 
       <div class="card">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16" width="24" height="24"><path d="M5 5.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm1.646 3.146a.5.5 0 0 0-.707.707L6.293 10.5H5.5a.5.5 0 0 0 0 1h.793l-.854.854a.5.5 0 0 0 .707.707L8 11.707l1.854 1.854a.5.5 0 0 0 .707-.707L8.707 11.5h.793a.5.5 0 0 0 0-1h-.793l.854-.854a.5.5 0 1 0-.707-.707L8 9.293l-1.854-1.854z"/></svg>
+        </div>
         <div class="card-content">
           <div class="card-title">Access to 12-week Comprehensive Impact Investing Course</div>
           <div class="card-description">
@@ -181,6 +238,9 @@
       </div>
 
       <div class="card">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16" width="24" height="24"><path d="M6 1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H6zm0-1h4a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2z"/></svg>
+        </div>
         <div class="card-content">
           <div class="card-title">Upgrade to Premium Membership</div>
           <div class="card-description">
@@ -195,14 +255,12 @@
           </div>
         </div>
       </div>
-
     </div>
 
     <!-- Back to Top Section -->
     <div class="back-to-top">
       <a href="#top">Back to top ↑</a>
     </div>
-
   </div>
 </body>
 </html>
