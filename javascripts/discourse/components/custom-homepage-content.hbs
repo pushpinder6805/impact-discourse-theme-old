@@ -122,29 +122,30 @@
 
 .course-overview.snipcss-K3msL {
   position: relative; /* Ensure the scroll line stays inside the container */
-  padding-left: 50px; /* Add padding to make space for the scroll line */
 }
 
 .scroll-line {
-  position: absolute;
-  left: 20px; /* Position the line inside the container */
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background-color: #b09d5e;
+    z-index: 9999;
+    position: absolute;
+    left: 74px;
+    top: 37px;
+    bottom: 83px;
+    width: 2px;
+    background-color: #b09d5e;
 }
 
 .scroll-dot {
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  background-color: #b09d5e;
-  border-radius: 50%;
-  left: 16px; /* Align the dots with the scroll line */
+    z-index: 999;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #b09d5e;
+    border-radius: 50%;
+    left: 70px;
 }
 
-.scroll-dot.dot1 { top: 20px; }
-.scroll-dot.dot2 { top: 120px; }
+.scroll-dot.dot1 { top: 212px; }
+.scroll-dot.dot2 { top: 30em; }
 .scroll-dot.dot3 { top: 240px; }
 .scroll-dot.dot4 { top: 360px; }
 .scroll-dot.dot5 { top: 480px; }
