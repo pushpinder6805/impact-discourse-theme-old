@@ -1,4 +1,143 @@
-<section class="course-overview snipcss-K3msL">
-  <!-- Your custom content goes here -->
-</section>
+{{#if this.isCustomHomepage}}
+  <section class="course-overview snipcss-K3msL">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Start Here</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      margin: 0;
+      padding: 20px;
+    }
+    
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
 
+    h1 {
+      text-align: center;
+      font-size: 2.5em;
+      color: #5a5a5a;
+    }
+
+    .section {
+      margin: 20px 0;
+    }
+
+    .section-header {
+      font-size: 1.25em;
+      font-weight: bold;
+      color: #4a4a4a;
+      margin-bottom: 10px;
+    }
+
+    .card {
+      background-color: #f0f0f0;
+      border-radius: 10px;
+      padding: 15px;
+      margin: 10px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+
+    .card-icon {
+      font-size: 1.5em;
+      margin-right: 15px;
+    }
+
+    .card-content {
+      flex: 1;
+    }
+
+    .card-title {
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .card-description {
+      font-size: 1em;
+      color: #555;
+    }
+
+    .intro-button {
+      padding: 10px 20px;
+      background-color: #ffc107;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      color: #333;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .intro-button:hover {
+      background-color: #e0a800;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Start Here</h1>
+
+    <!-- Section 1: Introduction -->
+    <div class="section">
+      <div class="section-header">1. Let them know you are in! Introduce yourself to the community.</div>
+      <div class="card">
+        <div class="card-content">
+          <div class="card-title">Welcome to the community! We're thrilled to have you here.</div>
+          <div class="card-description">
+            Please take a moment to introduce yourself—share your name, passions, values, and any hobbies you have.
+            This is a space to connect with like-minded individuals who, just like you, are ready to make an impact.
+          </div>
+          <button class="intro-button">Introduce yourself now</button>
+        </div>
+        <div class="card-info">
+          <div>5 replies</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 2: Explore what's inside the community -->
+    <div class="section">
+      <div class="section-header">2. Explore what's inside our community.</div>
+
+      <div class="card">
+        <div class="card-content">
+          <div class="card-title">Watch Free Educational Videos</div>
+          <div class="card-description">
+            Discover the different types of investment options. Learn what it means, the positive change it creates,
+            and the potential financial investment. Plus, gain insights on how to explain the concepts to your kids!
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-content">
+          <div class="card-title">Discover Investment Opportunities</div>
+          <div class="card-description">
+            Explore our curated list of vetted portfolios that align with your values and financial goals.
+            Each opportunity allows you to make an impactful investment for the future.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>
+
+
+  </section>
+{{/if}}
