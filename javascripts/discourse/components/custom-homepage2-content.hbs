@@ -123,54 +123,59 @@
     background-color: rgba(181, 161, 111, 0.9); /* Slightly darker on hover */
 }
 
+body {
+    font-family: Arial, sans-serif;
+}
+
 .event-container {
     display: flex;
-    background-color: #f8f8f8;
-    border-radius: 8px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    align-items: center;
-    width: 700px;
-    margin: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: white;
 }
 
-.event-date {
-    background-color: #fff;
-    border-radius: 8px;
+.event-left {
+    background-color: #f8f8f8;
     text-align: center;
     padding: 20px;
-    margin-right: 20px;
-    color: #d32f2f;
-    width: 150px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-right: 1px solid #ddd;
+    min-width: 180px;
 }
 
-.event-date h2 {
+.event-left h2 {
+    color: #D32F2F;
     margin: 0;
-    font-size: 28px;
+    font-size: 36px;
     font-weight: bold;
 }
 
-.event-date p {
+.event-left p {
+    color: #666;
     margin: 5px 0;
-    font-size: 14px;
-    color: #555;
 }
 
-.event-details {
+.event-right {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     flex-grow: 1;
-    color: #333;
 }
 
-.event-details h3 {
+.event-header h3 {
     margin: 0;
     font-size: 18px;
     font-weight: bold;
+    color: #333;
 }
 
-.event-details p {
-    font-size: 14px;
+.event-header p {
     color: #666;
+    margin: 10px 0;
 }
 
 .speakers {
@@ -184,15 +189,21 @@
 }
 
 .speaker img {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
+    border: 3px solid #ddd;
 }
 
 .speaker p {
     font-size: 14px;
     font-weight: bold;
     margin-top: 10px;
+    color: #333;
+}
+
+.speaker:last-child {
+    margin-right: 0;
 }
 
 
@@ -235,17 +246,20 @@
     </div>
 </div>
 
+
 <div class="event-container">
-    <div class="event-date">
+    <div class="event-left">
         <h2>SEP 10</h2>
         <p>12:00 PM - 2:00 PM</p>
         <p>Zoom Meeting</p>
         <p>10 going</p>
     </div>
-    <div class="event-details">
-        <h3>INVESTING IN RENEWABLE ENERGY:</h3>
-        <p>WHY IT MATTERS AND THE FUTURE OF RENEWABLE ENERGY INVESTMENTS</p>
-        <p>With Heather Beatty<br>CEO of ScopeFour Capital</p>
+    <div class="event-right">
+        <div class="event-header">
+            <h3>INVESTING IN RENEWABLE ENERGY:</h3>
+            <p>WHY IT MATTERS AND THE FUTURE OF RENEWABLE ENERGY INVESTMENTS</p>
+            <p>With Heather Beatty, CEO of ScopeFour Capital</p>
+        </div>
         <div class="speakers">
             <div class="speaker">
                 <img src="https://cdn.prod.website-files.com/65a03b7cad0e282d74212e84/65a03b7cad0e282d74212f46_1.png" alt="Heather Beatty">
@@ -258,7 +272,6 @@
         </div>
     </div>
 </div>
-
 
 
 </body>
