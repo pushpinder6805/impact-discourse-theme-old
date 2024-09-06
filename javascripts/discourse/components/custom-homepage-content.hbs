@@ -7,14 +7,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Start Here</title>
   <style>
-    
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f7f7f7;
+      margin: 0;
+      padding: 20px;
+      color: #4a4a4a;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5em;
+      font-weight: bold;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
     .container0 {
-      max-width: 800px;
+      max-width: 900px;
       margin: 0 auto;
       padding: 20px;
-      background-color: white;
+      background-color: #fff;
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     }
 
     .section0 {
@@ -22,26 +37,28 @@
     }
 
     .section0-header {
-      font-size: 1.25em;
+      font-size: 1.5em;
       font-weight: bold;
       color: #4a4a4a;
       margin-bottom: 10px;
     }
 
     .card {
-      background-color: #f0f0f0;
+      background-color: #f8f8f8;
       border-radius: 10px;
-      padding: 15px;
-      margin: 10px 0;
+      padding: 20px;
+      margin: 15px 0;
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       justify-content: space-between;
-      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+      border: 1px solid #dedede;
     }
 
     .card-icon {
-      font-size: 1.5em;
+      font-size: 2em;
       margin-right: 15px;
+      color: #b09d5e;
     }
 
     .card-content {
@@ -49,33 +66,69 @@
     }
 
     .card-title {
-      font-size: 1.2em;
+      font-size: 1.5em;
       font-weight: bold;
       color: #333;
+      margin-bottom: 10px;
     }
 
     .card-description {
       font-size: 1em;
       color: #555;
+      line-height: 1.6;
     }
 
     .intro-button {
-      padding: 10px 20px;
-      background-color: #ffc107;
+      padding: 12px 25px;
+      background-color: #b09d5e;
       border: none;
       border-radius: 5px;
-      cursor: pointer;
-      color: #333;
+      color: white;
       font-weight: bold;
-      margin-top: 10px;
+      font-size: 1em;
+      margin-top: 15px;
+      cursor: pointer;
+      text-transform: uppercase;
     }
 
     .intro-button:hover {
-      background-color: #e0a800;
+      background-color: #8f7b4b;
+    }
+
+    .card-info {
+      text-align: right;
+      font-size: 0.9em;
+      color: #777;
+    }
+
+    /* Back to Top Section */
+    .back-to-top {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .back-to-top a {
+      color: #b09d5e;
+      text-decoration: none;
+      font-size: 1.2em;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .back-to-top a:hover {
+      color: #8f7b4b;
+    }
+
+    /* List inside card description */
+    .card-description li {
+      margin-top: 8px;
+      list-style: disc;
+      margin-left: 20px;
     }
   </style>
 </head>
 <body>
+
   <div class="container0">
     <h1>Start Here</h1>
 
@@ -86,13 +139,13 @@
         <div class="card-content">
           <div class="card-title">Welcome to the community! We're thrilled to have you here.</div>
           <div class="card-description">
-            Please take a moment to introduce yourself—share your name, passions, values, and any hobbies you have.
-            This is a space to connect with like-minded individuals who, just like you, are ready to make an impact.
+            Please take a moment to introduce yourself—share your name, passions, values, and any hobbies you love.
+            This is a space to connect with like-minded women who, like you, are ready to make an impact through
+            investing. Let's grow, learn, and make a difference together!
           </div>
           <a href="https://impactinvestingcommunity.com/t/introduce-yourself/205">
-  <button class="intro-button">Introduce yourself now</button>
-</a>
-
+            <button class="intro-button">Introduce yourself here</button>
+          </a>
         </div>
         <div class="card-info">
           <div>5 replies</div>
@@ -102,14 +155,13 @@
 
     <!-- Section 2: Explore what's inside the community -->
     <div class="section0">
-      <div class="section0-header">2. Explore what's inside our community.</div>
+      <div class="section0-header">2. Explore what’s inside our community.</div>
 
       <div class="card">
         <div class="card-content">
           <div class="card-title">Watch Free Educational Videos</div>
           <div class="card-description">
-            Discover the different types of investment options. Learn what it means, the positive change it creates,
-            and the potential financial investment. Plus, gain insights on how to explain the concepts to your kids!
+            Discover the different types of impact investing! Learn what it means, the positive change it creates, and the potential financial outcomes. Plus, gain insights on how to explain these concepts to your kids for them to understand how investments can create positive change in communities.
           </div>
         </div>
       </div>
@@ -118,45 +170,56 @@
         <div class="card-content">
           <div class="card-title">Discover Investment Opportunities</div>
           <div class="card-description">
-            Explore our curated list of vetted portfolios that align with your values and financial goals.
-            Each opportunity allows you to make an impactful investment for the future.
+            Explore our curated list of vetted portfolios that align with your values and financial goals. Each opportunity has been carefully selected for its potential to create positive social and environmental impact, while offering competitive financial returns.
           </div>
         </div>
       </div>
+
       <div class="card">
         <div class="card-content">
           <div class="card-title">Forums</div>
           <div class="card-description">
-            Join the conversation! Our forums are a space for women like you to connect, share experiences, and discuss all things impact investing. Whether you’re seeking advice, exploring new opportunities, or simply looking to engage with a supportive community, this is the place to be. Dive in, ask questions, and grow together as we navigate the world of meaningful investments
+            Join the conversation! Our forums are a space for women like you to connect, share experiences, and discuss all things impact investing. Whether you're seeking advice, exploring new opportunities, or simply looking to engage with a supportive community, this is the place to be.
           </div>
         </div>
       </div>
+
       <div class="card">
         <div class="card-content">
           <div class="card-title">Access to 12-week Comprehensive Impact Investing Course</div>
           <div class="card-description">
-            Engage in a structured 12-week online course that covers the fundamentals of impact investing, advanced strategies, and current trends. Designed for both newcomers and experienced investors looking to refine their approach. Upgrade to Premium Membership to avail exclusive access.
+            Engage in a structured 12-week online course that covers the fundamentals of impact investing, advanced strategies, and current trends. Designed for both newcomers and experienced investors looking to refine their approach.
           </div>
         </div>
       </div>
+
       <div class="card">
         <div class="card-content">
           <div class="card-title">Upgrade to Premium Membership</div>
           <div class="card-description">
             Unlock Premium and Exclusive Benefits such as:
-<li>Exclusive Access to the In-Depth 12-week Social Impact Investing Course</li>
-<li>Exclusive and Tailored High-Impact Deals</li>
-<li>Exclusive Masterclasses, Articles, and News</li>
-<li>Exclusive Events and In-Person Investors’ Dinners</li>
-<li>and more!</li>
+            <ul>
+              <li>Exclusive Access to the In-Depth 12-week Social Impact Investing Course</li>
+              <li>Exclusive and Tailored High-Impact Deals</li>
+              <li>Exclusive Masterclasses, Articles, and News</li>
+              <li>Exclusive Events and In-Person Investors’ Dinners</li>
+              <li>and more!</li>
+            </ul>
           </div>
         </div>
       </div>
 
     </div>
+
+    <!-- Back to Top Section -->
+    <div class="back-to-top">
+      <a href="#top">Back to top ↑</a>
+    </div>
+
   </div>
 </body>
 </html>
+
 
 
   </section>
