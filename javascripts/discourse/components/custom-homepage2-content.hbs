@@ -77,6 +77,52 @@
             font-size: 1rem;
             margin: 10px 0;
         }
+        .impact-cards-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+    gap: 20px;
+}
+
+.impact-card {
+    position: relative;
+    width: 48%;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(181, 161, 111, 0.8); /* Semi-transparent gold overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.card-overlay p {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0;
+    padding: 20px;
+}
+
+.impact-card:hover .card-overlay {
+    background-color: rgba(181, 161, 111, 0.9); /* Slightly darker on hover */
+}
+
     </style>
     <title>Welcome Section</title>
 </head>
@@ -101,6 +147,21 @@
         <button class="premium-button">Upgrade to Premium</button>
     </div>
 </div>
+<div class="impact-cards-container">
+    <div class="impact-card">
+        <img src="https://media.istockphoto.com/id/1018188310/photo/two-women-analyzing-documents-at-office.jpg?s=612x612&w=0&k=20&c=HzF5z66E-QkBavNuVKUbtmoHe5PwRLTV83N3_sEpYl8=" alt="Learn Impact Investing for Free" class="card-image">
+        <div class="card-overlay">
+            <p>LEARN IMPACT INVESTING FOR FREE</p>
+        </div>
+    </div>
+    <div class="impact-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbCbLtFetov825IR1zvNCfpdLYtWaO9OCC8w&s" alt="Discover List of Impact Investment Opportunities" class="card-image">
+        <div class="card-overlay">
+            <p>DISCOVER LIST OF IMPACT INVESTMENT OPPORTUNITIES</p>
+        </div>
+    </div>
+</div>
+
 
 </body>
 </html>
