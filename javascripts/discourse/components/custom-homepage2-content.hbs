@@ -123,6 +123,79 @@
     background-color: rgba(181, 161, 111, 0.9); /* Slightly darker on hover */
 }
 
+.event-container {
+    display: flex;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    align-items: center;
+    width: 700px;
+    margin: 20px;
+}
+
+.event-date {
+    background-color: #fff;
+    border-radius: 8px;
+    text-align: center;
+    padding: 20px;
+    margin-right: 20px;
+    color: #d32f2f;
+    width: 150px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.event-date h2 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.event-date p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #555;
+}
+
+.event-details {
+    flex-grow: 1;
+    color: #333;
+}
+
+.event-details h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.event-details p {
+    font-size: 14px;
+    color: #666;
+}
+
+.speakers {
+    display: flex;
+    margin-top: 20px;
+}
+
+.speaker {
+    text-align: center;
+    margin-right: 20px;
+}
+
+.speaker img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.speaker p {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+
     </style>
     <title>Welcome Section</title>
 </head>
@@ -161,6 +234,31 @@
         </div>
     </div>
 </div>
+
+<div class="event-container">
+    <div class="event-date">
+        <h2>SEP 10</h2>
+        <p>12:00 PM - 2:00 PM</p>
+        <p>Zoom Meeting</p>
+        <p>10 going</p>
+    </div>
+    <div class="event-details">
+        <h3>INVESTING IN RENEWABLE ENERGY:</h3>
+        <p>WHY IT MATTERS AND THE FUTURE OF RENEWABLE ENERGY INVESTMENTS</p>
+        <p>With Heather Beatty<br>CEO of ScopeFour Capital</p>
+        <div class="speakers">
+            <div class="speaker">
+                <img src="https://cdn.prod.website-files.com/65a03b7cad0e282d74212e84/65a03b7cad0e282d74212f46_1.png" alt="Heather Beatty">
+                <p>Heather Beatty</p>
+            </div>
+            <div class="speaker">
+                <img src="https://media.licdn.com/dms/image/D5603AQEnWHKkFbMUDw/profile-displayphoto-shrink_200_200/0/1689129661868?e=2147483647&v=beta&t=1asqMoHjOaKLu2moRU4v0xSqBD6GDBotaoIo3nFmEIY" alt="Tanaia Hairston">
+                <p>Tanaia Hairston</p>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 
 </body>
