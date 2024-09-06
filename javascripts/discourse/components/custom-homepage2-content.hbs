@@ -129,7 +129,7 @@ body {
 
 .event-container {
     display: flex;
-    border: 1px solid #ccc;
+    border: 1px solid #000;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -138,11 +138,12 @@ body {
     background-color: white;
 }
 
+
 .event-left {
     background-color: #f8f8f8;
     text-align: center;
     padding: 20px;
-    border-right: 1px solid #ddd;
+    border-right: 1px solid #000000;
     min-width: 180px;
 }
 
@@ -163,6 +164,12 @@ body {
     padding: 20px;
     display: -webkit-box;
 }
+.event-logo {
+    display: block;
+    width: 50px;
+    margin-bottom: 10px;
+}
+
 
 .event-header {
     margin-bottom: 20px; /* Adds space between header and speakers */
@@ -181,6 +188,7 @@ body {
 }
 
 .speakers {
+  margin-left: 219px;
     display: flex; /* Speakers are aligned side by side */
 }
 
@@ -188,23 +196,46 @@ body {
     text-align: center;
     margin-right: 20px;
 }
+.speaker-image-container {
+    position: relative;
+    display: inline-block;
+    border-radius: 50%;
+    border: 5px solid gold;
+    padding: 5px;
+    background-color: #28a745;
+}
 
-.speaker img {
+.speaker-image {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    border: 3px solid #ddd;
+    display: block;
+    border: 3px solid #fff;
 }
-
-.speaker p {
+.speaker-name {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    padding: 3px 10px;
+    border-radius: 5px;
     font-size: 14px;
     font-weight: bold;
-    margin-top: 10px;
     color: #333;
 }
 
+
 .speaker:last-child {
     margin-right: 0;
+}
+.event-footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-logo {
+    width: 80px;
 }
 
 
@@ -271,6 +302,41 @@ body {
                 <img src="https://media.licdn.com/dms/image/D5603AQEnWHKkFbMUDw/profile-displayphoto-shrink_200_200/0/1689129661868?e=2147483647&v=beta&t=1asqMoHjOaKLu2moRU4v0xSqBD6GDBotaoIo3nFmEIY" alt="Tanaia Hairston">
                 <p>Tanaia Hairston</p>
             </div>
+        </div>
+    </div>
+</div>
+
+<div class="event-container">
+    <div class="event-left">
+        <h2>SEP 10</h2>
+        <p>12:00 PM - 2:00 PM</p>
+        <p>Zoom Meeting</p>
+        <p>10 going</p>
+    </div>
+    <div class="event-right">
+        <div class="event-header">
+            <img src="https://impactinvestingcommunity.com/uploads/default/original/1X/553b69c5da1cd2ad80244436d2d928787790f3f1.png" alt="Event Logo" class="event-logo">
+            <h3>INVESTING IN RENEWABLE ENERGY:</h3>
+            <p>WHY IT MATTERS AND THE FUTURE OF RENEWABLE ENERGY INVESTMENTS</p>
+            <hr class="gold-line">
+            <p>With Heather Beatty, CEO of ScopeFour Capital</p>
+        </div>
+        <div class="speakers">
+            <div class="speaker">
+                <div class="speaker-image-container">
+                    <img src="https://cdn.prod.website-files.com/65a03b7cad0e282d74212e84/65a03b7cad0e282d74212f46_1.png" alt="Heather Beatty" class="speaker-image">
+                    <p class="speaker-name">Heather Beatty</p>
+                </div>
+            </div>
+            <div class="speaker">
+                <div class="speaker-image-container">
+                    <img src="https://media.licdn.com/dms/image/D5603AQEnWHKkFbMUDw/profile-displayphoto-shrink_200_200/0/1689129661868?e=2147483647&v=beta&t=1asqMoHjOaKLu2moRU4v0xSqBD6GDBotaoIo3nFmEIY" alt="Tanaia Hairston" class="speaker-image">
+                    <p class="speaker-name">Tanaia Hairston</p>
+                </div>
+            </div>
+        </div>
+        <div class="event-footer">
+            <img src="https://impactinvestingcommunity.com/uploads/default/original/1X/553b69c5da1cd2ad80244436d2d928787790f3f1.png" alt="Footer Logo" class="footer-logo">
         </div>
     </div>
 </div>
