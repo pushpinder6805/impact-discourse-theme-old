@@ -1,4 +1,102 @@
 {{#if this.isCustomHomepage}}
+<section class="course-overview1"></section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Educational Videos</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      background-color: #f6f6f6;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .header {
+      font-size: 2em;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .sub-header {
+      font-size: 1.2em;
+      color: #666;
+      margin-bottom: 30px;
+    }
+    .video-categories {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-bottom: 50px;
+    }
+    .video-category {
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      text-transform: uppercase;
+      font-weight: bold;
+      background-size: cover;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 150px;
+    }
+    .premium-section {
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      margin-bottom: 30px;
+    }
+    .premium-section p {
+      font-size: 1.2em;
+      color: #555;
+      margin-bottom: 20px;
+    }
+    .upgrade-button {
+      background-color: #b89b3a;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="header">Free Educational Videos</h1>
+    <p class="sub-header">
+      Discover the different types of impact investing. Visit each category to access free video courses and start learning today.
+    </p>
 
+    <div class="video-categories">
+      <div class="video-category" style="background-image: url('venture_capital.jpg')">Venture Capital Basics</div>
+      <div class="video-category" style="background-image: url('angel_investing.jpg')">Angel Investing Basics</div>
+      <div class="video-category" style="background-image: url('gender_lens.jpg')">Gender Lens Investing</div>
+      <div class="video-category" style="background-image: url('impact_lending.jpg')">Impact Lending Essentials</div>
+      <div class="video-category" style="background-image: url('family_wealth.jpg')">Investing for Family Wealth</div>
+      <div class="video-category" style="background-image: url('sustainable_agriculture.jpg')">Sustainable Agriculture</div>
+    </div>
 
+    <div class="premium-section">
+      <p>
+        Unlock Premium and Exclusive Benefits <br>
+        Exclusive access to the 12-week Comprehensive Course, tailored High-Impact Deals, Masterclasses, and more.
+      </p>
+      <button class="upgrade-button">Upgrade to Premium</button>
+    </div>
+  </div>
+</body>
+</html>
+
+  </section>
 {{/if}}
