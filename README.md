@@ -1,5 +1,4 @@
-# impact
- impactinvesting discourse theme
+# impactinvesting discourse theme
 
 # Step 1: Commit and Push Changes to GitHub
 Css is in comman/comman.scss
