@@ -60,8 +60,11 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            text-align: center;
+            text-align: left;
             transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         .card:hover {
@@ -69,8 +72,9 @@
         }
 
         .card img {
-            width: 100px;
-            height: auto;
+            width: 150px;
+            height: 150px;
+            object-fit: contain;
             margin-bottom: 15px;
         }
 
@@ -80,13 +84,24 @@
         }
 
         .card p {
-            margin-bottom: 5px;
+            margin-bottom: 10px;
             font-size: 14px;
             color: #555;
         }
 
-        strong {
-            color: #000;
+        .card-content {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .strong-text {
+            font-weight: bold;
+            margin-top: auto;
+        }
+
+        .card-description {
+            margin-top: 10px;
         }
     </style>
 </head>
@@ -111,50 +126,62 @@
         <section class="cards">
             <div class="card">
                 <img src="https://via.placeholder.com/150" alt="Epic Cleantec Logo">
-                <h2>Epic Cleantec</h2>
-                <p>Water Reuse Technology</p>
-                <p>Impact Investment: Water Reuse Technology</p>
-                <p><strong>Private</strong></p>
+                <div class="card-content">
+                    <h2>Epic Cleantec</h2>
+                    <p>Water Reuse Technology</p>
+                    <p class="card-description">Impact Investment: Water Reuse Technology</p>
+                    <p class="strong-text">Private</p>
+                </div>
             </div>
 
             <div class="card">
                 <img src="https://via.placeholder.com/150" alt="Energea Logo">
-                <h2>Energea</h2>
-                <p>Renewable Energy</p>
-                <p>Affordable and Clean Energy</p>
-                <p><strong>Private</strong></p>
+                <div class="card-content">
+                    <h2>Energea</h2>
+                    <p>Renewable Energy</p>
+                    <p class="card-description">Affordable and Clean Energy</p>
+                    <p class="strong-text">Private</p>
+                </div>
             </div>
 
             <div class="card">
                 <img src="https://via.placeholder.com/150" alt="7Wire Ventures Logo">
-                <h2>7Wire Ventures</h2>
-                <p>Healthcare VC</p>
-                <p>Good Health and Well-Being</p>
-                <p><strong>Private</strong></p>
+                <div class="card-content">
+                    <h2>7Wire Ventures</h2>
+                    <p>Healthcare VC</p>
+                    <p class="card-description">Good Health and Well-Being</p>
+                    <p class="strong-text">Private</p>
+                </div>
             </div>
 
             <div class="card">
                 <img src="https://via.placeholder.com/150" alt="BlocPower Logo">
-                <h2>BlocPower</h2>
-                <p>Clean Energy</p>
-                <p>Affordable and Clean Energy</p>
-                <p><strong>Private</strong></p>
+                <div class="card-content">
+                    <h2>BlocPower</h2>
+                    <p>Clean Energy</p>
+                    <p class="card-description">Affordable and Clean Energy</p>
+                    <p class="strong-text">Private</p>
+                </div>
             </div>
 
             <div class="card">
                 <img src="https://via.placeholder.com/150" alt="Mishra Capital Logo">
-                <h2>Mishra Capital</h2>
-                <p>Investment Firm</p>
-                <p>Responsible Investment</p>
-                <p><strong>Private</strong></p>
+                <div class="card-content">
+                    <h2>Mishra Capital</h2>
+                    <p>Investment Firm</p>
+                    <p class="card-description">Responsible Investment</p>
+                    <p class="strong-text">Private</p>
+                </div>
             </div>
 
             <div class="card">
                 <img src="https://via.placeholder.com/150" alt="ScopeFour Capital Logo">
-                <h2>ScopeFour Capital</h2>
-                <p>Investment Firm</p>
-                <p>Responsible Investment</p>
-                <p><strong>Private</strong></p>
+                <div class="card-content">
+                    <h2>ScopeFour Capital</h2>
+                    <p>Investment Firm</p>
+                    <p class="card-description">Responsible Investment</p>
+                    <p class="strong-text">Private</p>
+                </div>
             </div>
         </section>
     </div>
