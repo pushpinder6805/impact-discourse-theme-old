@@ -1,6 +1,6 @@
 {{#if this.isCustomHomepage}}
 <section class="course-overview1">
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -76,10 +76,11 @@
         }
 
         .card796 img {
-    width: 100%;
-    height: 240px;
-    margin-bottom: 15px;
-}
+            width: 100%;
+            height: 80px;
+            object-fit: contain;
+            margin-bottom: 15px;
+        }
 
         .card796 h2 {
             font-size: 18px;
@@ -131,21 +132,31 @@
     <div class="container796">
         <h1>Investment Opportunities</h1>
         <div class="filters796">
-            <select name="category" id="category">
-                <option value="">Choose Private or Public</option>
+            <select id="categoryFilter">
+                <option value="all">Choose Private or Public</option>
+                <option value="Private">Private</option>
+                <option value="Public">Public</option>
             </select>
-            <select name="subcategory" id="subcategory">
-                <option value="">Select Here</option>
+            <select id="subcategoryFilter">
+                <option value="all">Select Here</option>
+                <option value="Quality Education">Quality Education</option>
+                <option value="Environmental Conservation">Environmental Conservation</option>
+                <option value="Gender Equality">Gender Equality</option>
+                <option value="Good Health and Well-Being">Good Health and Well-Being</option>
+                <option value="Sustainable Cities & Communities">Sustainable Cities & Communities</option>
+                <option value="Affordable & Clean Energy">Affordable & Clean Energy</option>
+                <option value="Industry, Innovation, and Infrastructure">Industry, Innovation, and Infrastructure</option>
             </select>
-            <select name="size" id="size">
-                <option value="">Select Here</option>
+            <select id="investmentFilter">
+                <option value="all">Select Investment Size</option>
+                <option value="50000-200000">$50,000 - $200,000</option>
             </select>
-            <i style="cursor:pointer;">🔍</i>
+            <i id="searchIcon" style="cursor:pointer;">🔍</i>
         </div>
 
-        <section class="cards796">
+        <section class="cards796" id="cardsContainer">
           <a href="https://impactinvestingcommunity.com/t/epic-cleantec/140" class="card-link">
-            <div class="card796">
+            <div class="card796" data-category="Private" data-subcategory="Environmental Conservation" data-investment="50000-200000">
                 <img src="https://impactinvestingcommunity.com/uploads/default/optimized/1X/4220f2dd11b9c0a54a1eca836f9bae00c9962129_2_867x750.jpeg" alt="Epic Cleantec Logo">
                 <div class="tags796">
                     <span>🌱 Environmental Conservation</span> 
@@ -161,10 +172,10 @@
                         <i>💬</i>0
                     </div>
                 </div>
-            </div></a>
-
+            </div>
+            </a>
 <a href="https://impactinvestingcommunity.com/t/energea-renewable-energy/157" class="card-link">
-            <div class="card796">
+            <div class="card796" data-category="Private" data-subcategory="Affordable & Clean Energy" data-investment="50000-200000">
                 <img src="https://impactinvestingcommunity.com/uploads/default/optimized/1X/11112796108db01e791fb6d17caf83623e99ffa9_2_867x750.jpeg" alt="Energea Logo">
                 <div class="tags796">
                     <span>💡 Affordable & Clean Energy</span>
@@ -181,9 +192,9 @@
                     </div>
                 </div>
             </div>
-</a>
+            </a>
 <a href="https://impactinvestingcommunity.com/t/7wireventures-healthcare-vc/168" class="card-link">
-            <div class="card796">
+            <div class="card796" data-category="Public" data-subcategory="Good Health and Well-Being" data-investment="50000-200000">
                 <img src="https://impactinvestingcommunity.com/uploads/default/optimized/1X/112ec201589db9fc1e9a723b50de2ac9cd74e937_2_867x750.jpeg" alt="7Wire Ventures Logo">
                 <div class="tags796">
                     <span>🩺 Good Health and Well-Being</span>
@@ -199,12 +210,14 @@
                         <i>💬</i>0
                     </div>
                 </div>
-            </div></a>
-<a href="https://impactinvestingcommunity.com/t/blocpower-clean-energy/158" class="card-link">
-            <div class="card796">
-                <img src="https://impactinvestingcommunity.com/uploads/default/optimized/1X/7d3201b6da0969907a20eca69f904583ae2bdf80_2_1035x648.jpeg" alt="BlocPower Logo">
+            </div>
+            </a>
+
+<a href="https://impactinvestingcommunity.com/t/7wireventures-healthcare-vc/168" class="card-link">
+            <div class="card796" data-category="Private" data-subcategory="Sustainable Cities & Communities" data-investment="50000-200000">
+                <img src="https://via.placeholder.com/300x80" alt="BlocPower Logo">
                 <div class="tags796">
-                    <span>💡 Clean Energy</span> 
+                    <span>🏙️ Sustainable Cities & Communities</span> 
                     <span>🔒 Private</span>
                 </div>
                 <h2>BlocPower - Clean Energy</h2>
@@ -217,50 +230,85 @@
                         <i>💬</i>1
                     </div>
                 </div>
-            </div></a>
+            </div>
+            </a>
 
-<a href="https://impactinvestingcommunity.com/t/blocpower-clean-energy/158" class="card-link">
-            <div class="card796">
-                <img src="https://i.ibb.co/gZZLyWN/mischra.png" alt="Mishra Capital Logo">
+        <a href="https://impactinvestingcommunity.com/t/7wireventures-healthcare-vc/168" class="card-link">  
+    <div class="card796" data-category="Private" data-subcategory="Sustainable Cities & Communities" data-investment="50000-200000"></div>
+                <img src="https://via.placeholder.com/300x80" alt="BlocPower Logo">
                 <div class="tags796">
-                    <span>💼 Investment Management</span> 
+                    <span>🏙️ Sustainable Cities & Communities</span> 
                     <span>🔒 Private</span>
                 </div>
-                <h2>Mishra Capital</h2>
-                <p>Focused on sustainable investment and growth strategies</p>
+                <h2>BlocPower - Clean Energy</h2>
+                <p>Affordable and clean energy solutions for urban areas</p>
                 <div class="card-footer796">
                     <div class="likes">
-                        <i>👁️</i>8
+                        <i>👁️</i>10
                     </div>
                     <div class="comments">
-                        <i>💬</i>2
+                        <i>💬</i>1
                     </div>
                 </div>
-            </div></a>
+                </a>
 
-<a href="https://impactinvestingcommunity.com/t/scopefour-capital/136" class="card-link">
-            <div class="card796">
-                <img src="https://impactinvestingcommunity.com/uploads/default/optimized/1X/0f8fd399fc39f07d2da871fc9224159e02460820_2_867x750.jpeg" alt="ScopeFour Capital Logo">
+<a href="https://impactinvestingcommunity.com/t/7wireventures-healthcare-vc/168" class="card-link">
+<div class="card796" data-category="Private" data-subcategory="Sustainable Cities & Communities" data-investment="50000-200000"></div>
+                <img src="https://via.placeholder.com/300x80" alt="BlocPower Logo">
                 <div class="tags796">
-                    <span>💼 VC Funding</span>
+                    <span>🏙️ Sustainable Cities & Communities</span> 
                     <span>🔒 Private</span>
                 </div>
-                <h2>ScopeFour Capital</h2>
-                <p>Growth and VC funding for high-impact ventures</p>
+                <h2>BlocPower - Clean Energy</h2>
+                <p>Affordable and clean energy solutions for urban areas</p>
                 <div class="card-footer796">
                     <div class="likes">
-                        <i>👁️</i>12
+                        <i>👁️</i>10
                     </div>
                     <div class="comments">
-                        <i>💬</i>3
+                        <i>💬</i>1
                     </div>
                 </div>
-            </div></a>
-        </section>
-    </div>
+                </a>
+                </section>
+                </div>
+    <script>
+        const categoryFilter = document.getElementById('categoryFilter');
+        const subcategoryFilter = document.getElementById('subcategoryFilter');
+        const investmentFilter = document.getElementById('investmentFilter');
+        const searchIcon = document.getElementById('searchIcon');
+        const cardsContainer = document.getElementById('cardsContainer');
+        const cards = document.querySelectorAll('.card796');
 
+        function filterCards() {
+            const category = categoryFilter.value;
+            const subcategory = subcategoryFilter.value;
+            const investment = investmentFilter.value;
+
+            cards.forEach(card => {
+                const cardCategory = card.getAttribute('data-category');
+                const cardSubcategory = card.getAttribute('data-subcategory');
+                const cardInvestment = card.getAttribute('data-investment');
+
+                const matchesCategory = (category === 'all' || cardCategory === category);
+                const matchesSubcategory = (subcategory === 'all' || cardSubcategory === subcategory);
+                const matchesInvestment = (investment === 'all' || cardInvestment === investment);
+
+                if (matchesCategory && matchesSubcategory && matchesInvestment) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        searchIcon.addEventListener('click', filterCards);
+
+        categoryFilter.addEventListener('change', filterCards);
+        subcategoryFilter.addEventListener('change', filterCards);
+        investmentFilter.addEventListener('change', filterCards);
+    </script>
 </body>
 </html>
-
   </section>
 {{/if}}
