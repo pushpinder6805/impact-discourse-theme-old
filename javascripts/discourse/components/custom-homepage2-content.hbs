@@ -150,27 +150,27 @@
       }
 
       /* Upcoming Events Section */
-      .upcoming-events-container {
-          display: flex;
-          align-items: center;
-          margin: 30px auto;
-          padding-left: 10px;
-          max-width: 1090px;
-      }
+     .upcoming-events-container {
+    display: flex;
+    flex-direction: column; /* This ensures the highlight bar is above the text */
+    align-items: flex-start;
+    margin: 30px auto;
+    max-width: 1090px;
+}
 
       .upcoming-events-label {
-          font-family: 'Arial', sans-serif;
-          font-size: 20px;
-          font-weight: bold;
-          color: #3f4921;
-      }
+    font-family: 'Arial', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #3f4921;
+}
 
-      .highlight-bar {
-          width: 100px;
-          height: 6px;
-          background-color: #b4a16f;
-          margin-left: 10px;
-      }
+     .highlight-bar {
+    width: 100px;
+    height: 6px;
+    background-color: #b4a16f;
+    margin-bottom: 10px; /* Adds spacing between the bar and the text */
+}
 
       .gold {
         border-top: 2px solid #DCB854;
@@ -216,8 +216,8 @@
 
     <!-- Upcoming Events Section Added Here -->
     <div class="upcoming-events-container">
+        <div class="highlight-bar"></div> <!-- The bar comes first -->
       <span class="upcoming-events-label">Upcoming Events</span>
-      <div class="highlight-bar"></div>
     </div>
 
     <!-- Event containers -->
