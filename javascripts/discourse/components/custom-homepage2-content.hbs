@@ -229,91 +229,49 @@ Whether you're just starting or looking to expand your impact, we're here to gui
     </div>
 <!-- First event -->
 <a href="https://impactinvestingcommunity.com/t/impact-circle/179" target="_blank">
-    <!-- Event containers -->
     <div class="event-container">
       <div class="event-left">
         <h2>OCT 24</h2>
         <p>12:00 PM PST</p>
         <p>LinkedIn Live</p>
-        <p>10 going</p>
+        <p id="going-event-1">10 going</p> <!-- Unique ID for first event -->
       </div>
       <div class="event-right">
         <img src="https://impactinvestingcommunity.com/uploads/default/original/1X/344454ba592c2ea70655c7888bc5134806f17d2e.png" alt="Event Banner" style="width: 100%; height: auto;">
       </div>
     </div>
-    </a>
-<!-- 2nd event-->
+</a>
+
+<!-- Second event -->
 <a href="https://impactinvestingcommunity.com/t/impact-circle/179" target="_blank">
-    <!-- Event containers -->
     <div class="event-container">
       <div class="event-left">
         <h2>NOV 1</h2>
         <p>12:00 PM PST</p>
         <p>LinkedIn Live</p>
-        <p>10 going</p>
+        <p id="going-event-2">10 going</p> <!-- Unique ID for second event -->
       </div>
       <div class="event-right">
         <img src="https://impactinvestingcommunity.com/uploads/default/original/1X/981c0c8fcd9ee50ccbac065985e54c2207409eee.JPG" alt="Event Banner" style="width: 100%; height: auto;">
       </div>
     </div>
-    </a>
+</a>
 
-
-     <!-- 3rd event -->
-     <a href="https://impactinvestingcommunity.com/t/investing-in-renewable-energy-why-it-matters-and-the-future-of-renewable-energy-investments/240" target="_blank">
+<!-- Third event -->
+<a href="https://impactinvestingcommunity.com/t/investing-in-renewable-energy-why-it-matters-and-the-future-of-renewable-energy-investments/240" target="_blank">
     <div class="event-container">
       <div class="event-left">
         <h2>DEC 5</h2>
         <p>12:00 PM PST</p>
         <p>LinedIn Live</p>
-        <p>25 going</p>
+        <p id="going-event-3">25 going</p> <!-- Unique ID for third event -->
       </div>
       <div class="event-right">
         <img src="https://impactinvestingcommunity.com/uploads/default/original/1X/d290b8000bd746efbf8f21090b2d2e43a73efdff.png" alt="Event Banner" style="width: 100%; height: auto;">
       </div>
     </div>
-    </a>
+</a>
 
-     <!-- JavaScript to dynamically update the going count -->
-    <script>
-      document.addEventListener("DOMContentLoaded", function() {
-        // Function to fetch the "going" count from each event page
-        function updateGoingCount(url, elementId) {
-          fetch(url)
-            .then(response => response.text())
-            .then(data => {
-              // Parse the response HTML
-              const parser = new DOMParser();
-              const doc = parser.parseFromString(data, 'text/html');
-              
-              // Find the "going" count from the event page
-              const goingCountElement = doc.querySelector('.event-invitees-status span:nth-child(1)');
-              
-              if (goingCountElement) {
-                // Extract and update the going count in the banner
-                const goingText = goingCountElement.textContent;
-                const goingCount = goingText.split(' ')[0];
-                document.getElementById(elementId).textContent = `${goingCount} going`;
-              }
-            })
-            .catch(error => {
-              console.error('Error fetching event page:', error);
-            });
-        }
-
-        // URLs of the event pages and corresponding element IDs
-        const events = [
-          { url: "https://impactinvestingcommunity.com/t/investing-in-renewable-energy-why-it-matters-and-the-future-of-renewable-energy-investments/240", elementId: "going-event-1" },
-          { url: "https://impactinvestingcommunity.com/t/creating-passive-income-with-purpose-how-to-achieve-financial-freedom-while-making-a-positive-impact/179", elementId: "going-event-2" },
-          { url: "https://impactinvestingcommunity.com/t/investing-in-renewable-energy-why-it-matters-and-the-future-of-renewable-energy-investments/240", elementId: "going-event-3" }
-        ];
-
-        // Update each event's going count
-        events.forEach(event => {
-          updateGoingCount(event.url, event.elementId);
-        });
-      });
-    </script>
 
     <!-- 4th event-->
   </section>
