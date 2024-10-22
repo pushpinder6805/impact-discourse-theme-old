@@ -274,49 +274,42 @@ Whether you're just starting or looking to expand your impact, we're here to gui
 <!-- JavaScript to dynamically update the going count -->
     <script>
     document.addEventListener("DOMContentLoaded", function() {
-  function updateGoingCount(url, elementId) {
-    fetch(url)
-      .then(response => response.text())
-      .then(data => {
-        // Log the raw HTML to inspect the structure
-        console.log('Fetched data:', data);
+  function updateGoingCount(apiUrl, elementId) {
+    fetch(apiUrl, {
+      headers: {
+        'Accept': 'application/json'
+      }
+    })
+    .then(response => response.json())
+    .then(data => {
+      // Access the post data
+      const post = data.post_stream.posts[0];
+      
+      if (post && post.event && post.event.stats) {
+        // Extract the "going" count from the event stats
+        const goingCount = post.event.stats.going;
 
-        // Parse the response HTML
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(data, 'text/html');
-
-        // Log the entire document to see the structure
-        console.log('Parsed document:', doc.body.innerHTML);
-
-        // Find the event-invitees-status element
-        const goingCountElement = doc.querySelector('.event-invitees-status span:first-child');
-        
-        if (goingCountElement) {
-          const goingText = goingCountElement.textContent;
-          const goingCount = goingText.split(' ')[0];
-          console.log(`Found going count: ${goingCount} for ${elementId}`);
-
-          // Update the event banner with this value
-          document.getElementById(elementId).textContent = `${goingCount} going`;
-        } else {
-          console.error(`Could not find the going count for ${elementId}`);
-        }
-      })
-      .catch(error => {
-        console.error('Error fetching event page:', error);
-      });
+        // Update the event banner with the dynamic "going" count
+        document.getElementById(elementId).textContent = `${goingCount} going`;
+      } else {
+        console.error(`Could not find the "going" count in API response for ${elementId}`);
+      }
+    })
+    .catch(error => {
+      console.error('Error fetching API data:', error);
+    });
   }
 
-  // URLs of the event pages and corresponding element IDs
+  // API URLs (use the .json API endpoint for each topic)
   const events = [
-    { url: "https://impactinvestingcommunity.com/t/investing-in-renewable-energy-why-it-matters-and-the-future-of-renewable-energy-investments/240", elementId: "going-event-1" },
-    { url: "https://impactinvestingcommunity.com/t/impact-circle/179", elementId: "going-event-2" },
-    { url: "https://impactinvestingcommunity.com/t/investing-in-renewable-energy-why-it-matters-and-the-future-of-renewable-energy-investments/240", elementId: "going-event-3" }
+    { apiUrl: "https://impactinvestingcommunity.com/t/179.json", elementId: "going-event-1" },
+    { apiUrl: "https://impactinvestingcommunity.com/t/180.json", elementId: "going-event-2" },
+    { apiUrl: "https://impactinvestingcommunity.com/t/240.json", elementId: "going-event-3" }
   ];
 
   // Update each event's going count
   events.forEach(event => {
-    updateGoingCount(event.url, event.elementId);
+    updateGoingCount(event.apiUrl, event.elementId);
   });
 });
 </script>
