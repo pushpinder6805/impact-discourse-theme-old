@@ -271,7 +271,7 @@ Whether you're just starting or looking to expand your impact, we're here to gui
       </div>
     </div>
 </a>
-<!-- JavaScript to dynamically update the going count -->
+
     <script>
     document.addEventListener("DOMContentLoaded", function() {
   function updateGoingCount(apiUrl, elementId) {
@@ -282,14 +282,14 @@ Whether you're just starting or looking to expand your impact, we're here to gui
     })
     .then(response => response.json())
     .then(data => {
-      // Access the post data
+
       const post = data.post_stream.posts[0];
       
       if (post && post.event && post.event.stats) {
-        // Extract the "going" count from the event stats
+
         const goingCount = post.event.stats.going;
 
-        // Update the event banner with the dynamic "going" count
+
         document.getElementById(elementId).textContent = `${goingCount} going`;
       } else {
         console.error(`Could not find the "going" count in API response for ${elementId}`);
@@ -300,14 +300,14 @@ Whether you're just starting or looking to expand your impact, we're here to gui
     });
   }
 
-  // API URLs (use the .json API endpoint for each topic)
+
   const events = [
     { apiUrl: "https://impactinvestingcommunity.com/t/leveraging-familey-offices-building-relationships-and-driving-impact/288.json", elementId: "going-event-1" },
     { apiUrl: "https://impactinvestingcommunity.com/t/creating-passive-income-with-purpose-how-to-achieve-financial-freedom-while-making-a-positive-impact/179.json", elementId: "going-event-2" },
     { apiUrl: "https://impactinvestingcommunity.com/t/investing-in-renewable-energy-why-it-matters-and-the-future-of-renewable-energy-investments/240.json", elementId: "going-event-3" }
   ];
 
-  // Update each event's going count
+
   events.forEach(event => {
     updateGoingCount(event.apiUrl, event.elementId);
   });
