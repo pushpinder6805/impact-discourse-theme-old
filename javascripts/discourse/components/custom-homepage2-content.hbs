@@ -278,28 +278,36 @@ Whether you're just starting or looking to expand your impact, we're here to gui
     fetch(url)
       .then(response => response.text())
       .then(data => {
-        // Log the full page response to the console
-        console.log('Fetched data from', url, 'is:', data);
-
         // Parse the response HTML
         const parser = new DOMParser();
         const doc = parser.parseFromString(data, 'text/html');
-        
-        // Find the "going" count from the event-invitees-status
-        const goingCountElement = doc.querySelector('.event-invitees-status span:first-child');
-        
-        if (goingCountElement) {
-          const goingText = goingCountElement.textContent;
-          const goingCount = goingText.split(' ')[0];
-          
-          // Log what we found in the console
-          console.log(`Found going count: ${goingCount} for ${elementId}`);
 
-          // Update the event banner with this value
-          document.getElementById(elementId).textContent = `${goingCount} going`;
-        } else {
-          console.error('Could not find the going count for', elementId);
+        // Check if the event-invitees-status element is dynamically loaded
+        const targetElement = doc.querySelector('.event-invitees-status');
+        
+        if (!targetElement) {
+          console.error('Could not find the .event-invitees-status element. It might be loaded dynamically.');
+          return;
         }
+
+        // Use MutationObserver to wait for the 'going' count to load dynamically
+        const observer = new MutationObserver((mutations) => {
+          const goingCountElement = targetElement.querySelector('span:first-child');
+          if (goingCountElement) {
+            const goingText = goingCountElement.textContent;
+            const goingCount = goingText.split(' ')[0];
+            console.log(`Found going count: ${goingCount} for ${elementId}`);
+
+            // Update the event banner with this value
+            document.getElementById(elementId).textContent = `${goingCount} going`;
+
+            // Stop observing once the content is updated
+            observer.disconnect();
+          }
+        });
+
+        // Start observing the target element for changes
+        observer.observe(targetElement, { childList: true, subtree: true });
       })
       .catch(error => {
         console.error('Error fetching event page:', error);
