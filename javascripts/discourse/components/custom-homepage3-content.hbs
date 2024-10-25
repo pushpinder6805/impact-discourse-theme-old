@@ -1,5 +1,6 @@
 {{#if this.isCustomHomepage}}
 <section class="course-overview1">
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -126,10 +127,17 @@
             <option value="Clean Energy">Clean Energy</option>
             <option value="HealthTech">HealthTech</option>
             <option value="Affordable Housing">Affordable Housing</option>
+            <option value="Environmental Conservation">Environmental Conservation</option>
+            <option value="Gender Equality">Gender Equality</option>
+            <option value="Good Health and Well-Being">Good Health and Well-Being</option>
+            <option value="Sustainable Cities & Communities">Sustainable Cities & Communities</option>
+            <option value="Affordable & Clean Energy">Affordable & Clean Energy</option>
+            <option value="Industry, Innovation, and Infrastructure">Industry, Innovation, and Infrastructure</option>
         </select>
         <select id="investmentSizeFilter">
             <option value="all">Select Investment Size</option>
-            <option value="25000">Less than $25,000</option>
+            <option value="5000">Less than $5,000</option>
+            <option value="25000">$5,000 - $25,000</option>
             <option value="50000">$25,000 - $50,000</option>
             <option value="100000">More than $50,000</option>
         </select>
@@ -140,10 +148,11 @@
 </div>
 <script>
     const cardData = [
-        { title: 'Epic Cleantec', impactArea: 'Clean Energy', investmentType: 'Growth Potential', investmentSize: 25000 },
-        { title: 'Energea - Renewable Energy', impactArea: 'Clean Energy', investmentType: 'Passive Income', investmentSize: 100000 },
-        { title: '7Wire Ventures - Healthcare VC', impactArea: 'HealthTech', investmentType: 'Growth Potential', investmentSize: 50000 },
-        { title: 'Mishra Capital', impactArea: 'Affordable Housing', investmentType: 'Growth Potential', investmentSize: 100000 }
+        { title: 'Epic Cleantec', impactArea: 'Environmental Conservation', investmentType: 'Growth Potential', investmentSize: 25000, imageUrl: 'https://impactinvestingcommunity.com/uploads/default/optimized/1X/4220f2dd11b9c0a54a1eca836f9bae00c9962129_2_867x750.jpeg', description: 'Impact Investment: Water Reuse Technology / Onsite Water Reuse', views: 16, comments: 0 },
+        { title: 'Energea - Renewable Energy', impactArea: 'Affordable & Clean Energy', investmentType: 'Passive Income', investmentSize: 100000, imageUrl: 'https://impactinvestingcommunity.com/uploads/default/optimized/1X/11112796108db01e791fb6d17caf83623e99ffa9_2_867x750.jpeg', description: 'Promoting sustainability and combating climate change', views: 7, comments: 0 },
+        { title: '7Wire Ventures - Healthcare VC', impactArea: 'Good Health and Well-Being', investmentType: 'Growth Potential', investmentSize: 50000, imageUrl: 'https://impactinvestingcommunity.com/uploads/default/optimized/1X/112ec201589db9fc1e9a723b50de2ac9cd74e937_2_867x750.jpeg', description: 'Investing in businesses that make a difference in health and well-being', views: 5, comments: 0 },
+        { title: 'BlocPower - Clean Energy', impactArea: 'Clean Energy', investmentType: 'Growth Potential', investmentSize: 50000, imageUrl: 'https://impactinvestingcommunity.com/uploads/default/optimized/1X/7d3201b6da0969907a20eca69f904583ae2bdf80_2_1035x648.jpeg', description: 'Affordable and clean energy solutions for urban areas', views: 10, comments: 1 },
+        { title: 'Mishra Capital', impactArea: 'Investment Management', investmentType: 'Growth Potential', investmentSize: 100000, imageUrl: 'https://i.ibb.co/gZZLyWN/mischra.png', description: 'Focused on sustainable investment and growth strategies', views: 8, comments: 2 }
     ];
 
     const cardsContainer = document.getElementById('cardsContainer');
@@ -154,10 +163,20 @@
             const cardElement = document.createElement('div');
             cardElement.classList.add('card796');
             cardElement.innerHTML = `
+                <img src="${card.imageUrl}" alt="${card.title} Logo">
+                <div class="tags796">
+                    <span>${card.impactArea}</span>
+                </div>
                 <h2>${card.title}</h2>
-                <p>Impact Area: ${card.impactArea}</p>
-                <p>Investment Type: ${card.investmentType}</p>
-                <p>Investment Size: $${card.investmentSize}</p>
+                <p>${card.description}</p>
+                <div class="card-footer796">
+                    <div class="likes">
+                        <i>👁️</i>${card.views}
+                    </div>
+                    <div class="comments">
+                        <i>💬</i>${card.comments}
+                    </div>
+                </div>
             `;
             cardsContainer.appendChild(cardElement);
         });
