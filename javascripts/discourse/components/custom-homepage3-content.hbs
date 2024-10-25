@@ -4,7 +4,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- ... Your existing head content ... -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment Opportunities with Filters</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container796 {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 40px;
+            font-family: 'Georgia', serif;
+            color: #3b3b3b;
+        }
+
+        .filters796 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 30px;
+            align-items: center;
+        }
+
+        select {
+            padding: 12px;
+            font-size: 15px;
+            border: 1px solid #ccc;
+            border-radius: 25px;
+            background-color: #f7f7f7;
+            padding-left: 20px;
+            padding-right: 20px;
+            cursor: pointer;
+        }
+
+        select:focus {
+            outline: none;
+            border-color: #999;
+        }
+
+        .cards796 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card796 {
+            background-color: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            border: 1px solid #ddd;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card796:hover {
+            transform: translateY(-10px);
+        }
+
+        .card796 img {
+            width: 100%;
+            height: 240px;
+            margin-bottom: 15px;
+        }
+
+        .card796 h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .card796 p {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .card-footer796 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+            color: #999;
+        }
+
+        .card-footer796 i {
+            margin-right: 5px;
+        }
+
+        .likes, .comments {
+            display: flex;
+            align-items: center;
+        }
+    </style>
 </head>
 <body>
 <div class="container796">
