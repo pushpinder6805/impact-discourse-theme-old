@@ -221,20 +221,25 @@
     }
 
     function filterCards() {
-        const categoryValue = document.getElementById('categoryFilter').value;
-        const impactAreaValue = document.getElementById('impactAreaFilter').value;
-        const investmentSizeValue = document.getElementById('investmentSizeFilter').value;
+    const categoryValue = document.getElementById('categoryFilter').value;
+    const impactAreaValue = document.getElementById('impactAreaFilter').value;
+    const investmentSizeValue = document.getElementById('investmentSizeFilter').value;
 
-        const filteredCards = cardData.filter(card => {
-            const categoryMatch = categoryValue === 'all' || card.investmentTypes.includes(categoryValue);
-            const impactAreaMatch = impactAreaValue === 'all' || card.impactArea === impactAreaValue;
-            const investmentSizeMatch = investmentSizeValue === 'all' || card.investmentSize <= parseInt(investmentSizeValue);
+    const filteredCards = cardData.filter(card => {
+        const categoryMatch = categoryValue === 'all' || card.investmentTypes.includes(categoryValue);
+        const impactAreaMatch = impactAreaValue === 'all' || (
+            Array.isArray(card.impactArea)
+                ? card.impactArea.includes(impactAreaValue)
+                : card.impactArea === impactAreaValue
+        );
+        const investmentSizeMatch = investmentSizeValue === 'all' || card.investmentSize <= parseInt(investmentSizeValue);
 
-            return categoryMatch && impactAreaMatch && investmentSizeMatch;
-        });
+        return categoryMatch && impactAreaMatch && investmentSizeMatch;
+    });
 
-        renderCards(filteredCards);
-    }
+    renderCards(filteredCards);
+}
+
 
     document.getElementById('categoryFilter').addEventListener('change', filterCards);
     document.getElementById('impactAreaFilter').addEventListener('change', filterCards);
