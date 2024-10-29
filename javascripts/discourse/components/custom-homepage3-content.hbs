@@ -1,5 +1,6 @@
 {{#if this.isCustomHomepage}}
 <section class="course-overview1">
+
     <title>Investment Opportunities with Filters</title>
     <style>
         body {
@@ -165,7 +166,6 @@
         <!-- Cards will be dynamically rendered here -->
     </section>
 </div>
-
 <script>
     const cardData = [
         {
@@ -176,8 +176,7 @@
             imageUrl: 'https://impactinvestingcommunity.com/uploads/default/optimized/1X/4220f2dd11b9c0a54a1eca836f9bae00c9962129_2_867x750.jpeg',
             description: 'Impact Investment: Water Reuse Technology / Onsite Water Reuse',
             views: 16,
-            comments: 0,
-            link: 'https://google.com'
+            comments: 0
             
         },
         {
@@ -188,9 +187,7 @@
             imageUrl: 'https://impactinvestingcommunity.com/uploads/default/optimized/1X/11112796108db01e791fb6d17caf83623e99ffa9_2_867x750.jpeg',
             description: 'Promoting sustainability and combating climate change',
             views: 7,
-            comments: 0,
-            link: 'https://google.com'
-            
+            comments: 0
         },
         {
             title: '7Wire Ventures - Healthcare VC',
@@ -200,8 +197,7 @@
             imageUrl: 'https://impactinvestingcommunity.com/uploads/default/optimized/1X/112ec201589db9fc1e9a723b50de2ac9cd74e937_2_867x750.jpeg',
             description: 'Investing in businesses that make a difference in health and well-being',
             views: 5,
-            comments: 0,
-            link: 'https://google.com'
+            comments: 0
         },
         {
             title: 'BlocPower - Clean Energy',
@@ -211,8 +207,7 @@
             imageUrl: 'https://impactinvestingcommunity.com/uploads/default/optimized/1X/7d3201b6da0969907a20eca69f904583ae2bdf80_2_1035x648.jpeg',
             description: 'Affordable and clean energy solutions for urban areas',
             views: 10,
-            comments: 1,
-            link: 'https://google.com'
+            comments: 1
         },
         {
             title: 'Mishra Capital',
@@ -222,8 +217,7 @@
             imageUrl: 'https://i.ibb.co/gZZLyWN/mischra.png',
             description: 'Focused on sustainable investment and growth strategies',
             views: 8,
-            comments: 2,
-            link: 'https://google.com'
+            comments: 2
         },
         {
             title: 'ScopeFour Capital',
@@ -233,8 +227,7 @@
             imageUrl: 'https://impactinvestingcommunity.com/uploads/default/optimized/1X/0f8fd399fc39f07d2da871fc9224159e02460820_2_867x750.jpeg',
             description: 'Growth and VC funding for high-impact ventures',
             views: 12,
-            comments: 3,
-            link: 'https://google.com'
+            comments: 3
         },
         {
             title: 'Sunwealth - Big Path Capital',
@@ -244,8 +237,7 @@
             imageUrl: 'https://impactinvestingcommunity.com/uploads/default/original/1X/b19c1dbe55508bd90f863f4078dc1200527d81c2.jpeg',
             description: 'Investing in clean energy projects',
             views: 13,
-            comments: 31,
-            link: 'https://google.com'
+            comments: 31
         },
         {
             title: 'Redwood Materials - Recycling',
@@ -255,8 +247,7 @@
             imageUrl: 'https://impactinvestingcommunity.com/uploads/default/original/1X/180ea3f944d23d4e11c0a192692f9d17977c734a.jpeg',
             description: 'Recycling and processing lithium-ion batteries',
             views: 12,
-            comments: 3,
-            link: 'https://google.com'
+            comments: 3
         },
         {
             title: 'TAE Technologies - Clean Water',
@@ -266,8 +257,7 @@
             imageUrl: 'https://impactinvestingcommunity.com/uploads/default/optimized/1X/a07115a6633a0a80c4d208769f472d226b30712b_2_867x750.jpeg',
             description: 'Transformational energy source capable of sustaining the planet',
             views: 12,
-            comments: 3,
-            link: 'https://google.com'
+            comments: 3
         },
         {
             title: 'Oscilla Power - Wave Energy',
@@ -277,8 +267,7 @@
             imageUrl: 'https://impactinvestingcommunity.com/uploads/default/optimized/1X/0587f80aa91d9a4d357168e1a4fab5d6b24a2568_2_867x750.jpeg',
             description: 'Advanced ocean wave energy converter',
             views: 12,
-            comments: 3,
-            link: 'https://google.com'
+            comments: 3
         },
         {
             title: 'Greenlight Biosciences',
@@ -288,8 +277,7 @@
             imageUrl: 'https://impactinvestingcommunity.com/uploads/default/optimized/1X/569ed28483cf09bfca23ce00c635a00deec8f55c_2_867x750.jpeg',
             description: 'Innovative solutions for plant health and crop protection',
             views: 12,
-            comments: 3,
-            link: 'https://google.com'
+            comments: 3
         },
         {
             title: 'Astia Fund',
@@ -299,8 +287,7 @@
             imageUrl: 'https://impactinvestingcommunity.com/uploads/default/optimized/1X/e473cc8f7e25877bb077f40a108199dca30a7942_2_867x750.jpeg',
             description: 'Invests in high-growth companies with women leaders',
             views: 12,
-            comments: 3,
-            link: 'https://google.com'
+            comments: 3
         },
         {
             title: 'EcoHyde - Startup',
@@ -310,8 +297,7 @@
             imageUrl: 'https://impactinvestingcommunity.com/uploads/default/optimized/1X/3d22252ce667cc53381f2da46e494f890dc4330d_2_867x750.jpeg',
             description: 'Plant-based leather using upcycled fruit and vegetable waste',
             views: 12,
-            comments: 3,
-            link: 'https://google.com'
+            comments: 3
         },
         {
             title: 'Solubag',
@@ -321,8 +307,7 @@
             imageUrl: 'https://impactinvestingcommunity.com/uploads/default/optimized/1X/07af63628148b7e199d8405e4e1a3abcddf03f91_2_867x750.jpeg',
             description: 'Bags that dissolve instantly and are non-toxic',
             views: 15,
-            comments: 4,
-            link: 'https://google.com'
+            comments: 4
         },
         {
             title: 'West Robins - OYSTER CO',
@@ -332,8 +317,7 @@
             imageUrl: 'https://impactinvestingcommunity.com/uploads/default/optimized/1X/d44d3e660b511e69a1b77bd63208cd5d7a5da116_2_867x750.jpeg',
             description: 'Investing in regenerative farming',
             views: 12,
-            comments: 3,
-            link: 'https://google.com'
+            comments: 3
         },
         {
             title: 'Iroquois Valley - Organic Farmland',
@@ -343,8 +327,7 @@
             imageUrl: 'https://impactinvestingcommunity.com/uploads/default/optimized/1X/3cc332fba56fd97ced80193346adfaa1cc13a613_2_867x750.jpeg',
             description: 'An organic farmland finance company',
             views: 12,
-            comments: 3,
-            link: 'https://google.com'
+            comments: 3
         },
         {
             title: 'Mighty Buildings',
@@ -354,8 +337,7 @@
             imageUrl: 'https://impactinvestingcommunity.com/uploads/default/optimized/1X/e4cf8ddc1bda7127757229b4ffaa8953680107b8_2_867x750.jpeg',
             description: '3D printing for sustainable building',
             views: 12,
-            comments: 3,
-            link: 'https://google.com'
+            comments: 3
         },
         {
             title: 'Bowery - Vertical Farming',
@@ -365,8 +347,7 @@
             imageUrl: 'https://impactinvestingcommunity.com/uploads/default/optimized/1X/28c2658cfec4948ad7b8ddadac615879092067a9_2_867x750.jpeg',
             description: 'Vertical farming for fresh produce',
             views: 14,
-            comments: 2,
-            link: 'https://google.com'
+            comments: 2
         },
         {
             title: 'Carbon Robotics AgTech',
@@ -376,8 +357,7 @@
             imageUrl: 'https://impactinvestingcommunity.com/uploads/default/optimized/1X/5b9c9af97ebf529cb9959c6652a126351d031a06_2_867x750.jpeg',
             description: 'Robotics for sustainable agriculture',
             views: 12,
-            comments: 3,
-            link: 'https://google.com'
+            comments: 3
         },
         {
             title: 'Water Equity - Clean Water',
@@ -387,8 +367,7 @@
             imageUrl: 'https://impactinvestingcommunity.com/uploads/default/optimized/1X/6ae6b49924d7f62284b4aff0b61dc30a4ab2db0f_2_867x750.jpeg',
             description: 'Investing in clean water initiatives',
             views: 12,
-            comments: 3,
-            link: 'https://google.com'
+            comments: 3
         },
         {
             title: 'Dandy',
@@ -398,8 +377,7 @@
             imageUrl: 'https://impactinvestingcommunity.com/uploads/default/optimized/1X/65db96e12643ade0a8bac676696ffd4cf97a253f_2_867x750.jpeg',
             description: 'Innovative solutions for modern industries',
             views: 12,
-            comments: 3,
-            link: 'https://google.com'
+            comments: 3
         },
         {
             title: 'Aura Health - Mental Wellness',
@@ -409,8 +387,7 @@
             imageUrl: 'https://impactinvestingcommunity.com/uploads/default/optimized/1X/2c719da7e8b89a17d8e55de7b0221c812eb77767_2_867x750.jpeg',
             description: 'Mental wellness platform',
             views: 12,
-            comments: 3,
-            link: 'https://google.com'
+            comments: 3
         },
         {
             title: 'ChenMed',
@@ -420,8 +397,7 @@
             imageUrl: 'https://impactinvestingcommunity.com/uploads/default/optimized/1X/394f81390b01946db85256e39ceef6db3df67a7e_2_867x750.jpeg',
             description: 'Primary care for seniors',
             views: 12,
-            comments: 3,
-            link: 'https://google.com'
+            comments: 3
         },
         {
             title: 'Mesentech',
@@ -431,8 +407,7 @@
             imageUrl: 'https://impactinvestingcommunity.com/uploads/default/optimized/1X/05eaf58ba06cff210fa32ce69f0b98c2289adfdb_2_867x750.jpeg',
             description: 'Bone healing technologies',
             views: 10,
-            comments: 2,
-            link: 'https://google.com'
+            comments: 2
         },
         {
             title: 'First Ascent Biomedical',
@@ -442,8 +417,7 @@
             imageUrl: 'https://impactinvestingcommunity.com/uploads/default/optimized/1X/feab962c15f98416a9c00c1e572a6e274ab20406_2_867x750.jpeg',
             description: 'Individualized cancer treatment plans',
             views: 8,
-            comments: 1,
-            link: 'https://google.com'
+            comments: 1
         },
         {
             title: 'Hypatia Women CEO ETF',
@@ -453,8 +427,7 @@
             imageUrl: 'https://impactinvestingcommunity.com/uploads/default/optimized/1X/8e594662fe7eff025a0a48a1fe6790dbadd8f100_2_867x750.jpeg',
             description: 'Focused on gender equality in leadership',
             views: 12,
-            comments: 3,
-            link: 'https://google.com'
+            comments: 3
         },
         {
             title: 'The Lyme Timber Company',
@@ -464,78 +437,79 @@
             imageUrl: 'https://impactinvestingcommunity.com/uploads/default/original/1X/e63d43143115be6c67b1942e67735565308512b5.png',
             description: 'Investing in sustainable timber',
             views: 12,
-            comments: 3,
-            link: 'https://google.com'
+            comments: 3
         }
     ];
 
-function renderCards(cards) {
-            const cardsContainer = document.getElementById('cardsContainer');
-            cardsContainer.innerHTML = '';
-            cards.forEach(card => {
-                const cardElement = document.createElement('div');
-                cardElement.classList.add('card796');
-                cardElement.innerHTML = `
-                    <a href="${card.link}" target="_blank" style="text-decoration: none; color: inherit;">
-                        <img src="${card.imageUrl}" alt="${card.title} Logo">
-                        <div class="tags796">
-                            ${Array.isArray(card.impactArea) ? card.impactArea.map(area => `<span>${area}</span>`).join('') : `<span>${card.impactArea}</span>`}
-                        </div>
-                        <h2>${card.title}</h2>
-                        <p>${card.description}</p>
-                        <div class="card-footer796">
-                            <div class="likes">
-                                <i>👁️</i>${card.views}
-                            </div>
-                            <div class="comments">
-                                <i>💬</i>${card.comments}
-                            </div>
-                        </div>
-                    </a>
-                `;
-                cardsContainer.appendChild(cardElement);
-            });
-        }
+    const cardsContainer = document.getElementById('cardsContainer');
 
-        function filterCards() {
-            const categoryValue = document.getElementById('categoryFilter').value;
-            const impactAreaValue = document.getElementById('impactAreaFilter').value;
-            const investmentSizeValue = document.getElementById('investmentSizeFilter').value;
+    function renderCards(cards) {
+        cardsContainer.innerHTML = '';
+        cards.forEach(card => {
+            const cardElement = document.createElement('div');
+            cardElement.classList.add('card796');
+            cardElement.innerHTML = 
+                <img src="${card.imageUrl}" alt="${card.title} Logo">
+                <div class="tags796">
+                    ${Array.isArray(card.impactArea) ? card.impactArea.map(area => <span>${area}</span>).join('') : <span>${card.impactArea}</span>}
+                </div>
+                <h2>${card.title}</h2>
+                <p>${card.description}</p>
+                <div class="card-footer796">
+                    <div class="likes">
+                        <i>👁️</i>${card.views}
+                    </div>
+                    <div class="comments">
+                        <i>💬</i>${card.comments}
+                    </div>
+                </div>
+            ;
+            cardsContainer.appendChild(cardElement);
+        });
+    }
 
-            const filteredCards = cardData.filter(card => {
-                const categoryMatch = categoryValue === 'all' || card.investmentTypes.includes(categoryValue);
-                const impactAreaMatch = impactAreaValue === 'all' || (
-                    Array.isArray(card.impactArea) ? card.impactArea.includes(impactAreaValue) : card.impactArea === impactAreaValue
-                );
-                let investmentSizeMatch = true;
-                if (investmentSizeValue !== 'all') {
-                    const sizeValue = parseInt(investmentSizeValue);
-                    investmentSizeMatch = (sizeValue === 5000 && card.investmentSize < 5000) ||
-                                          (sizeValue === 25000 && card.investmentSize >= 5000 && card.investmentSize <= 25000) ||
-                                          (sizeValue === 50000 && card.investmentSize > 25000 && card.investmentSize <= 50000) ||
-                                          (sizeValue === 100000 && card.investmentSize > 50000);
+    function filterCards() {
+        const categoryValue = document.getElementById('categoryFilter').value;
+        const impactAreaValue = document.getElementById('impactAreaFilter').value;
+        const investmentSizeValue = document.getElementById('investmentSizeFilter').value;
+
+        const filteredCards = cardData.filter(card => {
+            const categoryMatch = categoryValue === 'all' || card.investmentTypes.includes(categoryValue);
+
+            const impactAreaMatch = impactAreaValue === 'all' || (
+                Array.isArray(card.impactArea)
+                    ? card.impactArea.includes(impactAreaValue)
+                    : card.impactArea === impactAreaValue
+            );
+
+            let investmentSizeMatch = true;
+            if (investmentSizeValue !== 'all') {
+                const sizeValue = parseInt(investmentSizeValue);
+                if (sizeValue === 5000) {
+                    investmentSizeMatch = card.investmentSize < 5000;
+                } else if (sizeValue === 25000) {
+                    investmentSizeMatch = card.investmentSize >= 5000 && card.investmentSize <= 25000;
+                } else if (sizeValue === 50000) {
+                    investmentSizeMatch = card.investmentSize > 25000 && card.investmentSize <= 50000;
+                } else if (sizeValue === 100000) {
+                    investmentSizeMatch = card.investmentSize > 50000;
                 }
-                return categoryMatch && impactAreaMatch && investmentSizeMatch;
-            });
-
-            renderCards(filteredCards);
-            sessionStorage.setItem('renderedCards', JSON.stringify(filteredCards)); // Store rendered cards in sessionStorage
-        }
-
-        // Load cards either from sessionStorage or cardData on initial load
-        document.addEventListener('DOMContentLoaded', () => {
-            const savedCards = sessionStorage.getItem('renderedCards');
-            if (savedCards && JSON.parse(savedCards).length > 0) {
-                renderCards(JSON.parse(savedCards)); // Render saved cards if available
-            } else {
-                renderCards(cardData); // Render all cards initially
             }
+
+            return categoryMatch && impactAreaMatch && investmentSizeMatch;
         });
 
-        document.getElementById('categoryFilter').addEventListener('change', filterCards);
-        document.getElementById('impactAreaFilter').addEventListener('change', filterCards);
-        document.getElementById('investmentSizeFilter').addEventListener('change', filterCards);
+        renderCards(filteredCards);
+    }
 
-    </script>
-</section>
+    document.getElementById('categoryFilter').addEventListener('change', filterCards);
+    document.getElementById('impactAreaFilter').addEventListener('change', filterCards);
+    document.getElementById('investmentSizeFilter').addEventListener('change', filterCards);
+
+    // Initial render
+    renderCards(cardData);
+</script>
+
+
+  </section>
 {{/if}}
