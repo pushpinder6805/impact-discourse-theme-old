@@ -522,10 +522,10 @@ function renderCards(cards) {
             sessionStorage.setItem('renderedCards', JSON.stringify(filteredCards)); // Store rendered cards in sessionStorage
         }
 
-        // Immediately render all cards on page load or back navigation
+        // Load cards either from sessionStorage or cardData on initial load
         document.addEventListener('DOMContentLoaded', () => {
             const savedCards = sessionStorage.getItem('renderedCards');
-            if (savedCards) {
+            if (savedCards && JSON.parse(savedCards).length > 0) {
                 renderCards(JSON.parse(savedCards)); // Render saved cards if available
             } else {
                 renderCards(cardData); // Render all cards initially
