@@ -521,14 +521,19 @@ function renderCards(cards) {
             renderCards(filteredCards);
         }
 
-        document.getElementById('categoryFilter').addEventListener('change', filterCards);
-        document.getElementById('impactAreaFilter').addEventListener('change', filterCards);
-        document.getElementById('investmentSizeFilter').addEventListener('change', filterCards);
+        // Initial render of all cards on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            renderCards(cardData);
+        });
 
-        // Render all cards on initial page load and when navigating back to this page
+        // Re-render all cards on back navigation to ensure they load properly
         window.addEventListener('pageshow', () => {
             renderCards(cardData);
         });
+
+        document.getElementById('categoryFilter').addEventListener('change', filterCards);
+        document.getElementById('impactAreaFilter').addEventListener('change', filterCards);
+        document.getElementById('investmentSizeFilter').addEventListener('change', filterCards);
     </script>
 </section>
 {{/if}}
