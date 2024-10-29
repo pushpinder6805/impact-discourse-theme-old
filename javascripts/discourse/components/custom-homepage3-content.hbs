@@ -519,11 +519,12 @@
         renderCards(filteredCards);
     }
 
+    // Immediately render all cards on page load without needing to click any filters
+    renderCards(cardData);
+
     document.getElementById('categoryFilter').addEventListener('change', filterCards);
     document.getElementById('impactAreaFilter').addEventListener('change', filterCards);
     document.getElementById('investmentSizeFilter').addEventListener('change', filterCards);
-
-    document.addEventListener('DOMContentLoaded', () => renderCards(cardData));
 </script>
 
 </section>
