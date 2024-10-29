@@ -521,12 +521,11 @@ function renderCards(cards) {
             renderCards(filteredCards);
         }
 
-        // Initial render of all cards on page load
-        document.addEventListener('DOMContentLoaded', () => {
+        // Immediately render all cards on page load and on back navigation
+        window.addEventListener('load', () => {
             renderCards(cardData);
         });
-
-        // Re-render all cards on back navigation to ensure they load properly
+        
         window.addEventListener('pageshow', () => {
             renderCards(cardData);
         });
