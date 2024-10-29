@@ -117,55 +117,40 @@
         }
     </style>
 
-<div class="container796">
-    <h1>Investment Opportunities</h1>
-    <div class="filters796">
-        <select id="categoryFilter">
-            <option value="all">Investment Type</option>
-            <option value="Growth Potential">Growth Potential</option>
-            <option value="Tax Benefits">Tax Benefits</option>
-            <option value="Passive Income">Passive Income</option>
-        </select>
-        <select id="impactAreaFilter">
-            <option value="all">Select Impact Area</option>
-            <option value="Clean Energy">Clean Energy</option>
-            <option value="Solar Energy">Solar Energy</option>
-            <option value="Renewable Energy">Renewable Energy</option>
-            <option value="Net Zero">Net Zero</option>
-            <option value="Environment">Environment</option>
-            <option value="Waste Management">Waste Management</option>
-            <option value="FoodTech">FoodTech</option>
-            <option value="Medical Device">Medical Device</option>
-            <option value="CleanTech">CleanTech</option>
-            <option value="Sustainable Materials">Sustainable Materials</option>
-            <option value="Sustainable Farming">Sustainable Farming</option>
-            <option value="Organic Food">Organic Food</option>
-            <option value="Sustainable Agriculture">Sustainable Agriculture</option>
-            <option value="Health and Wellness">Health and Wellness</option>
-            <option value="Biotech">Biotech</option>
-            <option value="Nature Preservation">Nature Preservation</option>
-            <option value="Climate Action">Climate Action</option>
-            <option value="Decarbonization">Decarbonization</option>
-            <option value="Biodiversity">Biodiversity</option>
-            <option value="Environmental Conservation">Environmental Conservation</option>
-            <option value="Gender Equality">Gender Equality</option>
-            <option value="Good Health and Well-Being">Good Health and Well-Being</option>
-            <option value="Sustainable Cities & Communities">Sustainable Cities & Communities</option>
-            <option value="Affordable & Clean Energy">Affordable & Clean Energy</option>
-            <option value="Industry, Innovation, and Infrastructure">Industry, Innovation, and Infrastructure</option>
-        </select>
-        <select id="investmentSizeFilter">
-            <option value="all">Select Investment Size</option>
-            <option value="5000">Less than $5,000</option>
-            <option value="25000">$5,000 - $25,000</option>
-            <option value="50000">$25,000 - $50,000</option>
-            <option value="100000">More than $50,000</option>
-        </select>
+{{#if this.isCustomHomepage}}
+<section class="course-overview1">
+    <title>Investment Opportunities with Filters</title>
+    <style>
+        /* Your existing CSS here */
+    </style>
+
+    <div class="container796">
+        <h1>Investment Opportunities</h1>
+        <div class="filters796">
+            <select id="categoryFilter">
+                <option value="all">Investment Type</option>
+                <option value="Growth Potential">Growth Potential</option>
+                <option value="Tax Benefits">Tax Benefits</option>
+                <option value="Passive Income">Passive Income</option>
+            </select>
+            <select id="impactAreaFilter">
+                <option value="all">Select Impact Area</option>
+                <option value="Clean Energy">Clean Energy</option>
+                <option value="Solar Energy">Solar Energy</option>
+                <!-- Additional options here -->
+            </select>
+            <select id="investmentSizeFilter">
+                <option value="all">Select Investment Size</option>
+                <option value="5000">Less than $5,000</option>
+                <option value="25000">$5,000 - $25,000</option>
+                <option value="50000">$25,000 - $50,000</option>
+                <option value="100000">More than $50,000</option>
+            </select>
+        </div>
+        <section class="cards796" id="cardsContainer">
+            <!-- Cards will be dynamically rendered here -->
+        </section>
     </div>
-    <section class="cards796" id="cardsContainer">
-        <!-- Cards will be dynamically rendered here -->
-    </section>
-</div>
 <script>
     const cardData = [
         {
@@ -440,7 +425,7 @@
             comments: 3
         }
     ];
-    
+
 function renderCards(cards) {
             const cardsContainer = document.getElementById('cardsContainer');
             cardsContainer.innerHTML = '';
