@@ -69,6 +69,8 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            text-decoration: none;
+            color: inherit;
         }
 
         .card796:hover {
@@ -450,8 +452,10 @@
     function renderCards(cards) {
         cardsContainer.innerHTML = '';
         cards.forEach(card => {
-            const cardElement = document.createElement('div');
+            const cardElement = document.createElement('a');
             cardElement.classList.add('card796');
+            cardElement.href = card.link;
+            cardElement.target = "_blank";
             cardElement.innerHTML = `
                 <img src="${card.imageUrl}" alt="${card.title} Logo">
                 <div class="tags796">
@@ -502,7 +506,7 @@
     document.getElementById('impactAreaFilter').addEventListener('change', filterCards);
     document.getElementById('investmentSizeFilter').addEventListener('change', filterCards);
 
-    // Initial render of all cards
+    // Initial render
     renderCards(cardData);
 </script>
 </body>
