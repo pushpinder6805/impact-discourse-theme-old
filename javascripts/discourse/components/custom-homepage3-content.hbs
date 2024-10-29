@@ -497,6 +497,34 @@ function renderCards(cards) {
             });
         }
 
+function renderCards(cards) {
+            const cardsContainer = document.getElementById('cardsContainer');
+            cardsContainer.innerHTML = '';
+            cards.forEach(card => {
+                const cardElement = document.createElement('div');
+                cardElement.classList.add('card796');
+                cardElement.innerHTML = `
+                    <a href="${card.link}" target="_blank" style="text-decoration: none; color: inherit;">
+                        <img src="${card.imageUrl}" alt="${card.title} Logo">
+                        <div class="tags796">
+                            ${Array.isArray(card.impactArea) ? card.impactArea.map(area => `<span>${area}</span>`).join('') : `<span>${card.impactArea}</span>`}
+                        </div>
+                        <h2>${card.title}</h2>
+                        <p>${card.description}</p>
+                        <div class="card-footer796">
+                            <div class="likes">
+                                <i>👁️</i>${card.views}
+                            </div>
+                            <div class="comments">
+                                <i>💬</i>${card.comments}
+                            </div>
+                        </div>
+                    </a>
+                `;
+                cardsContainer.appendChild(cardElement);
+            });
+        }
+
         function filterCards() {
             const categoryValue = document.getElementById('categoryFilter').value;
             const impactAreaValue = document.getElementById('impactAreaFilter').value;
@@ -525,8 +553,10 @@ function renderCards(cards) {
         document.getElementById('impactAreaFilter').addEventListener('change', filterCards);
         document.getElementById('investmentSizeFilter').addEventListener('change', filterCards);
 
-        // Immediately render all cards on page load
-        renderCards(cardData);
+        // Render all cards on initial page load and when navigating back to this page
+        window.addEventListener('pageshow', () => {
+            renderCards(cardData);
+        });
     </script>
 </section>
 {{/if}}
