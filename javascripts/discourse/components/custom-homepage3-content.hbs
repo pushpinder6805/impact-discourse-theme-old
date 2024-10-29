@@ -519,20 +519,23 @@ function renderCards(cards) {
             });
 
             renderCards(filteredCards);
+            sessionStorage.setItem('renderedCards', JSON.stringify(filteredCards)); // Store rendered cards in sessionStorage
         }
 
-        // Immediately render all cards on page load and on back navigation
-        window.addEventListener('load', () => {
-            renderCards(cardData);
-        });
-        
-        window.addEventListener('pageshow', () => {
-            renderCards(cardData);
+        // Immediately render all cards on page load or back navigation
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedCards = sessionStorage.getItem('renderedCards');
+            if (savedCards) {
+                renderCards(JSON.parse(savedCards)); // Render saved cards if available
+            } else {
+                renderCards(cardData); // Render all cards initially
+            }
         });
 
         document.getElementById('categoryFilter').addEventListener('change', filterCards);
         document.getElementById('impactAreaFilter').addEventListener('change', filterCards);
         document.getElementById('investmentSizeFilter').addEventListener('change', filterCards);
+
     </script>
 </section>
 {{/if}}
