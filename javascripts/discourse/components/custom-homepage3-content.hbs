@@ -452,10 +452,10 @@
         cards.forEach(card => {
             const cardElement = document.createElement('div');
             cardElement.classList.add('card796');
-            cardElement.innerHTML = 
+            cardElement.innerHTML = `
                 <img src="${card.imageUrl}" alt="${card.title} Logo">
                 <div class="tags796">
-                    ${Array.isArray(card.impactArea) ? card.impactArea.map(area => <span>${area}</span>).join('') : <span>${card.impactArea}</span>}
+                    ${Array.isArray(card.impactArea) ? card.impactArea.map(area => `<span>${area}</span>`).join('') : `<span>${card.impactArea}</span>`}
                 </div>
                 <h2>${card.title}</h2>
                 <p>${card.description}</p>
@@ -467,7 +467,7 @@
                         <i>💬</i>${card.comments}
                     </div>
                 </div>
-            ;
+            `;
             cardsContainer.appendChild(cardElement);
         });
     }
@@ -479,27 +479,19 @@
 
         const filteredCards = cardData.filter(card => {
             const categoryMatch = categoryValue === 'all' || card.investmentTypes.includes(categoryValue);
-
             const impactAreaMatch = impactAreaValue === 'all' || (
                 Array.isArray(card.impactArea)
                     ? card.impactArea.includes(impactAreaValue)
                     : card.impactArea === impactAreaValue
             );
-
             let investmentSizeMatch = true;
             if (investmentSizeValue !== 'all') {
                 const sizeValue = parseInt(investmentSizeValue);
-                if (sizeValue === 5000) {
-                    investmentSizeMatch = card.investmentSize < 5000;
-                } else if (sizeValue === 25000) {
-                    investmentSizeMatch = card.investmentSize >= 5000 && card.investmentSize <= 25000;
-                } else if (sizeValue === 50000) {
-                    investmentSizeMatch = card.investmentSize > 25000 && card.investmentSize <= 50000;
-                } else if (sizeValue === 100000) {
-                    investmentSizeMatch = card.investmentSize > 50000;
-                }
+                investmentSizeMatch = (sizeValue === 5000 && card.investmentSize < 5000) ||
+                                      (sizeValue === 25000 && card.investmentSize >= 5000 && card.investmentSize <= 25000) ||
+                                      (sizeValue === 50000 && card.investmentSize > 25000 && card.investmentSize <= 50000) ||
+                                      (sizeValue === 100000 && card.investmentSize > 50000);
             }
-
             return categoryMatch && impactAreaMatch && investmentSizeMatch;
         });
 
@@ -510,11 +502,11 @@
     document.getElementById('impactAreaFilter').addEventListener('change', filterCards);
     document.getElementById('investmentSizeFilter').addEventListener('change', filterCards);
 
-    // Initial render
+    // Initial render of all cards
     renderCards(cardData);
 </script>
 </body>
 </html>
 
-  </section>
+</section>
 {{/if}}
