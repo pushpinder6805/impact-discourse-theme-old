@@ -135,31 +135,14 @@
         </select>
         <select id="impactAreaFilter">
             <option value="all">Select Impact Area</option>
-            <option value="Clean Energy">Clean Energy</option>
-            <option value="Solar Energy">Solar Energy</option>
-            <option value="Renewable Energy">Renewable Energy</option>
-            <option value="Net Zero">Net Zero</option>
-            <option value="Environment">Environment</option>
-            <option value="Waste Management">Waste Management</option>
-            <option value="FoodTech">FoodTech</option>
-            <option value="Medical Device">Medical Device</option>
-            <option value="CleanTech">CleanTech</option>
-            <option value="Sustainable Materials">Sustainable Materials</option>
-            <option value="Sustainable Farming">Sustainable Farming</option>
-            <option value="Organic Food">Organic Food</option>
-            <option value="Sustainable Agriculture">Sustainable Agriculture</option>
-            <option value="Health and Wellness">Health and Wellness</option>
-            <option value="Biotech">Biotech</option>
-            <option value="Nature Preservation">Nature Preservation</option>
-            <option value="Climate Action">Climate Action</option>
-            <option value="Decarbonization">Decarbonization</option>
-            <option value="Biodiversity">Biodiversity</option>
             <option value="Environmental Conservation">Environmental Conservation</option>
-            <option value="Gender Equality">Gender Equality</option>
-            <option value="Good Health and Well-Being">Good Health and Well-Being</option>
-            <option value="Sustainable Cities & Communities">Sustainable Cities & Communities</option>
             <option value="Affordable & Clean Energy">Affordable & Clean Energy</option>
+            <option value="Good Health and Well-Being">Good Health and Well-Being</option>
             <option value="Industry, Innovation, and Infrastructure">Industry, Innovation, and Infrastructure</option>
+            <option value="Sustainable Cities & Communities">Sustainable Cities & Communities</option>
+            <option value="Good Health and Well-Being">Good Health and Well-Being</option>
+            <option value="Gender Equality">Gender Equality</option>
+            <option value="Sustainable agriculture & Organic Food">Sustainable agriculture & Organic Food</option>
         </select>
         <select id="investmentSizeFilter">
             <option value="all">Select Investment Size</option>
@@ -177,7 +160,7 @@
     const cardData = [
         {
             title: 'Epic Cleantec',
-            impactArea: 'Clean Energy',
+            impactArea: 'Environmental Conservation',
             investmentTypes: ['Growth Potential', 'Tax Benefits', 'Passive Income'],
             investmentSize: 30000,
             imageUrl: 'https://impactinvestingcommunity.com/uploads/default/optimized/1X/4220f2dd11b9c0a54a1eca836f9bae00c9962129_2_867x750.jpeg',
@@ -188,7 +171,7 @@
         },
         {
             title: 'Energea - Renewable Energy',
-            impactArea: 'Renewable Energy',
+            impactArea: 'Affordable & Clean Energy',
             investmentTypes: ['Growth Potential', 'Tax Benefits', 'Passive Income'],
             investmentSize: 100,
             imageUrl: 'https://impactinvestingcommunity.com/uploads/default/optimized/1X/11112796108db01e791fb6d17caf83623e99ffa9_2_867x750.jpeg',
@@ -199,7 +182,7 @@
         },
         {
             title: '7Wire Ventures - Healthcare VC',
-            impactArea: 'HealthTech',
+            impactArea: 'Good Health and Well-Being',
             investmentTypes: ['Growth Potential'],
             investmentSize: 40000,
             imageUrl: 'https://impactinvestingcommunity.com/uploads/default/optimized/1X/112ec201589db9fc1e9a723b50de2ac9cd74e937_2_867x750.jpeg',
@@ -210,7 +193,7 @@
         },
         {
             title: 'BlocPower - Clean Energy',
-            impactArea: ['Clean Energy', 'Solar Energy'],
+            impactArea: ['Affordable & Clean Energy'],
             investmentTypes: ['Growth Potential'],
             investmentSize: 15000,
             imageUrl: 'https://impactinvestingcommunity.com/uploads/default/optimized/1X/7d3201b6da0969907a20eca69f904583ae2bdf80_2_1035x648.jpeg',
@@ -221,7 +204,7 @@
         },
         {
             title: 'Mishra Capital',
-            impactArea: 'Affordable Housing',
+            impactArea: 'Industry, Innovation, and Infrastructure',
             investmentTypes: ['Growth Potential'],
             investmentSize: 50000,
             imageUrl: 'https://i.ibb.co/gZZLyWN/mischra.png',
@@ -232,7 +215,7 @@
         },
         {
             title: 'ScopeFour Capital',
-            impactArea: 'Industry, Innovation, and Infrastructure',
+            impactArea: 'Sustainable Cities & Communities',
             investmentTypes: ['Growth Potential'],
             investmentSize: 75000,
             imageUrl: 'https://impactinvestingcommunity.com/uploads/default/optimized/1X/0f8fd399fc39f07d2da871fc9224159e02460820_2_867x750.jpeg',
@@ -266,7 +249,7 @@
         {
             title: 'TAE Technologies - Clean Water',
             impactArea: 'CleanTech',
-            investmentTypes: ['Growth Potential'],
+            investmentTypes: ['Affordable & Clean Energy', 'Good Health and Well-Being'],
             investmentSize: 25000,
             imageUrl: 'https://impactinvestingcommunity.com/uploads/default/optimized/1X/a07115a6633a0a80c4d208769f472d226b30712b_2_867x750.jpeg',
             description: 'Transformational energy source capable of sustaining the planet',
@@ -276,7 +259,7 @@
         },
         {
             title: 'Oscilla Power - Wave Energy',
-            impactArea: 'Renewable Energy',
+            impactArea: 'Affordable & Clean Energy',
             investmentTypes: ['Growth Potential'],
             investmentSize: 50000,
             imageUrl: 'https://impactinvestingcommunity.com/uploads/default/optimized/1X/0587f80aa91d9a4d357168e1a4fab5d6b24a2568_2_867x750.jpeg',
@@ -287,7 +270,7 @@
         },
         {
             title: 'Greenlight Biosciences',
-            impactArea: 'Biotech',
+            impactArea: 'Good Health and Well-Being',
             investmentTypes: ['Growth Potential'],
             investmentSize: 10000,
             imageUrl: 'https://impactinvestingcommunity.com/uploads/default/optimized/1X/569ed28483cf09bfca23ce00c635a00deec8f55c_2_867x750.jpeg',
@@ -309,7 +292,7 @@
         },
         {
             title: 'EcoHyde - Startup',
-            impactArea: 'Sustainable Materials',
+            impactArea: 'Industry, Innovation, and Infrastructure',
             investmentTypes: ['Growth Potential'],
             investmentSize: 15000,
             imageUrl: 'https://impactinvestingcommunity.com/uploads/default/optimized/1X/3d22252ce667cc53381f2da46e494f890dc4330d_2_867x750.jpeg',
@@ -320,7 +303,7 @@
         },
         {
             title: 'Solubag',
-            impactArea: 'Waste Management',
+            impactArea: 'Environmental Conservation',
             investmentTypes: ['Growth Potential'],
             investmentSize: 18000,
             imageUrl: 'https://impactinvestingcommunity.com/uploads/default/optimized/1X/07af63628148b7e199d8405e4e1a3abcddf03f91_2_867x750.jpeg',
@@ -331,7 +314,7 @@
         },
         {
             title: 'West Robins - OYSTER CO',
-            impactArea: 'Sustainable Farming',
+            impactArea: 'Environmental Conservation',
             investmentTypes: ['Growth Potential'],
             investmentSize: 8000,
             imageUrl: 'https://impactinvestingcommunity.com/uploads/default/optimized/1X/d44d3e660b511e69a1b77bd63208cd5d7a5da116_2_867x750.jpeg',
@@ -342,7 +325,7 @@
         },
         {
             title: 'Iroquois Valley - Organic Farmland',
-            impactArea: 'Sustainable Agriculture',
+            impactArea: 'Environmental Conservation',
             investmentTypes: ['Growth Potential', 'Tax Benefits', 'Passive Income'],
             investmentSize: 25000,
             imageUrl: 'https://impactinvestingcommunity.com/uploads/default/optimized/1X/3cc332fba56fd97ced80193346adfaa1cc13a613_2_867x750.jpeg',
@@ -364,7 +347,7 @@
         },
         {
             title: 'Bowery - Vertical Farming',
-            impactArea: 'FoodTech',
+            impactArea: 'Sustainable agriculture & Organic Food',
             investmentTypes: ['Growth Potential'],
             investmentSize: 30000,
             imageUrl: 'https://impactinvestingcommunity.com/uploads/default/optimized/1X/28c2658cfec4948ad7b8ddadac615879092067a9_2_867x750.jpeg',
@@ -375,7 +358,7 @@
         },
         {
             title: 'Carbon Robotics AgTech',
-            impactArea: 'CleanTech',
+            impactArea: 'Industry, Innovation, and Infrastructure',
             investmentTypes: ['Growth Potential'],
             investmentSize: 100,
             imageUrl: 'https://impactinvestingcommunity.com/uploads/default/optimized/1X/5b9c9af97ebf529cb9959c6652a126351d031a06_2_867x750.jpeg',
@@ -386,7 +369,7 @@
         },
         {
             title: 'Water Equity - Clean Water',
-            impactArea: 'Clean Energy',
+            impactArea: 'Good Health and Well-Being',
             investmentTypes: ['Growth Potential', 'Tax Benefits', 'Passive Income'],
             investmentSize: 50000,
             imageUrl: 'https://impactinvestingcommunity.com/uploads/default/optimized/1X/6ae6b49924d7f62284b4aff0b61dc30a4ab2db0f_2_867x750.jpeg',
@@ -397,7 +380,7 @@
         },
         {
             title: 'Dandy',
-            impactArea: 'Industry, Innovation, and Infrastructure',
+            impactArea: 'Good Health and Well-Being',
             investmentTypes: ['Growth Potential'],
             investmentSize: 10000,
             imageUrl: 'https://impactinvestingcommunity.com/uploads/default/optimized/1X/65db96e12643ade0a8bac676696ffd4cf97a253f_2_867x750.jpeg',
@@ -419,7 +402,7 @@
         },
         {
             title: 'ChenMed',
-            impactArea: 'HealthTech',
+            impactArea: 'Good Health and Well-Being',
             investmentTypes: ['Growth Potential'],
             investmentSize: 100,
             imageUrl: 'https://impactinvestingcommunity.com/uploads/default/optimized/1X/394f81390b01946db85256e39ceef6db3df67a7e_2_867x750.jpeg',
@@ -430,7 +413,7 @@
         },
         {
             title: 'Mesentech',
-            impactArea: 'Medical Device',
+            impactArea: 'Good Health and Well-Being',
             investmentTypes: ['Growth Potential'],
             investmentSize: 15000,
             imageUrl: 'https://impactinvestingcommunity.com/uploads/default/optimized/1X/05eaf58ba06cff210fa32ce69f0b98c2289adfdb_2_867x750.jpeg',
@@ -441,7 +424,7 @@
         },
         {
             title: 'First Ascent Biomedical',
-            impactArea: 'Biotech',
+            impactArea: 'Good Health and Well-Being',
             investmentTypes: ['Growth Potential'],
             investmentSize: 35000,
             imageUrl: 'https://impactinvestingcommunity.com/uploads/default/optimized/1X/feab962c15f98416a9c00c1e572a6e274ab20406_2_867x750.jpeg',
