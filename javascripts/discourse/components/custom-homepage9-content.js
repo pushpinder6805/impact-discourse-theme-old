@@ -6,9 +6,9 @@ export default class CustomHomepageContent extends Component {
 
   get isCustomHomepage() {
     const { currentURL } = this.router;
-    const customPaths = ['c/calculator/67', 'c/calculator/67'];
+    const customPaths = ['/c/free-educational-videos/angel-investing-basics/38', '/c/free-educational-videos/angel-investing-basics/38'];
     
-    console.log("Current URL:", currentURL);  // Debugging: Check the URL const customPaths = ['/c/free-educational-videos/angel-investing-basics/38', '/c/free-educational-videos/angel-investing-basics/38'];
+    console.log("Current URL:", currentURL);  // Debugging: Check the URL 
     return customPaths.includes(currentURL);
   }
 }
