@@ -141,6 +141,39 @@
 .container797 h1, .container797 .calc {
     margin: 0; /* Remove default margins for better alignment */
 }
+/* Modal Overlay Styling */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal Content Styling */
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    max-width: 90%;
+    width: 600px;
+    position: relative;
+    border-radius: 8px;
+}
+
+/* Close Button Styling */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
 
     </style>
 </head>
@@ -148,8 +181,45 @@
 <div class="container796">
     <div class="container797">
     <h1>Investment Opportunities</h1>
-    <h2 class="calc">Open Investment Calculator</h2>
+    <h2 class="calc" id="open-calculator">Open Investment Calculator</h2>
     </div>
+    <!-- Overlay Modal -->
+<div id="calculatorModal" class="modal">
+    <div class="modal-content">
+        <span class="close-button" id="close-calculator">&times;</span>
+        <div id="calculatorexpress_com-calculator" style="text-align: center;">Loading...</div>
+        <script src="https://firebasestorage.googleapis.com/v0/b/js-scripts-b71a4.appspot.com/o/scripts%2Fembed.js?alt=media&token=53c14d46-c103-4aa4-80f0-1d043988b399"></script>
+        <script type="text/javascript">
+            var embed = 'PHN0eWxlPmlmcmFtZXt3aWR0aDogMTAwJTttaW4td2lkdGg6IDEyMDBweDtib3JkZXI6bm9uZTt9QG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA2MDBweCkge2lmcmFtZSB7IGRpc3BsYXk6IGJsb2NrOyB3aWR0aDoxMDAlO21pbi13aWR0aDoyODBweDsgfTwvc3R5bGU+PGNlbnRlcj48aWZyYW1lIGlkPSJteUlmcmFtZSIgc3JjPSJodHRwczovL2NhbGN1bGF0b3JleHByZXNzLmNvbS9BUEk3L3RoYWlyNzc3LyIgc2Nyb2xsaW5nPSJubyIgYm9yZGVyPSJubyIgb25sb2FkPSJpRnJhbWVSZXNpemUoKSI+PC9pZnJhbWU+PC9jZW50ZXI+';
+            document.getElementById('calculatorexpress_com-calculator').innerHTML = atob(embed);
+        </script>
+    </div>
+</div>
+<script>
+    // Get modal elements
+const modal = document.getElementById("calculatorModal");
+const openButton = document.getElementById("open-calculator");
+const closeButton = document.getElementById("close-calculator");
+
+// Show modal on button click
+openButton.addEventListener("click", () => {
+    modal.style.display = "flex";
+});
+
+// Close modal on close button click
+closeButton.addEventListener("click", () => {
+    modal.style.display = "none";
+});
+
+// Close modal on outside click
+window.addEventListener("click", (e) => {
+    if (e.target == modal) {
+        modal.style.display = "none";
+    }
+});
+
+</script>
+
     <div class="filters796">
         <select id="categoryFilter">
             <option value="all">Investment Type</option>
