@@ -154,28 +154,17 @@
     <h2 class="calc" id="open-calculator">Open Investment Calculator</h2>
     </div>
     <!-- Overlay Modal -->
-<div id="calculatorexpress_com-calculator" style="text-align: center;">Loading...</div>
-<script>
-    var embed = `
-    <style>
-        iframe {
-            width: 100%; /* Full width */
-            min-width: 280px; /* Minimum width for small screens */
-            max-width: 600px; /* Limit width for larger screens */
-            height: 500px; /* Set a fixed height for the iframe */
-            border: none; /* Remove borders */
-            overflow-y: auto; /* Allow vertical scrolling inside the iframe */
-        }
-    </style>
-    <center>
-        <iframe id="myIframe"
-                src="https://calculatorexpress.com/API7/thair777/"
-                scrolling="yes" /* Enable iframe scrolling */
-                frameborder="0">
-        </iframe>
-    </center>`;
-    document.getElementById('calculatorexpress_com-calculator').innerHTML = atob(embed);
-</script>
+<div id="calculatorModal" class="modal1">
+    <div class="modal1-content">
+        <span class="close-button" id="close-calculator">&times;</span>
+        <div id="calculatorexpress_com-calculator" style="text-align: center;">Loading...</div>
+        <script src="https://firebasestorage.googleapis.com/v0/b/js-scripts-b71a4.appspot.com/o/scripts%2Fembed.js?alt=media&token=53c14d46-c103-4aa4-80f0-1d043988b399"></script>
+        <script type="text/javascript">
+            var embed = 'PHN0eWxlPmlmcmFtZXt3aWR0aDogMTAwJTttaW4td2lkdGg6IDEyMDBweDtib3JkZXI6bm9uZTt9QG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA2MDBweCkge2lmcmFtZSB7IGRpc3BsYXk6IGJsb2NrOyB3aWR0aDoxMDAlO21pbi13aWR0aDoyODBweDsgfTwvc3R5bGU+PGNlbnRlcj48aWZyYW1lIGlkPSJteUlmcmFtZSIgc3JjPSJodHRwczovL2NhbGN1bGF0b3JleHByZXNzLmNvbS9BUEk3L3RoYWlyNzc3LyIgc2Nyb2xsaW5nPSJubyIgYm9yZGVyPSJubyIgb25sb2FkPSJpRnJhbWVSZXNpemUoKSI+PC9pZnJhbWU+PC9jZW50ZXI+';
+            document.getElementById('calculatorexpress_com-calculator').innerHTML = atob(embed);
+        </script>
+    </div>
+</div>
 <script>
     // Get modal elements
 const modal1 = document.getElementById("calculatorModal");
