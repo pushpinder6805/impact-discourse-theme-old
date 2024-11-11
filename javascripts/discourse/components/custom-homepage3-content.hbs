@@ -142,6 +142,7 @@
     margin: 0; /* Remove default margins for better alignment */
 }
 /* Modal Overlay Styling */
+
 .modal {
     display: none; /* Hidden by default */
     position: fixed;
@@ -153,27 +154,56 @@
     z-index: 1000;
     justify-content: center;
     align-items: center;
+    overflow: auto; /* Add scrolling if needed */
 }
 
 /* Modal Content Styling */
 .modal-content {
     background-color: white;
-    padding: 20px;
+    padding: 15px;
     max-width: 90%;
-    width: 600px;
+    width: 400px; /* Smaller width */
     position: relative;
     border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.3s ease-in-out; /* Add smooth animation */
 }
 
 /* Close Button Styling */
 .close-button {
     position: absolute;
     top: 10px;
-    right: 20px;
-    font-size: 24px;
+    right: 15px;
+    font-size: 20px;
     cursor: pointer;
+    color: #555;
 }
 
+/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Adjustments for Smaller Screens */
+@media (max-width: 480px) {
+    .modal-content {
+        width: 90%; /* Full width on small screens */
+        padding: 10px;
+    }
+
+    .close-button {
+        font-size: 18px;
+        top: 8px;
+        right: 10px;
+    }
+}
 
     </style>
 </head>
