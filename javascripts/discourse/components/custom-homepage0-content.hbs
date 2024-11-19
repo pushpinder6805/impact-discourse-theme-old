@@ -7,15 +7,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator Test</title>
 </head>
-<body style="margin: 0; padding: 0; height: 100vh; display: flex; justify-content: center; align-items: center;">
-    <div id="calculatorexpress_com-calculator" style="width: 100%; height: 100vh; text-align: center;">
-        Loading...
-    </div>
-    <script src="https://firebasestorage.googleapis.com/v0/b/js-scripts-b71a4.appspot.com/o/scripts%2Fembed.js?alt=media&token=53c14d46-c103-4aa4-80f0-1d043988b399"></script>
-    <script type="text/javascript">
-        var embed = 'PHN0eWxlPmlmcmFtZXt3aWR0aDogMTAwJTttaW4td2lkdGg6IDEyMDBweDtib3JkZXI6bm9uZTt9QG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA2MDBweCkge2lmcmFtZSB7IGRpc3BsYXk6IGJsb2NrOyB3aWR0aDoxMDAlO21pbi13aWR0aDoyODBweDsgfTwvc3R5bGU+PGNlbnRlcj48aWZyYW1lIGlkPSJteUlmcmFtZSIgc3JjPSJodHRwczovL2NhbGN1bGF0b3JleHByZXNzLmNvbS9BUEk3L3RoYWlyNzc3LyIgc2Nyb2xsaW5nPSJubyIgYm9yZGVyPSJubyIgb25sb2FkPSJpRnJhbWVSZXNpemUoKSI+PC9pZnJhbWU+PC9jZW50ZXI+';
-        document.getElementById('calculatorexpress_com-calculator').innerHTML = atob(embed);
-    </script>
+<body>
+<button onclick="openModal()">Open Investment Calculator</button>
+<div id="calculatorModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8); z-index: 1000;">
+  <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 90%; height: 90%; background: white; padding: 10px;">
+    <div id="calculatorexpress_com-calculator">Loading...</div>
+    <button id="closeModal" style="position: absolute; top: 10px; right: 10px;">Close</button>
+  </div>
+</div>
+<script src="https://firebasestorage.googleapis.com/v0/b/js-scripts-b71a4.appspot.com/o/scripts%2Fembed.js?alt=media&token=53c14d46-c103-4aa4-80f0-1d043988b399"></script>
+<script>
+  var embed = 'PHN0eWxlPmlmcmFtZXt3aWR0aDogMTAwJTttaW4td2lkdGg6IDEyMDBweDtib3JkZXI6bm9uZTt9QG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA2MDBweCkge2lmcmFtZSB7IGRpc3BsYXk6IGJsb2NrOyB3aWR0aDoxMDAlO21pbi13aWR0aDoyODBweDsgfTwvc3R5bGU+PGNlbnRlcj48aWZyYW1lIGlkPSJteUlmcmFtZSIgc3JjPSJodHRwczovL2NhbGN1bGF0b3JleHByZXNzLmNvbS9BUEk3L3RoYWlyNzc3LyIgc2Nyb2xsaW5nPSJubyIgYm9yZGVyPSJubyIgb25sb2FkPSJpRnJhbWVSZXNpemUoKSI+PC9pZnJhbWU+PC9jZW50ZXI+';
+  document.getElementById('calculatorexpress_com-calculator').innerHTML = atob(embed);
+
+  document.getElementById('closeModal').addEventListener('click', () => {
+    document.getElementById('calculatorModal').style.display = 'none';
+  });
+
+  function openModal() {
+    document.getElementById('calculatorModal').style.display = 'block';
+  }
+</script>
+
+
 </body>
 </html>
   </section>
