@@ -5,7 +5,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Investment Calculator</title>
+  <title>RISE Investment Calculator</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -15,7 +16,7 @@
     }
 
     .calculator-container {
-      max-width: 800px;
+      max-width: 1200px;
       margin: 50px auto;
       padding: 20px;
       background: #fff;
@@ -23,47 +24,36 @@
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
-    .calculator-title {
+    h1 {
       text-align: center;
-      font-size: 24px;
-      font-weight: bold;
+      font-size: 28px;
       margin-bottom: 20px;
     }
 
-    .calculator-form {
+    .form-section {
       display: flex;
-      flex-direction: column;
+      flex-wrap: wrap;
       gap: 20px;
+      justify-content: space-between;
     }
 
     .form-group {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      flex: 1 1 calc(50% - 20px);
     }
 
     .form-group label {
-      flex: 1;
-      font-size: 16px;
+      display: block;
+      margin-bottom: 5px;
+      font-size: 14px;
     }
 
     .form-group input,
     .form-group select {
-      flex: 2;
+      width: 100%;
       padding: 10px;
+      font-size: 14px;
       border: 1px solid #ccc;
       border-radius: 4px;
-    }
-
-    .form-group input[type="number"] {
-      max-width: 150px;
-    }
-
-    .result {
-      text-align: center;
-      font-size: 18px;
-      margin-top: 20px;
-      color: #333;
     }
 
     .calculate-btn {
@@ -81,57 +71,193 @@
     .calculate-btn:hover {
       background-color: #a08f5d;
     }
+
+    .result-section {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .result-value {
+      font-size: 24px;
+      color: #333;
+    }
+
+    .chart-container {
+      max-width: 800px;
+      margin: 30px auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    table th,
+    table td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;
+    }
+
+    table th {
+      background-color: #f4f4f4;
+    }
+
+    .email-section {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .email-section input {
+      width: 300px;
+      margin: 5px;
+      padding: 10px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .email-section button {
+      padding: 10px 20px;
+      background-color: #b09d5e;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .email-section button:hover {
+      background-color: #a08f5d;
+    }
   </style>
 </head>
 <body>
   <div class="calculator-container">
-    <div class="calculator-title">Investment Calculator</div>
-    <form class="calculator-form">
+    <h1>RISE Investment Calculator</h1>
+
+    <!-- Input Section -->
+    <div class="form-section">
       <div class="form-group">
-        <label for="investment">Investment Amount ($):</label>
-        <input type="number" id="investment" placeholder="Enter amount" required />
+        <label for="starting-amount">Starting Amount</label>
+        <input type="number" id="starting-amount" placeholder="$5000">
       </div>
       <div class="form-group">
-        <label for="rate">Interest Rate (%):</label>
-        <input type="number" id="rate" placeholder="Enter rate" required />
+        <label for="additional-contribution">Additional Contribution</label>
+        <input type="number" id="additional-contribution" placeholder="$100">
       </div>
       <div class="form-group">
-        <label for="years">Investment Period (Years):</label>
-        <input type="number" id="years" placeholder="Enter years" required />
-      </div>
-      <div class="form-group">
-        <label for="compound">Compounding Frequency:</label>
-        <select id="compound">
-          <option value="1">Annually</option>
-          <option value="4">Quarterly</option>
-          <option value="12">Monthly</option>
+        <label for="frequency">Contribution Frequency</label>
+        <select id="frequency">
+          <option value="annually">Annually</option>
+          <option value="monthly">Monthly</option>
         </select>
       </div>
-      <button type="button" class="calculate-btn" onclick="calculateInvestment()">Calculate</button>
-    </form>
-    <div class="result" id="result">Your investment returns will appear here.</div>
+      <div class="form-group">
+        <label for="rate-of-return">Expected Rate of Return (%)</label>
+        <input type="number" id="rate-of-return" placeholder="8">
+      </div>
+      <div class="form-group">
+        <label for="years">Years to Grow</label>
+        <input type="number" id="years" placeholder="30">
+      </div>
+    </div>
+
+    <button class="calculate-btn" onclick="calculateInvestment()">Calculate</button>
+
+    <!-- Result Section -->
+    <div class="result-section">
+      <p class="result-value" id="result-value">This investment will be worth $0.</p>
+    </div>
+
+    <!-- Chart Section -->
+    <div class="chart-container">
+      <canvas id="investmentChart"></canvas>
+    </div>
+
+    <!-- Table Section -->
+    <table>
+      <thead>
+        <tr>
+          <th>Year</th>
+          <th>Starting Amount</th>
+          <th>Annual Contribution</th>
+          <th>Total Contribution</th>
+          <th>Interest Earned</th>
+          <th>End Balance</th>
+        </tr>
+      </thead>
+      <tbody id="result-table-body"></tbody>
+    </table>
+
+    <!-- Email Section -->
+    <div class="email-section">
+      <p>SEND RESULTS TO YOUR INBOX</p>
+      <input type="text" placeholder="Name">
+      <input type="email" placeholder="Email">
+      <button>Send Results</button>
+    </div>
   </div>
 
   <script>
     function calculateInvestment() {
-      const investment = parseFloat(document.getElementById('investment').value);
-      const rate = parseFloat(document.getElementById('rate').value) / 100;
-      const years = parseInt(document.getElementById('years').value);
-      const compound = parseInt(document.getElementById('compound').value);
+      const startingAmount = parseFloat(document.getElementById('starting-amount').value) || 0;
+      const additionalContribution = parseFloat(document.getElementById('additional-contribution').value) || 0;
+      const frequency = document.getElementById('frequency').value === 'monthly' ? 12 : 1;
+      const rateOfReturn = parseFloat(document.getElementById('rate-of-return').value) / 100 || 0;
+      const years = parseInt(document.getElementById('years').value) || 0;
 
-      if (!investment || !rate || !years || !compound) {
-        document.getElementById('result').textContent = 'Please fill all fields correctly.';
-        return;
+      let balance = startingAmount;
+      let totalContribution = startingAmount;
+      let tableHTML = '';
+      const yearlyData = [];
+      
+      for (let year = 1; year <= years; year++) {
+        const interest = balance * rateOfReturn;
+        balance += interest + additionalContribution * frequency;
+        totalContribution += additionalContribution * frequency;
+
+        tableHTML += `
+          <tr>
+            <td>${2024 + year}</td>
+            <td>$${balance.toFixed(2)}</td>
+            <td>$${(additionalContribution * frequency).toFixed(2)}</td>
+            <td>$${totalContribution.toFixed(2)}</td>
+            <td>$${interest.toFixed(2)}</td>
+            <td>$${balance.toFixed(2)}</td>
+          </tr>
+        `;
+        yearlyData.push(balance);
       }
 
-      // Compound interest formula
-      const total = investment * Math.pow(1 + rate / compound, compound * years);
+      document.getElementById('result-table-body').innerHTML = tableHTML;
+      document.getElementById('result-value').textContent = `This investment will be worth $${balance.toFixed(2)}.`;
 
-      document.getElementById('result').textContent = `Your total returns after ${years} years: $${total.toFixed(2)}`;
+      const ctx = document.getElementById('investmentChart').getContext('2d');
+      new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: Array.from({ length: years }, (_, i) => 2024 + i + 1),
+          datasets: [{
+            label: 'End Balance',
+            data: yearlyData,
+            backgroundColor: 'rgba(181, 161, 111, 0.8)',
+          }]
+        },
+        options: {
+          responsive: true,
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+      });
     }
   </script>
 </body>
 </html>
+
 
   </section>
 {{/if}}
