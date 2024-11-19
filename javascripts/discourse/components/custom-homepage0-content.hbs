@@ -1,236 +1,45 @@
 {{#if this.isCustomHomepage}}
 <section class="course-overview2">
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RISE Investment Calculator</title>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <style>
-
-    .calculator-container {
-      max-width: 1200px;
-      margin: 50px auto;
-      padding: 20px;
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-
-    .form-section {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: space-between;
-    }
-
-    .form-group {
-      flex: 1 1 calc(50% - 20px);
-    }
-
-    .form-group label {
-      display: block;
-      margin-bottom: 5px;
-      font-size: 14px;
-    }
-
-    .form-group input,
-    .form-group select {
-      width: 100%;
-      padding: 10px;
-      font-size: 14px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-
-    .calculate-btn {
-      display: block;
-      margin: 20px auto;
-      padding: 10px 20px;
-      background-color: #b09d5e;
-      color: #fff;
-      border: none;
-      border-radius: 4px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-
-    .calculate-btn:hover {
-      background-color: #a08f5d;
-    }
-
-    .result-section {
-      text-align: center;
-      margin-top: 20px;
-    }
-
-    .result-value {
-      font-size: 24px;
-      color: #333;
-    }
-
-    .chart-container {
-      max-width: 800px;
-      margin: 30px auto;
-    }
-
-
-    .email-section {
-      margin-top: 30px;
-      text-align: center;
-    }
-
-    .email-section input {
-      width: 300px;
-      margin: 5px;
-      padding: 10px;
-      font-size: 14px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-
-    .email-section button {
-      padding: 10px 20px;
-      background-color: #b09d5e;
-      color: #fff;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-
-    .email-section button:hover {
-      background-color: #a08f5d;
-    }
-  </style>
-</head>
-<body>
-  <div class="calculator-container">
-    <h1>RISE Investment Calculator</h1>
-
-    <!-- Input Section -->
-    <div class="form-section">
-      <div class="form-group">
-        <label for="starting-amount">Starting Amount</label>
-        <input type="number" id="starting-amount" placeholder="$5000">
-      </div>
-      <div class="form-group">
-        <label for="additional-contribution">Additional Contribution</label>
-        <input type="number" id="additional-contribution" placeholder="$100">
-      </div>
-      <div class="form-group">
-        <label for="frequency">Contribution Frequency</label>
-        <select id="frequency">
-          <option value="annually">Annually</option>
-          <option value="monthly">Monthly</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="rate-of-return">Expected Rate of Return (%)</label>
-        <input type="number" id="rate-of-return" placeholder="8">
-      </div>
-      <div class="form-group">
-        <label for="years">Years to Grow</label>
-        <input type="number" id="years" placeholder="30">
-      </div>
+<div class="container796">
+    <div class="container797">
+    <h1>Investment Opportunities</h1>
+    <h2 class="calc" id="open-calculator">Open Investment Calculator</h2>
     </div>
-
-    <button class="calculate-btn" onclick="calculateInvestment()">Calculate</button>
-
-    <!-- Result Section -->
-    <div class="result-section">
-      <p class="result-value" id="result-value">This investment will be worth $0.</p>
+    <!-- Overlay Modal -->
+<div id="calculatorModal" class="modal1">
+    <div class="modal1-content">
+        <span class="close-button" id="close-calculator">&times;</span>
+        <div id="calculatorexpress_com-calculator" style="text-align: center;">Loading...</div>
+        <script src="https://firebasestorage.googleapis.com/v0/b/js-scripts-b71a4.appspot.com/o/scripts%2Fembed.js?alt=media&token=53c14d46-c103-4aa4-80f0-1d043988b399"></script>
+        <script type="text/javascript">
+            var embed = 'PHN0eWxlPmlmcmFtZXt3aWR0aDogMTAwJTttaW4td2lkdGg6IDEyMDBweDtib3JkZXI6bm9uZTt9QG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA2MDBweCkge2lmcmFtZSB7IGRpc3BsYXk6IGJsb2NrOyB3aWR0aDoxMDAlO21pbi13aWR0aDoyODBweDsgfTwvc3R5bGU+PGNlbnRlcj48aWZyYW1lIGlkPSJteUlmcmFtZSIgc3JjPSJodHRwczovL2NhbGN1bGF0b3JleHByZXNzLmNvbS9BUEk3L3RoYWlyNzc3LyIgc2Nyb2xsaW5nPSJubyIgYm9yZGVyPSJubyIgb25sb2FkPSJpRnJhbWVSZXNpemUoKSI+PC9pZnJhbWU+PC9jZW50ZXI+';
+            document.getElementById('calculatorexpress_com-calculator').innerHTML = atob(embed);
+        </script>
     </div>
+</div>
+<script>
+    // Get modal elements
+const modal1 = document.getElementById("calculatorModal");
+const openButton = document.getElementById("open-calculator");
+const closeButton = document.getElementById("close-calculator");
 
-    <!-- Chart Section -->
-    <div class="chart-container">
-      <canvas id="investmentChart"></canvas>
-    </div>
+// Show modal on button click
+openButton.addEventListener("click", () => {
+    modal1.style.display = "flex";
+});
 
-    <!-- Table Section -->
-    <table>
-      <thead>
-        <tr>
-          <th>Year</th>
-          <th>Starting Amount</th>
-          <th>Annual Contribution</th>
-          <th>Total Contribution</th>
-          <th>Interest Earned</th>
-          <th>End Balance</th>
-        </tr>
-      </thead>
-      <tbody id="result-table-body"></tbody>
-    </table>
+// Close modal on close button click
+closeButton.addEventListener("click", () => {
+    modal1.style.display = "none";
+});
 
-    <!-- Email Section -->
-    <div class="email-section">
-      <p>SEND RESULTS TO YOUR INBOX</p>
-      <input type="text" placeholder="Name">
-      <input type="email" placeholder="Email">
-      <button>Send Results</button>
-    </div>
-  </div>
-
-  <script>
-    function calculateInvestment() {
-      const startingAmount = parseFloat(document.getElementById('starting-amount').value) || 0;
-      const additionalContribution = parseFloat(document.getElementById('additional-contribution').value) || 0;
-      const frequency = document.getElementById('frequency').value === 'monthly' ? 12 : 1;
-      const rateOfReturn = parseFloat(document.getElementById('rate-of-return').value) / 100 || 0;
-      const years = parseInt(document.getElementById('years').value) || 0;
-
-      let balance = startingAmount;
-      let totalContribution = startingAmount;
-      let tableHTML = '';
-      const yearlyData = [];
-      
-      for (let year = 1; year <= years; year++) {
-        const interest = balance * rateOfReturn;
-        balance += interest + additionalContribution * frequency;
-        totalContribution += additionalContribution * frequency;
-
-        tableHTML += `
-          <tr>
-            <td>${2024 + year}</td>
-            <td>$${balance.toFixed(2)}</td>
-            <td>$${(additionalContribution * frequency).toFixed(2)}</td>
-            <td>$${totalContribution.toFixed(2)}</td>
-            <td>$${interest.toFixed(2)}</td>
-            <td>$${balance.toFixed(2)}</td>
-          </tr>
-        `;
-        yearlyData.push(balance);
-      }
-
-      document.getElementById('result-table-body').innerHTML = tableHTML;
-      document.getElementById('result-value').textContent = `This investment will be worth $${balance.toFixed(2)}.`;
-
-      const ctx = document.getElementById('investmentChart').getContext('2d');
-      new Chart(ctx, {
-        type: 'bar',
-        data: {
-          labels: Array.from({ length: years }, (_, i) => 2024 + i + 1),
-          datasets: [{
-            label: 'End Balance',
-            data: yearlyData,
-            backgroundColor: 'rgba(181, 161, 111, 0.8)',
-          }]
-        },
-        options: {
-          responsive: true,
-          scales: {
-            y: {
-              beginAtZero: true
-            }
-          }
-        }
-      });
+// Close modal on outside click
+window.addEventListener("click", (e) => {
+    if (e.target == modal1) {
+        modal1.style.display = "none";
     }
-  </script>
-</body>
-</html>
+});
 
-
+</script>
   </section>
 {{/if}}
