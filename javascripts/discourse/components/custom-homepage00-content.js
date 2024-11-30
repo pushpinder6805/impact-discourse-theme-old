@@ -6,7 +6,7 @@ export default class CustomHomepageContent extends Component {
 
   get isCustomHomepage() {
     const { currentURL } = this.router;
-    const customPaths = ['https://impactinvestingcommunity.com/login', '/login'];
+    const customPaths = ['/c/private-opportunities/phase2-dashboard/68', '/c/private-opportunities/phase2-dashboard/68'];
     
     console.log("Current URL:", currentURL);  // Debugging: Check the URL
     return customPaths.includes(currentURL);
