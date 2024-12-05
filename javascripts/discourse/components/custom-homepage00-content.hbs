@@ -1,0 +1,1104 @@
+{{#if this.isCustomHomepage}}
+<section class="course-overview2">
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page New</title>
+    <style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f5f2;
+    color: #4a503d;
+    padding: 20px;
+}
+
+.membership-plans {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.membership-plans h2 {
+    font-size: 1.8rem;
+    color: #b8a163;
+    margin-bottom: 30px;
+}
+
+.plans {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.plan {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+    text-align: left;
+    border: 2px solid transparent;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.plan:hover {
+    transform: translateY(-5px);
+    border-color: #b8a163;
+}
+
+.plan h3 {
+    font-size: 1.2rem;
+    color: #4a503d;
+    margin-bottom: 15px;
+}
+
+.plan ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 20px;
+    color: #6e6e6e;
+    line-height: 1.6;
+}
+
+.plan ul li {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.plan .price {
+    font-size: 1.2rem;
+    color: #4a503d;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 1rem;
+    text-align: center;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.basic-button {
+    background-color: #fff;
+    color: #4a503d;
+    border: 2px solid #4a503d;
+}
+
+.basic-button:hover {
+    background-color: #4a503d;
+    color: #fff;
+}
+
+.premium-button {
+    background-color: #b8a163;
+    color: #fff;
+    border: none;
+}
+
+.premium-button:hover {
+    background-color: #4a503d;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .plans {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .plan {
+        max-width: 90%;
+    }
+}
+
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f5f2;
+    color: #4a503d;
+    padding: 20px;
+}
+
+.impact-investments {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.impact-investments h2 {
+    font-size: 1.8rem;
+    color: #b8a163;
+    margin-bottom: 30px;
+}
+
+.investment-cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 300px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.card-tags {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.card-tags span {
+    background-color: #e8e4d9;
+    color: #4a503d;
+    font-size: 0.8rem;
+    padding: 5px 10px;
+    border-radius: 15px;
+}
+
+.card p {
+    font-size: 0.9rem;
+    color: #6e6e6e;
+    margin-bottom: 15px;
+}
+
+.card ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 15px;
+}
+
+.card ul li {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.card ul li strong {
+    color: #4a503d;
+}
+
+.learn-more {
+    font-size: 0.9rem;
+    color: #b8a163;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.learn-more:hover {
+    text-decoration: underline;
+}
+
+.cta-button {
+    background-color: #b8a163;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #4a503d;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .investment-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        max-width: 90%;
+    }
+}
+
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f5f2;
+    color: #4a503d;
+    padding: 20px;
+}
+
+.premium-resources {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.premium-resources h2 {
+    font-size: 1.8rem;
+    color: #b8a163;
+    margin-bottom: 20px;
+}
+
+.resources-box {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.resources-box h3 {
+    font-size: 1.2rem;
+    color: #4a503d;
+    margin-bottom: 20px;
+}
+
+.resources-box ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.resources-box ul li {
+    font-size: 1rem;
+    color: #6e6e6e;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.resources-box ul li span {
+    color: #b8a163;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.cta-button {
+    display: block;
+    background-color: #b8a163;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    margin: 20px auto 0;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #4a503d;
+}
+
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f3ec;
+    color: #4a503d;
+    padding: 20px;
+}
+
+.insider-access {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.insider-access h2 {
+    font-size: 1.8rem;
+    color: #b8a163;
+    margin-bottom: 10px;
+}
+
+.insider-access p {
+    font-size: 1rem;
+    color: #6e6e6e;
+    margin-bottom: 30px;
+}
+
+.live-event {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    overflow: hidden;
+    max-width: 800px;
+    margin: 0 auto 20px;
+}
+
+.event-details {
+    display: flex;
+    flex: 2;
+    text-align: left;
+    padding: 20px;
+    gap: 20px;
+    border-right: 1px solid #e8e4d9;
+}
+
+.event-date {
+    text-align: center;
+    color: #b8a163;
+}
+
+.event-date h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.event-info h3 {
+    font-size: 1.2rem;
+    color: #4a503d;
+    margin-bottom: 10px;
+}
+
+.event-info p {
+    font-size: 0.9rem;
+    color: #6e6e6e;
+    line-height: 1.5;
+}
+
+.speakers {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.speaker img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.speaker p {
+    font-size: 0.9rem;
+    color: #4a503d;
+}
+
+.cta-button {
+    background-color: #4a503d;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 40px;
+}
+
+.cta-button:hover {
+    background-color: #b8a163;
+}
+
+.past-events-title {
+    font-size: 1.2rem;
+    color: #4a503d;
+    margin-bottom: 20px;
+}
+
+.past-events {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.past-events img {
+    width: 300px;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .live-event {
+        flex-direction: column;
+    }
+
+    .event-details {
+        border-right: none;
+        border-bottom: 1px solid #e8e4d9;
+    }
+
+    .speakers {
+        flex-direction: column;
+    }
+
+    .past-events img {
+        width: 90%;
+    }
+}
+
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f5f2;
+    color: #4a503d;
+    padding: 20px;
+}
+
+.investment-section {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.investment-section h2 {
+    font-size: 1.8rem;
+    color: #b8a163;
+    margin-bottom: 30px;
+}
+
+.investment-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.card {
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    width: 100%;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-image img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px 0 0 10px;
+}
+
+.card-content {
+    padding: 15px;
+    text-align: left;
+    flex: 1;
+}
+
+.card-content h3 {
+    font-size: 1.2rem;
+    color: #4a503d;
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    font-size: 0.9rem;
+    color: #6e6e6e;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.card-content ul {
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+.card-content ul li {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.card-content ul li strong {
+    color: #4a503d;
+}
+
+.tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.tags span {
+    background-color: #e8e4d9;
+    color: #4a503d;
+    font-size: 0.8rem;
+    padding: 5px 10px;
+    border-radius: 15px;
+    display: inline-block;
+}
+
+.cta-button {
+    background-color: #4a503d;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #b8a163;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .card-image img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .card-content {
+        text-align: center;
+    }
+
+    .investment-cards {
+        flex-direction: column;
+    }
+}
+
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f5f2;
+    color: #4a503d;
+    padding: 20px;
+}
+
+.audiences {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.audiences .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.audience {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.audience:hover {
+    transform: translateY(-10px);
+}
+
+.audience img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.audience h3 {
+    font-size: 1.2rem;
+    color: #4a503d;
+    margin-bottom: 10px;
+}
+
+.audience p {
+    font-size: 0.9rem;
+    color: #6e6e6e;
+    line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .audience {
+        max-width: 90%;
+    }
+}
+
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f5f2;
+    color: #4a503d;
+}
+
+.features {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.features h2 {
+    font-size: 1.8rem;
+    color: #b8a163;
+    margin-bottom: 20px;
+}
+
+.feature-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 300px;
+    text-align: center;
+}
+
+.card .icon img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 1.2rem;
+    color: #b8a163;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 0.9rem;
+    color: #6e6e6e;
+    line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .feature-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        max-width: 90%;
+    }
+}
+
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4a503d;
+    color: #fff;
+    padding: 20px;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    gap: 20px;
+}
+
+.text {
+    flex: 1 1 50%;
+    max-width: 500px;
+}
+
+.text .badge {
+    background-color: #d72c16;
+    color: white;
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 10px 15px;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.text h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.text p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.text button {
+    background-color: #ccb561;
+    color: #4a503d;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.text button:hover {
+    background-color: #b59c50;
+}
+
+.image {
+    flex: 1 1 50%;
+    max-width: 600px;
+}
+
+.image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text {
+        max-width: 100%;
+    }
+
+    .image {
+        max-width: 100%;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <div class="content">
+            <div class="text">
+                <h1>Changing the Way Money Creates Impact</h1>
+                <p>
+                    Access exclusive vetted private investments that deliver competitive financial 
+                    returns while driving meaningful social and environmental change.
+                </p>
+                <button>Create an investor account now</button>
+            </div>
+            <div class="image">
+                <img src="https://via.placeholder.com/600x400" alt="Group of people">
+            </div>
+        </div>
+    </div>
+    <section class="features">
+        <h2>Exclusive Access to Private Market Investments</h2>
+        <div class="feature-cards">
+            <div class="card">
+                <div class="icon">
+                    <img src="https://via.placeholder.com/50" alt="Expert Sourcing Icon">
+                </div>
+                <h3>Expert sourcing & accessible minimums</h3>
+                <p>
+                    Gain exclusive access to rigorously vetted opportunities starting at $10K, designed for purpose-driven investors.
+                </p>
+            </div>
+            <div class="card">
+                <div class="icon">
+                    <img src="https://via.placeholder.com/50" alt="Streamlined Process Icon">
+                </div>
+                <h3>Streamlined Process</h3>
+                <p>
+                    Our platform takes the complexity out of private market investing—what used to take days now takes minutes.
+                </p>
+            </div>
+            <div class="card">
+                <div class="icon">
+                    <img src="https://via.placeholder.com/50" alt="Competitive Advantage Icon">
+                </div>
+                <h3>Competitive Advantage</h3>
+                <p>
+                    Stay ahead of the rising demand for impact investments with opportunities aligned to your values and financial goals.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="audiences">
+        <div class="container">
+            <div class="audience">
+                <img src="https://via.placeholder.com/150" alt="Individuals & Families">
+                <h3>Individuals & Families</h3>
+                <p>
+                    Access private investments designed to accelerate the social and environmental transformation you care about while building your financial future.
+                </p>
+            </div>
+            <div class="audience">
+                <img src="https://via.placeholder.com/150" alt="Financial Advisors & Family Offices">
+                <h3>Financial Advisors & Family Offices</h3>
+                <p>
+                    Access private investments designed to accelerate the social and environmental transformation you care about while building your financial future.
+                </p>
+            </div>
+            <div class="audience">
+                <img src="https://via.placeholder.com/150" alt="Donor-Advised Funds & Community Foundations">
+                <h3>Donor-Advised Funds & Community Foundations</h3>
+                <p>
+                    Provide donors with strategic, vetted options to put philanthropic capital to work for measurable, lasting outcomes.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="investment-section">
+        <h2>Discover Impact Investments That Deliver Financial and Societal Returns</h2>
+        <div class="investment-cards">
+            <div class="card">
+                <div class="card-image">
+                    <img src="https://via.placeholder.com/150" alt="Affordable Housing">
+                </div>
+                <div class="card-content">
+                    <h3>Affordable Housing Fund</h3>
+                    <p>This property is near proximity to employment hubs and green, promoting sustainable living.</p>
+                    <ul>
+                        <li>Projected Return: <strong>22%</strong></li>
+                        <li>Investment Rate: <strong>min $100</strong></li>
+                        <li>Investment Term: <strong>5 years</strong></li>
+                    </ul>
+                    <div class="tags">
+                        <span>Housing</span>
+                        <span>Community</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                    <img src="https://via.placeholder.com/150" alt="Financial Fund">
+                </div>
+                <div class="card-content">
+                    <h3>Financial Fund</h3>
+                    <p>This venture helps consumers invalidate credit card and other consumer debt.</p>
+                    <ul>
+                        <li>Projected Return: <strong>22%</strong></li>
+                        <li>Investment Rate: <strong>min $50,000</strong></li>
+                        <li>Investment Term: <strong>5-7 years</strong></li>
+                    </ul>
+                    <div class="tags">
+                        <span>Social Justice</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="cta-button">Join Now to Access More Exclusive Deals</button>
+    </section>
+    <section class="insider-access">
+        <h2>Gain Insider Access to the Latest Opportunities</h2>
+        <p>Join live sessions featuring founders and fund managers presenting vetted impact investments.</p>
+
+        <div class="live-event">
+            <div class="event-details">
+                <div class="event-date">
+                    <h3>DEC 5</h3>
+                    <p>12:00 PM PST</p>
+                    <p>LinkedIn Live</p>
+                </div>
+                <div class="event-info">
+                    <h3>INVESTING IN RENEWABLE ENERGY:</h3>
+                    <p>WHY IT MATTERS AND THE FUTURE OF RENEWABLE ENERGY INVESTMENTS</p>
+                    <p>With Heather Beatty <br>CEO of ScopeFour Capital</p>
+                </div>
+            </div>
+            <div class="speakers">
+                <div class="speaker">
+                    <img src="https://via.placeholder.com/100" alt="Heather Beatty">
+                    <p>Heather Beatty</p>
+                </div>
+                <div class="speaker">
+                    <img src="https://via.placeholder.com/100" alt="Tanaha Hairston">
+                    <p>Tanaha Hairston</p>
+                </div>
+            </div>
+        </div>
+
+        <button class="cta-button">Reserve Your Spot in the Next Forum</button>
+
+        <h3 class="past-events-title">Past Events</h3>
+        <div class="past-events">
+            <img src="https://via.placeholder.com/300x150" alt="Past Event 1">
+            <img src="https://via.placeholder.com/300x150" alt="Past Event 2">
+            <img src="https://via.placeholder.com/300x150" alt="Past Event 3">
+        </div>
+    </section>
+    <section class="premium-resources">
+        <h2>Tailored Resources for Every Stage of Your Impact Journey</h2>
+        <div class="resources-box">
+            <h3>Offer Premium Members Access To:</h3>
+            <ul>
+                <li><span>✔</span> Exclusive articles, guides, and webinars.</li>
+                <li><span>✔</span> Insights on impact trends, legal structures, and portfolio management.</li>
+                <li><span>✔</span> Practical tools like an Investment Calculator.</li>
+            </ul>
+            <button class="cta-button">Upgrade to Premium for Exclusive Resources</button>
+        </div>
+    </section>
+    <section class="impact-investments">
+        <h2>SKIP - Discover Impact Investments That Deliver Financial and Societal Returns</h2>
+        <div class="investment-cards">
+            <div class="card">
+                <img src="https://via.placeholder.com/150" alt="Housing and Community">
+                <div class="card-tags">
+                    <span>Housing</span>
+                    <span>Community</span>
+                </div>
+                <p>This property is near proximity to employment hubs and green, promoting sustainable living.</p>
+                <ul>
+                    <li>Projected Return: <strong>22%</strong></li>
+                    <li>Investment Rate: <strong>min $100</strong></li>
+                    <li>Investment Term: <strong>5 years</strong></li>
+                </ul>
+                <a href="#" class="learn-more">Learn more <span>ℹ</span></a>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/150" alt="Social Justice">
+                <div class="card-tags">
+                    <span>Social Justice</span>
+                </div>
+                <p>This venture helps consumers invalidate credit card and other consumer debt.</p>
+                <ul>
+                    <li>Projected Return: <strong>22%</strong></li>
+                    <li>Investment Rate: <strong>min $50,000</strong></li>
+                    <li>Investment Term: <strong>5-7 years</strong></li>
+                </ul>
+                <a href="#" class="learn-more">Learn more <span>ℹ</span></a>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/150" alt="Environmental Conservation">
+                <div class="card-tags">
+                    <span>Environmental Conservation</span>
+                </div>
+                <p>This venture mission is to invite more people to invest in climate change.</p>
+                <ul>
+                    <li>Projected Return: <strong>12%</strong></li>
+                    <li>Investment Rate: <strong>min $100</strong></li>
+                    <li>Investment Term: <strong>5 years</strong></li>
+                </ul>
+                <a href="#" class="learn-more">Learn more <span>ℹ</span></a>
+            </div>
+        </div>
+        <button class="cta-button">Join Now to Access Exclusive Deals</button>
+    </section>
+    <section class="membership-plans">
+        <h2>SKIP - Join a Community Built for Serious Investors</h2>
+        <div class="plans">
+            <div class="plan basic-plan">
+                <h3>Basic Membership:</h3>
+                <ul>
+                    <li>Limited deal previews</li>
+                    <li>Access to a public forum and select educational content.</li>
+                </ul>
+                <p class="price">Free</p>
+                <button class="cta-button basic-button">Create an investor account now</button>
+            </div>
+            <div class="plan premium-plan">
+                <h3>Premium Membership:</h3>
+                <ul>
+                    <li>Access to exclusive, vetted deal flow.</li>
+                    <li>Monthly forums with founders and fund managers.</li>
+                    <li>SPV participation with other members.</li>
+                    <li>Direct access to innovators and investment leaders.</li>
+                </ul>
+                <p class="price">$3,000/annual</p>
+                <button class="cta-button premium-button">Become a premium member</button>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+</section>
+{{/if}}
+
