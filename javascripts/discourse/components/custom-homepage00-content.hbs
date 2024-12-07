@@ -223,6 +223,106 @@
     color: #535844;
 }
 
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.investment-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.investment-heading {
+    color: #b19547;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.investment-card {
+    display: flex;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+    align-items: center;
+}
+
+.investment-image img {
+    width: 150px;
+    height: 100px;
+    border-radius: 4px;
+    margin-right: 20px;
+}
+
+.investment-details {
+    text-align: left;
+    flex: 1;
+}
+
+.investment-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 0 10px;
+}
+
+.investment-description {
+    font-size: 14px;
+    color: #666;
+    margin: 0 0 10px;
+}
+
+.investment-info {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 10px;
+}
+
+.investment-info li {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.investment-tags {
+    display: flex;
+    gap: 10px;
+}
+
+.tag {
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    background: #f0f0f0;
+    color: #666;
+    display: inline-block;
+}
+
+.join-now-btn {
+    background: #b19547;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+
+.join-now-btn:hover {
+    background: #9e8240;
+}
+
+
 
 
     </style>
@@ -346,6 +446,67 @@
         <p>Provide donors with strategic, vetted options to put philanthropic capital to work for measurable, lasting outcomes.</p>
     </div>
 </div>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impact Investments</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="investment-container">
+        <h1 class="investment-heading">
+            Discover Impact Investments That Deliver<br> Financial and Societal Returns
+        </h1>
+
+        <div class="investment-card">
+            <div class="investment-image">
+                <img src="https://via.placeholder.com/300x200" alt="Affordable Housing Fund">
+            </div>
+            <div class="investment-details">
+                <h2 class="investment-title">Affordable Housing Fund</h2>
+                <p class="investment-description">
+                    This property is near proximity to employment hubs and green, promoting sustainable living.
+                </p>
+                <ul class="investment-info">
+                    <li>Projected Return: <strong>22%</strong></li>
+                    <li>Investment Rate: <strong>min $100</strong></li>
+                    <li>Investment Term: <strong>5 years</strong></li>
+                </ul>
+                <div class="investment-tags">
+                    <span class="tag">Housing</span>
+                    <span class="tag">Community</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="investment-card">
+            <div class="investment-image">
+                <img src="https://via.placeholder.com/300x200" alt="Climate Solutions">
+            </div>
+            <div class="investment-details">
+                <h2 class="investment-title">Marketplace for impact investing in climate solutions</h2>
+                <p class="investment-description">
+                    Powered by heroic entrepreneurs and innovators who are not content to wait for big energy and leaders in government to get their act together.
+                </p>
+                <ul class="investment-info">
+                    <li>Projected Return: <strong>22%</strong></li>
+                    <li>Investment Rate: <strong>min $50,000</strong></li>
+                    <li>Investment Term: <strong>5-7 years</strong></li>
+                </ul>
+                <div class="investment-tags">
+                    <span class="tag">Environmental</span>
+                </div>
+            </div>
+        </div>
+
+        <button class="join-now-btn">Join Now to Access More Exclusive Deals</button>
+    </div>
+</body>
+</html>
+
 
 </body>
 </html>
