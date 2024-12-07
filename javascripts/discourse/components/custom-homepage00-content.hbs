@@ -445,11 +445,14 @@ body {
 }
 
 .resources-box {
+    margin-left: 28em;
+    display: grid
+;
+    width: 41%;
     background: #fff;
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    text-align: left;
 }
 
 .resources-heading {
@@ -493,6 +496,85 @@ body {
 .upgrade-btn:hover {
     background: #9e8240;
 }
+/* General body styling */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9f5ef;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Unique container wrapper */
+.unique-container-wrapper {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Header title */
+.unique-header-title {
+  font-size: 24px;
+  color: #b59a5e;
+  margin-bottom: 20px;
+}
+
+/* Card styling */
+.unique-card-box {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  padding: 25px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.unique-card-heading {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* List styles */
+.unique-card-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.unique-card-item {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.unique-check-icon {
+  color: #4caf50;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+/* Button styling */
+.unique-cta-button {
+  background-color: #b59a5e;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.unique-cta-button:hover {
+  background-color: #a48853;
+}
+
 
 
     </style>
@@ -751,18 +833,24 @@ body {
             </div>
                     </div>
     </div>
-        <div class="impact-container">
-        <h2 class="impact-heading">Tailored Resources for Every Stage of Your Impact Journey</h2>
-        <div class="resources-box">
-            <p class="resources-heading">Offer Premium Members Access To:</p>
-            <ul class="resources-list">
-                <li class="resources-item"><span class="check-icon">&#10003;</span> Exclusive articles, guides, and webinars.</li>
-                <li class="resources-item"><span class="check-icon">&#10003;</span> Insights on impact trends, legal structures, and portfolio management.</li>
-                <li class="resources-item"><span class="check-icon">&#10003;</span> Practical tools like an Investment Calculator.</li>
-            </ul>
-            <button class="upgrade-btn">Upgrade to Premium for Exclusive Resources</button>
-        </div>
+         <div class="unique-container-wrapper">
+    <h1 class="unique-header-title">Tailored Resources for Every Stage of Your Impact Journey</h1>
+    <div class="unique-card-box">
+      <h2 class="unique-card-heading">Offer Premium Members Access To:</h2>
+      <ul class="unique-card-list">
+        <li class="unique-card-item">
+          <span class="unique-check-icon">✔</span> Exclusive articles, guides, and webinars.
+        </li>
+        <li class="unique-card-item">
+          <span class="unique-check-icon">✔</span> Insights on impact trends, legal structures, and portfolio management.
+        </li>
+        <li class="unique-card-item">
+          <span class="unique-check-icon">✔</span> Practical tools like an Investment Calculator.
+        </li>
+      </ul>
+      <button class="unique-cta-button">Upgrade to Premium for Exclusive Resources</button>
     </div>
+  </div>
 
 </body>
 </html>
