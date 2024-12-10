@@ -275,6 +275,161 @@ button:hover {
   background: #a17d2f;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #f7f7f7;
+  color: #333;
+}
+
+.peachy-apricot-breeze {
+  background: #dce2cc; /* Pale greenish background */
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.luminous-parakeet-panel {
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.verdant-amber-crest {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #9b8f4c; /* Adjust hue as necessary */
+  margin-bottom: 20px;
+}
+
+.misty-plum-subtext {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.crimson-tortoise-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.marble-daisy-card {
+  background: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  width: 520px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.rustic-coconut-detail {
+  background: #fff;
+  padding: 20px;
+  flex: 1 1 50%;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.rustic-coconut-detail h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+  color: #333;
+  text-transform: uppercase;
+}
+
+.rustic-coconut-detail p {
+  font-size: 0.9rem;
+  margin: 0 0 10px 0;
+  line-height: 1.4;
+}
+
+.whispering-kiwi-role {
+  color: #555;
+}
+
+.azure-firefly-speakers {
+  background: #9da985; /* greenish background */
+  padding: 20px;
+  box-sizing: border-box;
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.opal-jasmine-person {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.copper-lotus-portrait {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+
+.copper-lotus-portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.saffron-orchid-tag {
+  font-size: 0.8rem;
+  font-weight: 700;
+  background: #b79846; /* dark gold for name background */
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+.midnight-seashell-logo img {
+  width: 80px;
+  margin-top: 10px;
+}
+
+.ginger-lagoon-buttonzone {
+  margin-top: 40px;
+}
+
+.honeydew-camelia-clicker {
+  background: #b79846;
+  color: #fff;
+  border: none;
+  padding: 15px 40px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.honeydew-camelia-clicker:hover {
+  background: #a17d2f;
+}
+
+@media (max-width: 768px) {
+  .marble-daisy-card {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .rustic-coconut-detail,
+  .azure-firefly-speakers {
+    width: 100%;
+  }
+}
+
+
 </style>
 </head>
 <body>
@@ -410,6 +565,75 @@ var x = setInterval(function() {
       </div>
     </div>
 
+  </div>
+</section>
+
+<section class="peachy-apricot-breeze">
+  <div class="luminous-parakeet-panel">
+    <h2 class="verdant-amber-crest">Gain Insider Access to the Past Webinars</h2>
+    <p class="misty-plum-subtext">
+      Join live sessions featuring founders and fund managers presenting vetted impact investments.
+    </p>
+
+    <div class="crimson-tortoise-grid">
+      <!-- Webinar Card 1 -->
+      <div class="marble-daisy-card">
+        <div class="rustic-coconut-detail">
+          <h3>INVESTING IN RENEWABLE ENERGY:</h3>
+          <p>WHY IT MATTERS AND THE FUTURE OF RENEWABLE ENERGY INVESTMENTS</p>
+          <p class="whispering-kiwi-role">With Heather Beatty<br>CEO of ScopeFour Capital</p>
+        </div>
+        <div class="azure-firefly-speakers">
+          <div class="opal-jasmine-person">
+            <div class="copper-lotus-portrait">
+              <img src="heather.jpg" alt="Heather Beatty">
+            </div>
+            <span class="saffron-orchid-tag">HEATHER BEATTY</span>
+          </div>
+          <div class="opal-jasmine-person">
+            <div class="copper-lotus-portrait">
+              <img src="tanaha.jpg" alt="Tanaha Hairston">
+            </div>
+            <span class="saffron-orchid-tag">TANAHA HAIRSTON</span>
+          </div>
+          <div class="midnight-seashell-logo">
+            <img src="scopefour_logo.png" alt="ScopeFour Capital Logo">
+          </div>
+        </div>
+      </div>
+
+      <!-- Webinar Card 2 (duplicate as needed) -->
+      <div class="marble-daisy-card">
+        <div class="rustic-coconut-detail">
+          <h3>INVESTING IN RENEWABLE ENERGY:</h3>
+          <p>WHY IT MATTERS AND THE FUTURE OF RENEWABLE ENERGY INVESTMENTS</p>
+          <p class="whispering-kiwi-role">With Heather Beatty<br>CEO of ScopeFour Capital</p>
+        </div>
+        <div class="azure-firefly-speakers">
+          <div class="opal-jasmine-person">
+            <div class="copper-lotus-portrait">
+              <img src="heather.jpg" alt="Heather Beatty">
+            </div>
+            <span class="saffron-orchid-tag">HEATHER BEATTY</span>
+          </div>
+          <div class="opal-jasmine-person">
+            <div class="copper-lotus-portrait">
+              <img src="tanaha.jpg" alt="Tanaha Hairston">
+            </div>
+            <span class="saffron-orchid-tag">TANAHA HAIRSTON</span>
+          </div>
+          <div class="midnight-seashell-logo">
+            <img src="scopefour_logo.png" alt="ScopeFour Capital Logo">
+          </div>
+        </div>
+      </div>
+
+      <!-- Add more cards as needed -->
+    </div>
+
+    <div class="ginger-lagoon-buttonzone">
+      <button class="honeydew-camelia-clicker">Register to Watch Replays</button>
+    </div>
   </div>
 </section>
 
