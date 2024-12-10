@@ -296,16 +296,18 @@ body {
 }
 
 .copper-moonlit-phrase {
-  font-size: 2rem;
-  font-weight: 600;
-  color: #9b8f4c; /* Adjust hue as needed */
-  margin-bottom: 20px;
+    font-family: 'Montserrat';
+    font-size: 2rem;
+    font-weight: 600;
+    color: #9b8f4c;
+    margin-bottom: 20px;
 }
 
 .mango-fern-whisper {
-  font-size: 1rem;
-  color: #666;
-  margin-bottom: 40px;
+    font-family: 'Montserrat';
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 40px;
 }
 
 .crimson-butterfly-grove {
@@ -415,6 +417,148 @@ body {
     font-weight: 600;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #fff;
+  color: #333;
+}
+
+.subscribe-section {
+  padding: 60px 20px;
+  text-align: center;
+  background: #fff;
+}
+
+.subscribe-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.subscribe-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #6f7b50; /* Adjust as needed for the greenish heading color */
+  margin-bottom: 40px;
+}
+
+.subscribe-content {
+  display: flex;
+  flex-wrap: wrap;
+  background: #f4f7ee; /* Pale greenish background */
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Left Side (List) */
+.subscribe-left {
+  background: #f4f7ee;
+  flex: 1 1 50%;
+  padding: 40px;
+  box-sizing: border-box;
+  min-width: 300px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.subscribe-subheading {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #3f4d2e; /* Slightly darker green text */
+}
+
+.subscribe-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  line-height: 1.6;
+  color: #596442; /* Dark green for text */
+}
+
+.subscribe-list li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+}
+
+.subscribe-list li::before {
+  content: "✔";
+  color: #4d7a3b; /* Green check mark */
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translateY(2px);
+  font-size: 1rem;
+}
+
+/* Right Side (Form) */
+.subscribe-right {
+  background: #e1e7ce; /* Slightly darker greenish background for the form */
+  flex: 1 1 50%;
+  padding: 40px;
+  box-sizing: border-box;
+  min-width: 300px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.subscribe-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.subscribe-form input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.subscribe-button {
+  background: #b79846; /* Gold hue */
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.subscribe-button:hover {
+  background: #a17d2f; 
+}
+
+@media (max-width: 768px) {
+  .subscribe-content {
+    flex-direction: column;
+    border-radius: 10px; /* maintain rounded corners */
+  }
+  
+  .subscribe-left, .subscribe-right {
+    border-radius: 0;
+    border: none;
+  }
+  
+  .subscribe-left {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  .subscribe-right {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+}
 
 
 
@@ -647,6 +791,35 @@ var x = setInterval(function() {
 
     <div class="jade-firefly-buttonwrap">
       <button class="ginger-snowflake-button">Register to Watch Replays</button>
+    </div>
+  </div>
+</section>
+
+<section class="subscribe-section">
+  <div class="subscribe-container">
+    <h2 class="subscribe-heading">Register for Monthly RISING Impact Series</h2>
+    
+    <div class="subscribe-content">
+      <div class="subscribe-left">
+        <h3 class="subscribe-subheading">What You’ll Learn Every Session:</h3>
+        <ul class="subscribe-list">
+          <li>How To Invest Passively In Self-Storage For Cash Flow And Growth</li>
+          <li>What Makes Self-Storage So Recession-Resilient</li>
+          <li>Self-Storage Performance Vs Other Commercial Real Estate</li>
+          <li>Strategies To Evaluate And Select Profitable Self-Storage Investments</li>
+          <li>Expert Tips To Maximize Returns & Minimize Risk</li>
+          <li>Live Q&A to Give You the Answers You Need</li>
+        </ul>
+      </div>
+      
+      <div class="subscribe-right">
+        <form class="subscribe-form">
+          <input type="text" placeholder="First Name" required>
+          <input type="text" placeholder="Last Name" required>
+          <input type="email" placeholder="Email" required>
+          <button type="submit" class="subscribe-button">Subscribe</button>
+        </form>
+      </div>
     </div>
   </div>
 </section>
