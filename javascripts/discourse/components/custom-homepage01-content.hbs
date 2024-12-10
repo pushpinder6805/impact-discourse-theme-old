@@ -1,6 +1,228 @@
 {{#if this.isCustomHomepage}}
 <section class="course-overview22">
-  
+  <!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #f7f7f7;
+}
+
+.container {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(rgba(1,0,0,0.9), rgba(0,0,0,0.1)),
+    url('https://images.unsplash.com/photo-1508918979902-1db8643af094?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YiVDMyVBMnRpbWVudHMlMjBoYXV0c3xlbnwwfHwwfHx8MA%3D%3D') no-repeat center center;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+  padding: 60px 20px;
+  box-sizing: border-box;
+}
+
+.header {
+  margin-bottom: 40px;
+}
+
+.series-title {
+  font-size: 1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 0 0 10px 0;
+}
+
+.main-title {
+  font-size: 2rem;
+  margin: 0 0 10px 0;
+  font-weight: 700;
+}
+
+.event-info {
+  font-size: 1rem;
+  margin: 0 0 30px 0;
+}
+
+.countdown-container {
+  display: inline-flex;
+  background: #b79846;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+
+.time-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 10px;
+}
+
+.time-number {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.time-label {
+  font-size: 0.85rem;
+  text-transform: lowercase;
+  margin-top: 5px;
+}
+
+.form-container {
+  background: rgba(255,255,255,0.9);
+  border-radius: 10px;
+  padding: 30px;
+  color: #333;
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.form-container h3 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.form-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.form-row input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: start;
+  font-size: 0.8rem;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.checkbox-label input {
+  margin-right: 10px;
+  margin-top: 3px;
+}
+
+button {
+  width: 100%;
+  background: #b79846;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  text-align: center;
+}
+
+button:hover {
+  background: #a17d2f;
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="header">
+    <h2 class="series-title">IMPACT INVESTING MASTERY SERIES</h2>
+    <h1 class="main-title">Maximizing DAFs for Impact Investing</h1>
+    <p class="event-info">Thursday | December 12 | 12:00 PM EST</p>
+  </div>
+
+  <div class="countdown-container">
+    <div class="time-box">
+      <span class="time-number" id="days">00</span>
+      <span class="time-label">days</span>
+    </div>
+    <div class="time-box">
+      <span class="time-number" id="hours">00</span>
+      <span class="time-label">hours</span>
+    </div>
+    <div class="time-box">
+      <span class="time-number" id="minutes">00</span>
+      <span class="time-label">minutes</span>
+    </div>
+    <div class="time-box">
+      <span class="time-number" id="seconds">00</span>
+      <span class="time-label">seconds</span>
+    </div>
+  </div>
+
+  <div class="form-container">
+    <h3>Register & Access Replay</h3>
+    <form>
+      <div class="form-row">
+        <input type="text" placeholder="First Name" required />
+        <input type="text" placeholder="Last Name" required />
+      </div>
+      <div class="form-row">
+        <input type="email" placeholder="Email" required />
+        <input type="tel" placeholder="Phone" />
+      </div>
+      <label class="checkbox-label">
+        <input type="checkbox" />
+        I want to receive automated, pre-recorded & manual communication via the provided contact information.
+      </label>
+      <button type="submit">Register for this Series</button>
+    </form>
+  </div>
+
+</div>
+
+<script>
+// Set the date and time of the event (UTC or local as needed)
+var countDownDate = new Date("Dec 12, 2024 12:00:00 EST").getTime();
+
+// Update the countdown every 1 second
+var x = setInterval(function() {
+  var now = new Date().getTime();
+  var distance = countDownDate - now;
+
+  // Calculate time left
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / 
+  (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / 
+  (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display results
+  document.getElementById("days").innerHTML = (days < 10 ? "0" + days : days);
+  document.getElementById("hours").innerHTML = (hours < 10 ? "0" + hours : hours);
+  document.getElementById("minutes").innerHTML = (minutes < 10 ? "0" + minutes : minutes);
+  document.getElementById("seconds").innerHTML = (seconds < 10 ? "0" + seconds : seconds);
+
+  // If the countdown finishes
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("days").innerHTML = "00";
+    document.getElementById("hours").innerHTML = "00";
+    document.getElementById("minutes").innerHTML = "00";
+    document.getElementById("seconds").innerHTML = "00";
+  }
+}, 1000);
+</script>
+
+</body>
+</html>
+
 </section>
 {{/if}}
 
