@@ -10,6 +10,85 @@
   padding: 0;
   font-family: Arial, sans-serif;
   background: #f7f7f7;
+  color: #333;
+}
+
+.container01 {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 40px;
+  color: #7d8b55; /* Adjust this greenish hue as needed */
+}
+
+.speaker {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 50px;
+}
+
+.speaker-image {
+  flex: 0 0 150px;
+  margin-right: 40px;
+}
+
+.speaker-image img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+}
+
+.speaker-info {
+  flex: 1;
+}
+
+.speaker-info h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 0 5px 0;
+  color: #333;
+}
+
+.company {
+  font-weight: 500;
+  margin: 0 0 20px 0;
+  color: #666;
+}
+
+.bio {
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media(max-width: 600px) {
+  .speaker {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .speaker-image {
+    margin: 0 0 20px 0;
+  }
+
+  .speaker-info {
+    text-align: left;
+  }
+}
+
+    body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #f7f7f7;
 }
 
 .learn-section {
@@ -20,10 +99,11 @@
 }
 
 .learn-section h2 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 30px;
-  color: #4d5733; /* Slightly darker green-gray for heading text */
+    font-family: 'Montserrat';
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: #4d5733;
 }
 
 .learn-section ul {
@@ -36,11 +116,12 @@
 }
 
 .learn-section li {
-  position: relative;
-  padding-left: 30px;
-  margin-bottom: 15px;
-  font-size: 1rem;
-  color: #333;
+    font-family: 'Montserrat';
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    color: #4a5841;
 }
 
 /* Add a green checkmark before each list item */
@@ -284,6 +365,47 @@ var x = setInterval(function() {
     <li>Expert Tips To Maximize Returns & Minimize Risk</li>
     <li>Live Q&A to Give You the Answers You Need</li>
   </ul>
+</section>
+
+<section class="speakers-section">
+  <div class="container01">
+    <h2 class="section-title">Meet Your Speakers</h2>
+
+    <div class="speaker">
+      <div class="speaker-image">
+        <img src="speaker1.jpg" alt="Speaker 1">
+      </div>
+      <div class="speaker-info">
+        <h3>Host: Tanaha Hairston</h3>
+        <p class="company">IIC Capital</p>
+        <p class="bio">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </div>
+    </div>
+
+    <div class="speaker">
+      <div class="speaker-image">
+        <img src="speaker2.jpg" alt="Speaker 2">
+      </div>
+      <div class="speaker-info">
+        <h3>Guest Speaker: Maggie Spicer</h3>
+        <p class="company">Pet Nat Ventures</p>
+        <p class="bio">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </div>
+    </div>
+
+  </div>
 </section>
 
 </body>
