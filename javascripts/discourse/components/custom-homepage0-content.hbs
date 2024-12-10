@@ -348,6 +348,200 @@ body {
 }
 
 
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #fff;
+  color: #333;
+}
+
+.events-section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.events-heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+
+.events-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 850px; /* Keep this so that not all cards fit at once */
+  margin: 0 auto;
+  
+}
+
+.events-scroll-wrapper {
+  display: flex;
+  gap: 20px;
+  overflow-x: hidden; /* Enables horizontal scroll bar */
+  scroll-behavior: smooth;
+  max-width: 850px; /* Matches container width so scroll is needed */
+  -webkit-overflow-scrolling: touch; /* For smoother scrolling on touch devices */
+}
+
+
+
+/* Each event card */
+.event-card {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 220px; /* card width */
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.event-card-top {
+  background: #9da985;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.speakers {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.speaker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.speaker-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+
+.speaker-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.speaker-name {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #fff;
+  background: #b79846; 
+  padding: 2px 5px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+.sponsor-logo img {
+  width: 80px;
+}
+
+.event-card-content {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.event-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin: 0;
+  color: #333;
+}
+
+.event-date {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8rem;
+  gap: 5px;
+}
+
+.event-month {
+  color: #b32e2e; 
+  font-weight: 700;
+}
+
+.event-time,
+.event-location,
+.event-going {
+  color: #666;
+}
+
+.register-button {
+  background: #b79846;
+  color: #fff;
+  border: none;
+  padding: 8px;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  text-align: center;
+}
+
+.register-button:hover {
+  background: #a17d2f;
+}
+
+/* Scroll Buttons */
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #b79846;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.scroll-btn:hover {
+  background: #a17d2f;
+}
+
+.scroll-left {
+  left: -40px; 
+}
+
+.scroll-right {
+  right: -40px;
+}
+
+@media (max-width: 768px) {
+  .events-container {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+  
+  .scroll-left,
+  .scroll-right {
+    display: none; /* Hide scroll arrows on mobile if desired */
+  }
+  
+  .events-scroll-wrapper {
+    gap: 10px;
+  }
+}
 
 
   </style>
@@ -811,6 +1005,232 @@ scrollRightBtn.addEventListener('click', () => {
     uniqueScrollCards.scrollBy({ left: uniqueCardWidth, behavior: 'smooth' });
   });
 </script>
+<section class="events-section">
+  <h2 class="events-heading">Upcoming Events</h2>
+  
+  <div class="events-container">
+    <button class="scroll-btn scroll-left">&lt;</button>
+    
+    <div class="events-scroll-wrapper" id="events-scroll-wrapper">
+      <!-- Event Card 1 -->
+      <div class="event-card">
+        <div class="event-card-top">
+          <div class="speakers">
+            <div class="speaker">
+              <div class="speaker-image">
+                <img src="heather.jpg" alt="Heather Beatty">
+              </div>
+              <span class="speaker-name">HEATHER BEATTY</span>
+            </div>
+            <div class="speaker">
+              <div class="speaker-image">
+                <img src="tanaha.jpg" alt="Tanaha Hairston">
+              </div>
+              <span class="speaker-name">TANAHA HAIRSTON</span>
+            </div>
+          </div>
+          <div class="sponsor-logo">
+            <img src="scopefour_logo.png" alt="ScopeFour Capital Logo">
+          </div>
+        </div>
+        <div class="event-card-content">
+          <h3 class="event-title">Investing in Renewable Energy: Why It Matters and the Future of Renew...</h3>
+          <div class="event-date">
+            <span class="event-month">SEP 10</span>
+            <span class="event-time">12:00 PM–2:00 PM</span>
+            <span class="event-location">Zoom Meeting</span>
+            <span class="event-going">10 going</span>
+          </div>
+          <button class="register-button">Register</button>
+        </div>
+      </div>
+
+      <!-- Event Card 2 -->
+      <div class="event-card">
+        <div class="event-card-top">
+          <div class="speakers">
+            <div class="speaker">
+              <div class="speaker-image">
+                <img src="heather.jpg" alt="Heather Beatty">
+              </div>
+              <span class="speaker-name">HEATHER BEATTY</span>
+            </div>
+            <div class="speaker">
+              <div class="speaker-image">
+                <img src="tanaha.jpg" alt="Tanaha Hairston">
+              </div>
+              <span class="speaker-name">TANAHA HAIRSTON</span>
+            </div>
+          </div>
+          <div class="sponsor-logo">
+            <img src="scopefour_logo.png" alt="ScopeFour Capital Logo">
+          </div>
+        </div>
+        <div class="event-card-content">
+          <h3 class="event-title">Investing in Renewable Energy: Why It Matters and the Future of Renew...</h3>
+          <div class="event-date">
+            <span class="event-month">SEP 10</span>
+            <span class="event-time">12:00 PM–2:00 PM</span>
+            <span class="event-location">Zoom Meeting</span>
+            <span class="event-going">10 going</span>
+          </div>
+          <button class="register-button">Register</button>
+        </div>
+      </div>
+
+      <!-- Event Card 3 -->
+      <div class="event-card">
+        <div class="event-card-top">
+          <div class="speakers">
+            <div class="speaker">
+              <div class="speaker-image">
+                <img src="heather.jpg" alt="Heather Beatty">
+              </div>
+              <span class="speaker-name">HEATHER BEATTY</span>
+            </div>
+            <div class="speaker">
+              <div class="speaker-image">
+                <img src="tanaha.jpg" alt="Tanaha Hairston">
+              </div>
+              <span class="speaker-name">TANAHA HAIRSTON</span>
+            </div>
+          </div>
+          <div class="sponsor-logo">
+            <img src="scopefour_logo.png" alt="ScopeFour Capital Logo">
+          </div>
+        </div>
+        <div class="event-card-content">
+          <h3 class="event-title">Investing in Renewable Energy: Why It Matters and the Future of Renew...</h3>
+          <div class="event-date">
+            <span class="event-month">SEP 10</span>
+            <span class="event-time">12:00 PM–2:00 PM</span>
+            <span class="event-location">Zoom Meeting</span>
+            <span class="event-going">10 going</span>
+          </div>
+          <button class="register-button">Register</button>
+        </div>
+      </div>
+
+      <!-- Event Card 4 -->
+      <div class="event-card">
+        <div class="event-card-top">
+          <div class="speakers">
+            <div class="speaker">
+              <div class="speaker-image">
+                <img src="heather.jpg" alt="Heather Beatty">
+              </div>
+              <span class="speaker-name">HEATHER BEATTY</span>
+            </div>
+            <div class="speaker">
+              <div class="speaker-image">
+                <img src="tanaha.jpg" alt="Tanaha Hairston">
+              </div>
+              <span class="speaker-name">TANAHA HAIRSTON</span>
+            </div>
+          </div>
+          <div class="sponsor-logo">
+            <img src="scopefour_logo.png" alt="ScopeFour Capital Logo">
+          </div>
+        </div>
+        <div class="event-card-content">
+          <h3 class="event-title">Investing in Renewable Energy: Why It Matters and the Future of Renew...</h3>
+          <div class="event-date">
+            <span class="event-month">SEP 10</span>
+            <span class="event-time">12:00 PM–2:00 PM</span>
+            <span class="event-location">Zoom Meeting</span>
+            <span class="event-going">10 going</span>
+          </div>
+          <button class="register-button">Register</button>
+        </div>
+      </div>
+
+      <!-- Event Card 5 -->
+      <div class="event-card">
+        <div class="event-card-top">
+          <div class="speakers">
+            <div class="speaker">
+              <div class="speaker-image">
+                <img src="heather.jpg" alt="Heather Beatty">
+              </div>
+              <span class="speaker-name">HEATHER BEATTY</span>
+            </div>
+            <div class="speaker">
+              <div class="speaker-image">
+                <img src="tanaha.jpg" alt="Tanaha Hairston">
+              </div>
+              <span class="speaker-name">TANAHA HAIRSTON</span>
+            </div>
+          </div>
+          <div class="sponsor-logo">
+            <img src="scopefour_logo.png" alt="ScopeFour Capital Logo">
+          </div>
+        </div>
+        <div class="event-card-content">
+          <h3 class="event-title">Investing in Renewable Energy: Why It Matters and the Future of Renew...</h3>
+          <div class="event-date">
+            <span class="event-month">SEP 10</span>
+            <span class="event-time">12:00 PM–2:00 PM</span>
+            <span class="event-location">Zoom Meeting</span>
+            <span class="event-going">10 going</span>
+          </div>
+          <button class="register-button">Register</button>
+        </div>
+      </div>
+
+      <!-- Event Card 6 -->
+      <div class="event-card">
+        <div class="event-card-top">
+          <div class="speakers">
+            <div class="speaker">
+              <div class="speaker-image">
+                <img src="heather.jpg" alt="Heather Beatty">
+              </div>
+              <span class="speaker-name">HEATHER BEATTY</span>
+            </div>
+            <div class="speaker">
+              <div class="speaker-image">
+                <img src="tanaha.jpg" alt="Tanaha Hairston">
+              </div>
+              <span class="speaker-name">TANAHA HAIRSTON</span>
+            </div>
+          </div>
+          <div class="sponsor-logo">
+            <img src="scopefour_logo.png" alt="ScopeFour Capital Logo">
+          </div>
+        </div>
+        <div class="event-card-content">
+          <h3 class="event-title">Investing in Renewable Energy: Why It Matters and the Future of Renew...</h3>
+          <div class="event-date">
+            <span class="event-month">SEP 10</span>
+            <span class="event-time">12:00 PM–2:00 PM</span>
+            <span class="event-location">Zoom Meeting</span>
+            <span class="event-going">10 going</span>
+          </div>
+          <button class="register-button">Register</button>
+        </div>
+      </div>
+    </div>
+    
+    <button class="scroll-btn scroll-right">&gt;</button>
+  </div>
+</section>
+
+<script>
+  const scrollWrapper = document.getElementById('events-scroll-wrapper');
+  const leftBtn = document.querySelector('.scroll-left');
+  const rightBtn = document.querySelector('.scroll-right');
+
+  // Adjust card width + margins to match exactly how many cards are visible at once.
+  const cardWidth = 260; // Example: card width (220px) + margins( 2 * 10px ) = 240-260px approx
+  leftBtn.addEventListener('click', () => {
+    scrollWrapper.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+  });
+
+  rightBtn.addEventListener('click', () => {
+    scrollWrapper.scrollBy({ left: cardWidth, behavior: 'smooth' });
+  });
+</script>
+
 
 
 </section>
