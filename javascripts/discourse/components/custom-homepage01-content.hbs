@@ -5,6 +5,55 @@
 <head>
 <title>Page Title</title>
 <style>
+    body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #f7f7f7;
+}
+
+.learn-section {
+  background: #eaeedc; /* Light green-ish background to match the image */
+  padding: 40px 20px;
+  text-align: center;
+  color: #333;
+}
+
+.learn-section h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: #4d5733; /* Slightly darker green-gray for heading text */
+}
+
+.learn-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 700px; /* To limit width and center content */
+  text-align: left;  /* Left-align list items inside container */
+  line-height: 1.6;
+}
+
+.learn-section li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Add a green checkmark before each list item */
+.learn-section li::before {
+  content: "✔";
+  color: #4fa24f; /* Green color for the check mark */
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -224,6 +273,18 @@ var x = setInterval(function() {
   }
 }, 1000);
 </script>
+
+<section class="learn-section">
+  <h2>What You’ll Learn In This Session</h2>
+  <ul>
+    <li>How To Invest Passively In Self-Storage For Cash Flow And Growth</li>
+    <li>What Makes Self-Storage So Recession-Resilient</li>
+    <li>Self-Storage Performance Vs Other Commercial Real Estate</li>
+    <li>Strategies To Evaluate And Select Profitable Self-Storage Investments</li>
+    <li>Expert Tips To Maximize Returns & Minimize Risk</li>
+    <li>Live Q&A to Give You the Answers You Need</li>
+  </ul>
+</section>
 
 </body>
 </html>
