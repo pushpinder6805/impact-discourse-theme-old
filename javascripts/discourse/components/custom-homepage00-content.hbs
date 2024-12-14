@@ -8,6 +8,136 @@
     <title>Landing Page New</title>
     <style>
 
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #C9BC8F;
+  color: #4D4D4D;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* Section Styles */
+.impact-investing {
+  padding: 50px 20px;
+}
+
+.investing-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #4D4D4D;
+  margin-bottom: 10px;
+}
+
+.investing-subheading {
+  font-size: 1.2rem;
+  color: #4D4D4D;
+  margin-bottom: 40px;
+}
+
+/* Timeline Container */
+.timeline {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  padding: 20px 0;
+}
+
+/* Timeline Step */
+.timeline-step {
+  flex: 1;
+  text-align: center;
+  position: relative;
+}
+
+.step-circle {
+  width: 40px;
+  height: 40px;
+  background-color: #4D4D4D;
+  color: white;
+  font-size: 1.2rem;
+  line-height: 40px;
+  border-radius: 50%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  font-weight: bold;
+}
+
+/* Line connecting circles */
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #E0D8C0;
+  z-index: 1;
+}
+
+/* Timeline Box */
+.timeline-box {
+  background-color: #FAF4E8;
+  border: 1px solid #E0D8C0;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.step-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #4D4D4D;
+}
+
+.step-description {
+  font-size: 0.9rem;
+  color: #4D4D4D;
+}
+
+/* Button Styles */
+.call-to-action {
+  margin-top: 30px;
+  background-color: #697B53;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.call-to-action:hover {
+  background-color: #50603F;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .timeline {
+    flex-direction: column;
+  }
+
+  .timeline-step {
+    margin-bottom: 20px;
+  }
+
+  .timeline-box {
+    max-width: 100%;
+  }
+}
+
         /* General Styles */
 body {
   margin: 0;
@@ -1005,6 +1135,48 @@ body {
         <strong>Measurable Outcomes:</strong> Track the results of your investments through detailed impact updates.
       </li>
     </ul>
+  </section>
+
+  <section class="impact-investing">
+    <h2 class="investing-heading">Take the Next Step Toward Impactful Investing</h2>
+    <p class="investing-subheading">
+      Your capital has the power to create change.<br>
+      Let us help you find investments that bring your vision to life.
+    </p>
+
+    <!-- Timeline -->
+    <div class="timeline">
+      <div class="timeline-step">
+        <div class="step-circle">1</div>
+        <div class="timeline-box">
+          <h3 class="step-title">Initial Consultation</h3>
+          <p class="step-description">
+            Book a complimentary consultation to discuss your goals and receive personalized, hand-selected impact investment opportunities, curated to align with your financial and social objectives.
+          </p>
+        </div>
+      </div>
+      <div class="timeline-step">
+        <div class="step-circle">2</div>
+        <div class="timeline-box">
+          <h3 class="step-title">Access Deal Flow</h3>
+          <p class="step-description">
+            Receive personalized, curated impact investment opportunities tailored to align with your vision for both financial and social returns.
+          </p>
+        </div>
+      </div>
+      <div class="timeline-step">
+        <div class="step-circle">3</div>
+        <div class="timeline-box">
+          <h3 class="step-title">Support and Reporting</h3>
+          <p class="step-description">
+            Benefit from quarterly reports and ongoing consultations, ensuring that your portfolio meets both financial and social impact goals. Stay informed and prepared to seize new opportunities.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Call to Action -->
+    <button class="call-to-action">Schedule a Call</button>
   </section>
 
     <div class="investment-container">
