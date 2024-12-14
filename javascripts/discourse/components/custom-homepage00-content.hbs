@@ -8,7 +8,88 @@
     <title>Landing Page New</title>
     <style>
 
- 
+ /* General Styles */
+.opportunities-section {
+  font-family: Arial, sans-serif;
+  background-color: #8A9972;
+  color: #fff;
+}
+
+/* Section Styles */
+.opportunities-section {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.section-description {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Grid Styles */
+.opportunities-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.opportunity-item {
+  text-align: center;
+}
+
+.opportunity-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.opportunity-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Footer Styles */
+.section-footer {
+  font-size: 1rem;
+  margin-top: 40px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .opportunities-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .opportunities-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .section-description,
+  .section-footer {
+    font-size: 1rem;
+  }
+}
 
     .next2 {
     gap: 20px;
@@ -678,6 +759,34 @@
         <p>Provide donors with strategic, vetted options to put philanthropic capital to work for measurable, lasting outcomes.</p>
     </div>
 </div>
+
+<div class="opportunities-section">
+    <h2 class="section-title">Opportunities That Align with What Matters Most to You</h2>
+    <p class="section-description">
+      Our curated portfolio includes a diverse range of private investments across asset classes and impact themes, allowing you to support causes close to your heart while achieving your financial objectives.
+    </p>
+    <div class="opportunities-grid">
+      <div class="opportunity-item">
+        <img src="affordable-housing.jpg" alt="Affordable Housing">
+        <p class="opportunity-title">Affordable Housing</p>
+      </div>
+      <div class="opportunity-item">
+        <img src="clean-energy.jpg" alt="Clean Energy">
+        <p class="opportunity-title">Clean Energy</p>
+      </div>
+      <div class="opportunity-item">
+        <img src="regenerative-agriculture.jpg" alt="Regenerative Agriculture">
+        <p class="opportunity-title">Regenerative Agriculture</p>
+      </div>
+      <div class="opportunity-item">
+        <img src="education-equity.jpg" alt="Education and Equity">
+        <p class="opportunity-title">Education and Equity</p>
+      </div>
+    </div>
+    <p class="section-footer">
+      Each opportunity is carefully evaluated to ensure it meets rigorous standards for both impact and financial performance, giving you confidence in the change your investments create.
+    </p>
+  </div>
 
 
     <div class="investment-container">
