@@ -7,6 +7,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page New</title>
     <style>
+/* General Styles */
+.purpose-section {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #F7F7F0;
+  color: #4D4D4D;
+  line-height: 1.6;
+}
+
+/* Section Styles */
+.purpose-section {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.purpose-heading {
+  font-size: 2rem;
+  color: #4D4D4D;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+/* Grid Styles */
+.purpose-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.purpose-item {
+  text-align: center;
+  padding: 20px;
+}
+
+.purpose-icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 20px;
+}
+
+.purpose-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #6A7745;
+  margin-bottom: 10px;
+}
+
+.purpose-description {
+  font-size: 1rem;
+  color: #4D4D4D;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .purpose-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .purpose-heading {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .purpose-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .purpose-heading {
+    font-size: 1.5rem;
+  }
+
+  .purpose-description {
+    font-size: 0.9rem;
+  }
+}
 
  /* General Styles */
 .opportunities-section {
@@ -792,6 +870,39 @@
     </p>
   </div>
 
+<section class="purpose-section">
+    <h2 class="purpose-heading">How We Help You Invest with Purpose</h2>
+    <div class="purpose-grid">
+      <div class="purpose-item">
+        <img src="tailored-experience-icon.png" alt="Tailored Experience Icon" class="purpose-icon">
+        <h3 class="purpose-title">A Tailored Experience</h3>
+        <p class="purpose-description">
+          We work alongside you and your trusted advisors to identify and select investments that align with your values and financial strategy.
+        </p>
+      </div>
+      <div class="purpose-item">
+        <img src="expert-guidance-icon.png" alt="Expert Guidance Icon" class="purpose-icon">
+        <h3 class="purpose-title">Expert Guidance</h3>
+        <p class="purpose-description">
+          With deep expertise across sectors, our team provides insights to help you navigate opportunities and make informed decisions.
+        </p>
+      </div>
+      <div class="purpose-item">
+        <img src="transparent-reporting-icon.png" alt="Transparent Reporting Icon" class="purpose-icon">
+        <h3 class="purpose-title">Transparent Reporting</h3>
+        <p class="purpose-description">
+          After your investment is made, our detailed reporting keeps you connected to the measurable impact your capital is driving.
+        </p>
+      </div>
+      <div class="purpose-item">
+        <img src="simplified-access-icon.png" alt="Simplified Access Icon" class="purpose-icon">
+        <h3 class="purpose-title">Simplified Access</h3>
+        <p class="purpose-description">
+          From due diligence to deal execution, we streamline the entire process so you can focus on what matters—creating a legacy of impact.
+        </p>
+      </div>
+    </div>
+  </section>
 
     <div class="investment-container">
         <h1 class="investment-heading">
