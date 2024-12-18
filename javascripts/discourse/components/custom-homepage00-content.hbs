@@ -176,7 +176,94 @@
       .gold {
         border-top: 2px solid #DCB854;
       }
+
+      /* Sidebar */
+      /* Sidebar Container */
+.sidebar-wrapper {
+  position: fixed; /* Fix sidebar to the left */
+  top: 0;
+  left: 0;
+  height: 100vh; /* Full viewport height */
+  width: 250px; /* Sidebar width */
+  background-color: #f8f5ef; /* Light beige background */
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  overflow-y: auto; /* Scroll if content exceeds */
+  font-family: Arial, sans-serif;
+}
+
+/* Sidebar Links */
+.sidebar-link {
+  display: block;
+  color: #4a4a4a;
+  text-decoration: none;
+  padding: 10px 0;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.sidebar-link:hover {
+  color: #9e8853;
+  padding-left: 10px;
+}
+
+/* Bolded Links */
+.sidebar-link.bold {
+  font-weight: bold;
+  color: #3c3c3c;
+}
+
+/* Sidebar Headings */
+.sidebar-heading {
+  margin: 20px 0 10px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #9e8853; /* Gold-like color */
+  text-transform: uppercase;
+}
+
+/* General Layout - Main Content */
+body {
+  margin: 0;
+  display: flex;
+}
+
+.main-content {
+  margin-left: 270px; /* Sidebar width + padding */
+  padding: 20px;
+  flex: 1;
+  background-color: #fff;
+}
+
     </style>
+    <div class="sidebar-wrapper">
+  <nav class="sidebar-container">
+    <ul class="sidebar-sections">
+      <li><a href="#" class="sidebar-link bold">Home</a></li>
+      <li><a href="#" class="sidebar-link bold">Start Here</a></li>
+      <li><a href="#" class="sidebar-link bold">Legacy Educational Videos</a></li>
+      <li><a href="#" class="sidebar-link bold">Investment Opportunities</a></li>
+      <li><a href="#" class="sidebar-link bold">Investing Mastery Series</a></li>
+      
+      <h3 class="sidebar-heading">MY IMPACT JOURNEY</h3>
+      <li><a href="#" class="sidebar-link">My Posts</a></li>
+      <li><a href="#" class="sidebar-link">My Threads</a></li>
+      <li><a href="#" class="sidebar-link">My Events</a></li>
+      <li><a href="#" class="sidebar-link">General Forum</a></li>
+      <li><a href="#" class="sidebar-link">News and Articles</a></li>
+      <li><a href="#" class="sidebar-link">Resources</a></li>
+
+      <h3 class="sidebar-heading">NON-ACCREDITED INVESTORS</h3>
+      <li><a href="#" class="sidebar-link">Channel</a></li>
+      <li><a href="#" class="sidebar-link">Forum</a></li>
+
+      <h3 class="sidebar-heading">ACCREDITED INVESTORS</h3>
+      <li><a href="#" class="sidebar-link">Channel</a></li>
+      <li><a href="#" class="sidebar-link">Forum</a></li>
+    </ul>
+  </nav>
+</div>
+
 
     <div class="welcome-container">
         <h1>Welcome to RISE Impact Investing Community</h1>
