@@ -7,6 +7,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page New</title>
     <style>
+      /* Scope styling to a specific container */
+.custom-buttons-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between buttons */
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f8f8f8; /* Light background */
+}
+
+/* Button Base Styles - Scoped */
+.custom-btn {
+    border: none;
+    color: #ffffff; /* White text */
+    font-size: 18px;
+    font-weight: bold;
+    padding: 15px 50px;
+    border-radius: 50px; /* Fully rounded edges */
+    cursor: pointer;
+    text-align: center;
+    text-transform: capitalize;
+    min-width: 300px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+/* Specific Button Colors */
+.custom-btn-green {
+    background-color: #6b7652; /* Greenish color */
+}
+
+.custom-btn-yellow {
+    background-color: #b39a5e; /* Yellowish color */
+}
+
+/* Hover Effects */
+.custom-btn:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+}
+
         /* General Styles */
 body {
   margin: 0;
@@ -1262,8 +1305,10 @@ body {
     </div>
 
     <!-- Call to Action -->
-    <button class="call-to-action">Schedule a Call</button>
-    <button class="call-to-action">Create Your Account</button>
+    <div class="custom-buttons-container">
+        <button class="custom-btn custom-btn-green">Schedule a Call</button>
+        <button class="custom-btn custom-btn-yellow">Create Your Account</button>
+    </div>
   </section>
 
     <div class="investment-container">
