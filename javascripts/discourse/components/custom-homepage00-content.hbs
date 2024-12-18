@@ -1,1404 +1,234 @@
 {{#if this.isCustomHomepage}}
 <section class="course-overview22">
-  <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page New</title>
-    <style>
-      /* Scope styling to a specific container */
-.custom-buttons-container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px; /* Space between buttons */
-    align-items: center;
-    justify-content: center;
-    height: 44vh;
-    margin: 0;
-}
-
-/* Button Base Styles - Scoped */
-.custom-btn {
-  font-family: 'Montserrat';
-    border: none;
-    color: #ffffff; /* White text */
-    font-size: 30px;
-    font-weight: bold;
-    padding: 15px 50px;
-    border-radius: 50px; /* Fully rounded edges */
-    cursor: pointer;
-    text-align: center;
-    min-width: 447px;
-    outline: none;
-    transition: all 0.3s ease;
-}
-
-/* Specific Button Colors */
-.custom-btn-green {
-    background-color: #6b7652; /* Greenish color */
-}
-
-.custom-btn-yellow {
-    background-color: #b39a5e; /* Yellowish color */
-}
-
-/* Hover Effects */
-.custom-btn:hover {
-    opacity: 0.9;
-    transform: scale(1.05);
-}
-
-        /* General Styles */
-body {
-  margin: 0;
-  font-family: 'Arial', sans-serif;
-  background-color: #F8F4EE;
-  color: #4D4D4D;
-  line-height: 1.6;
-  text-align: center;
-}
-
-.access-section {
-  padding: 50px 20px;
-  text-align: center;
-}
-
-.section-title1 {
-    font-family: 'Playfair Display';
-    font-size: 2.3rem;
-    margin-bottom: 20px;
-    font-weight: bold;
-    color: #b09d5e;
-}
-
-/* Container and Box Styles */
-.access-container {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-
-.access-box {
-  background-color: #FFFFFF;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  border: 1px solid #E8E4D9;
-  width: 300px; /* Set equal width */
-  padding: 30px;
-  text-align: center;
-  flex-shrink: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.icon-container {
-    width: 110px;
-    height: 84px;
-    margin-bottom: 20px;
-}
-
-.icon-container img {
-  width: 100%;
-  height: auto;
-}
-
-.box-title {
-    font-family: 'Montserrat';
-    font-size: 1.1rem;
-    font-weight: bold;
-    color: #8B7D5D;
-    margin-bottom: 10px;
-}
-
-.box-description {
-    font-family: 'Montserrat';
-    font-size: 0.9rem;
-    color: #4D4D4D;
-    line-height: 1.5;
-}
-
-/* Responsive Styles */
-@media (max-width: 1024px) {
-  .access-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .access-box {
-    width: 90%; /* Full width on smaller screens */
-    margin-bottom: 20px;
-  }
-}
-
-
-/* General Styles */
-body {
-  margin: 0;
-  font-family: 'Arial', sans-serif;
-  background-color: #C9BC8F;
-  color: #4D4D4D;
-  line-height: 1.6;
-  text-align: center;
-}
-
-/* Section Styles */
-.impact-investing {
-    background: #ffffff;
-    padding: 50px 20px;
-}
-
-.investing-heading {
-    font-family: 'Playfair Display';
-    font-size: 2.4rem;
-    font-weight: bold;
-    color: #b09d5e;
-    margin-bottom: 10px;
-}
-.investing-heading1 {
-  font-weight: 100 !important;
-    font-family: 'Montserrat';
-    font-weight: bold;
-    color: rgb(103 110 79);
-}
-
-
-.investing-subheading {
-    font-family: 'Montserrat';
-    font-size: 1.4rem;
-    color: #ffffff;
-    margin-bottom: 40px;
-}
-
-/* Timeline Container */
-.timeline {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 20px;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  margin: 0 auto;
-  position: relative;
-  padding: 20px 0;
-}
-
-/* Timeline Step */
-.timeline-step {
-  flex: 1;
-  text-align: center;
-  position: relative;
-}
-
-.step-circle {
-    width: 40px;
-    height: 40px;
-    background-color: #ffffff;
-    color: #b09d5e;
-    font-size: 1.2rem;
-    line-height: 40px;
-    border-radius: 50%;
-    margin: 0 auto;
-    position: relative;
-    z-index: 2;
-    font-weight: bold;
-}
-
-/* Line connecting circles */
-.timeline::before {
-    content: '';
-    position: absolute;
-    top: 40px;
-    left: 186px;
-    right: 0;
-    height: 4px;
-    background-color: #ffffff;
-    z-index: 1;
-    width: 52em;
-}
-
-/* Timeline Box */
-.timeline-box {
-    height: 250px;
-    background-color: #b09d5e;
-    border: 1px solid #E0D8C0;
-    border-radius: 10px;
-    padding: 38px;
-    margin-top: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.step-title {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #ffffff;
-    font-family: 'Montserrat';
-}
-
-.step-description {
-    font-size: 0.9rem;
-    color: #ffffff;
-    font-family: 'Montserrat';
-}
-
-/* Button Styles */
-.call-to-action {
-    font-family: 'Montserrat';
-    margin-top: 30px;
-    background-color: #697B53;
-    color: white;
-    padding: 10px 63px;
-    border: none;
-    border-radius: 26px;
-    font-size: 1rem;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-.call-to-action:hover {
-  background-color: #50603F;
-}
-
-/* Responsive Styles */
-@media (max-width: 1024px) {
-  .timeline {
-    flex-direction: column;
-  }
-
-  .timeline-step {
-    margin-bottom: 20px;
-  }
-
-  .timeline-box {
-    max-width: 100%;
-  }
-}
-
-        /* General Styles */
-body {
-  margin: 0;
-  font-family: 'Arial', sans-serif;
-  background-color: #FAF4E8;
-  color: #4D4D4D;
-  line-height: 1.6;
-}
-
-/* Section Styles */
-.impact-community {
-  text-align: center;
-  padding: 50px 20px;
-  max-width: 955px;
-  margin: 0 auto;
-}
-
-.impact-heading {
-    display: flex
-;
-    white-space: nowrap;
-    font-family: 'Playfair Display';
-    font-size: 2.3rem;
-    margin-bottom: 30px;
-    font-weight: bold;
-    color: #4D4D4D;
-}
-
-/* List Styles */
-.impact-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  text-align: left; /* Align list items to the left */
-}
-
-.impact-item {
-    font-family: 'Montserrat';
-    display: flex
-;
-    align-items: flex-start;
-    margin-bottom: 17px;
-    font-size: 1rem;
-    white-space: nowrap;
-}
-
-.impact-icon {
-  color: #4CAF50; /* Green check icon color */
-  font-size: 1.2rem;
-  margin-right: 10px; /* Spacing between icon and text */
-  line-height: 1.5;
-}
-
-/* Strong Text Styles */
-.impact-item strong {
-    white-space: nowrap;
-    font-family: 'Montserrat';
-    color: #4D4D4D;
-    margin-right: 5px;
-    font-weight: bold;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .impact-heading {
-    font-size: 1.8rem;
-  }
-
-  .impact-item {
-    font-size: 0.9rem;
-  }
-
-  .impact-icon {
-    font-size: 1rem;
-  }
-}
-
-/* General Styles */
-.purpose-section {
-  margin: 0;
-  font-family: 'Arial', sans-serif;
-  background-color: #ffffff;
-  color: #4D4D4D;
-  line-height: 1.6;
-}
-
-/* Section Styles */
-.purpose-section {
-  text-align: center;
-  padding: 50px 20px;
-}
-
-.purpose-heading {
-    font-family: 'Playfair Display';
-    font-size: 2.3rem;
-    color: #4D4D4D;
-    margin-bottom: 40px;
-    font-weight: bold;
-}
-
-/* Grid Styles */
-.purpose-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.purpose-item {
-  text-align: center;
-  padding: 20px;
-}
-
-.purpose-icon {
-    width: 108px;
-    height: 78px;
-    margin-bottom: 20px;
-}
-
-.purpose-title {
-    font-family: 'Montserrat';
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #6A7745;
-    margin-bottom: 10px;
-}
-
-.purpose-description {
-    font-family: 'Montserrat';
-    font-size: 1rem;
-    color: #4D4D4D;
-}
-
-/* Responsive Styles */
-@media (max-width: 1024px) {
-  .purpose-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .purpose-heading {
-    font-size: 1.8rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .purpose-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .purpose-heading {
-    font-size: 1.5rem;
-  }
-
-  .purpose-description {
-    font-size: 0.9rem;
-  }
-}
-
- /* General Styles */
-.opportunities-section {
-  font-family: Arial, sans-serif;
-  background-color: #8A9972;
-  color: #fff;
-}
-
-/* Section Styles */
-.opportunities-section {
-  text-align: center;
-  padding: 50px 20px;
-}
-
-.section-title {
-    font-family: 'Playfair Display';
-    font-size: 2.3rem;
-    margin-bottom: 20px;
-    font-weight: bold;
-}
-
-.section-description {
-    white-space: pre-wrap;
-    font-family: 'Montserrat';
-    font-size: 27px;
-    margin-bottom: 40px;
-    margin-left: auto;
-    margin-right: auto;
-    line-height: 1;
-}
-
-/* Grid Styles */
-.opportunities-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 35px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.opportunity-item {
-  text-align: center;
-}
-
-.opportunity-item img {
-    width: 107%;
-    height: 183px;
-    border-radius: 16px;
-}
-
-.opportunity-title {
-    font-size: 1.1rem;
-    font-weight: bold;
-    margin-top: 10px;
-    font-family: 'Montserrat';
-}
-
-/* Footer Styles */
-.section-footer {
-    font-family: 'Montserrat';
-    font-size: 1rem;
-    margin-top: 40px;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* Responsive Styles */
-@media (max-width: 1024px) {
-  .opportunities-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  .opportunities-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .section-title {
-    font-size: 1.8rem;
-  }
-
-  .section-description,
-  .section-footer {
-    font-size: 1rem;
-  }
-}
-
-    .next2 {
-    gap: 20px;
-    display: flex;
-}
-   /* custom css */
-
-.banner {
-    display: none;
-    align-items: center;
-    justify-content: center;
-    background-color: #4a503d;
-    color: #fff;
-    padding: 20px;
-}
-
-.content {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    max-width: 1200px;
-    width: 100%;
-    gap: 20px;
-}
-
-.text {
-    margin-left: -113px;
-    flex: 1 1 50%;
-    max-width: 657px;
-}
-
-.text .badge {
-    background-color: #d72c16;
-    color: white;
-    font-weight: bold;
-    border-radius: 50%;
-    padding: 10px 15px;
-    display: inline-block;
-    margin-bottom: 15px;
-}
-
-.text h1 {
-    font-family: 'Playfair Display';
-    font-size: 47.9px;
-    margin-bottom: 15px;
-}
-
-.text p {
-  font-family: 'Montserrat';
-    font-size: 1rem;
-    margin-bottom: 20px;
-    line-height: 1.5;
-}
-
-.text button {
-  font-family: 'Montserrat';
-    background-color: #ccb561;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 24px;
-    cursor: pointer;
-    font-size: 1rem;
-}
-
-.text button:hover {
-    background-color: #b59c50;
-}
-
-.image {
-    margin-left: 12em;
-    flex: 1 1 50%;
-    max-width: 487px;
-}
-
-.image img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .content {
-        flex-direction: column;
+  <style>
+      .d-header{
+        background-color: #B3BA9D !important;
+      }
+      .premium-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #ffffff !important;
+        border: 2px solid #c4a769;
+        border-radius: 50px;
+        padding: 5px 121px;
+        max-width: 745px;
+        margin: 20px auto;
+      }
+
+      .premium-text {
+        color: #675f50;
+      }
+
+      .premium-text h2 {
+        font-size: 1.5rem;
+        margin: 0 0 10px;
+        color: #8b7642;
+      }
+
+      .premium-text ul {
+        margin: 0;
+        padding: 0 0 0 20px;
+        list-style-type: disc;
+        color: #675f50;
+      }
+
+      .premium-text ul li {
+        font-size: 0.9rem;
+        line-height: 1.5;
+      }
+
+      .premium-button {
+        background-color: #b4a16f;
+        color: white;
+        padding: 15px 40px;
+        border: none;
+        border-radius: 50px;
+        font-size: 1rem;
+        cursor: pointer;
         text-align: center;
-    }
+      }
 
-    .text {
-        max-width: 100%;
-    }
+      .premium-button:hover {
+        background-color: #a08f5d;
+      }
 
-    .image {
-        max-width: 100%;
-    }
-}
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: "Arial", sans-serif;
-        }
+      body {
+          font-family: Arial, sans-serif;
+      }
+      .welcome-container {
+          background-color: #4E5935;
+          color: #fff;
+          text-align: center;
+          padding: 20px;
+          border-radius: 10px;
+          max-width: 1012px;
+          margin: 20px auto;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+     .welcome-container h1 {
+      font-family: Playfair Display;
+      font-size: 2rem;
+      margin: 0;
+     }
+      .welcome-container p {
+      font-family: 'Montserrat';
+      font-size: 16px;
+      margin: 10px 0;
+      }
+      .impact-cards-container {
+      display: flex;
+      margin: 2px 0;
+      gap: 21px;
+      }
 
-        body {
-            font-family: 'Montserrat' !important;
-            background-color: #f8f5f0;
-            color: #333;
-            line-height: 1.6;
-        }
+      .impact-card {
+      position: relative;
+      height: 23em;
+      width: 100%;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      }
 
-        .section-container {
-            padding: 60px 20px;
-            text-align: center;
-        }
+      .card-image {
+      width: 100%;
+      height: auto;
+      display: block;
+      }
 
-        .section-heading {
-            font-family: 'Montserrat';
-            font-size: 2rem;
-            color: #9e8853;
-            font-weight: bold;
-            margin-bottom: 40px;
-        }
+      .card-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(181, 161, 111, 0.8); /* Semi-transparent gold overlay */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      }
 
-        .feature-container {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
+      .card-overlay p {
+      color: white;
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin: 0;
+      padding: 20px;
+      }
 
-        .feature-box {
-            background-color: #fff;
-            border-radius: 12px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 30px;
-            width: 300px;
-            text-align: center;
-        }
+      .impact-card:hover .card-overlay {
+      background-color: rgba(181, 161, 111, 0.9); /* Slightly darker on hover */
+      }
 
-        .feature-icon {
-            margin-bottom: 15px;
-        }
+      .event-container {
+      display: flex;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      max-width: 1090px;
+      margin: 20px auto;
+      }
 
-        .feature-icon img {
-            width: 50px;
-            height: 50px;
-        }
+      .event-left {
+      background-color: #f8f8f8;
+      text-align: center;
+      padding: 20px;
+      min-width: 180px;
+      }
 
-        .feature-title {
-            font-size: 1.25rem;
-            color: #9e8853;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
+      .event-left h2 {
+      color: #D32F2F;
+      margin: 0;
+      font-size: 36px;
+      font-weight: bold;
+      }
 
-        .feature-description {
-            font-size: 1rem;
-            color: #666;
-        }
+      .event-left p {
+      color: #666;
+      margin: 5px 0;
+      }
 
-        @media (max-width: 768px) {
-            .feature-container {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-        .Tard-title {
-    font-family: "Montserrat";
-    font-size: 14px;
-    font-weight: bold;
-    color: #b09d5e;
-    margin-bottom: 10px;
-}
-.Tard {
-    background-color: #ffffff;
-    border-radius: 43px;
-    padding: 20px;
-    margin: 15px 0;
-    display: flex
-;
+      /* Upcoming Events Section */
+     .upcoming-events-container {
+    display: flex;
+    flex-direction: column; /* This ensures the highlight bar is above the text */
     align-items: flex-start;
-    justify-content: space-between;
-    box-shadow: 0 0 10px rgba(0, 0, 0, .05);
-    border: 1px solid #dedede;
-}
-.container1 {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    margin: 20px;
-}
-
-.sectionn {
-    width: 477px;
-    text-align: center;
-}
-
-.sectionn img {
-    width: 91%;
-    height: 30pc;
-    border-radius: 53%;
-}
-
-.sectionn h3 {
-    font-family: 'Playfair Display';
-    margin-top: -73px;
-    color: #535844;
-    font-size: 22px;
-}
-.sectionn p {
-    margin-left: 54px;
-    width: 27em;
-    font-family: 'Montserrat';
-    font-size: 14px;
-    color: #535844;
-}
-
-
-
-.investment-container {
-    background: white;
-    padding: 20px;
-    text-align: center;
-}
-
-.investment-heading {
-    font-family: 'Playfair Display';
-    color: #b19547;
-    font-size: 34px;
-    font-weight: bold;
-    margin-bottom: 30px;
-    line-height: 1.5;
-}
-
-.investment-card {
-    border: 1px solid lightgrey;
-    margin-left: 17em;
-    width: 65%;
-    display: flex;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    padding: 20px;
-    align-items: center;
-}
-
-.investment-image img {
-    width: 150px;
-    height: 100px;
-    border-radius: 4px;
-    margin-right: 20px;
-}
-
-.investment-details {
-    text-align: left;
-    flex: 1;
-}
-
-.investment-title {
-    color: #676e4f;
-    font-family: 'Montserrat';
-    font-size: 18px;
-    font-weight: bold;
-    margin: 0 0 10px;
-}
-
-.investment-description {
-    font-family: 'Montserrat';
-    font-size: 14px;
-    color: #666;
-    margin: 0 0 10px;
-}
-
-.investment-info {
-    font-family: 'Montserrat';
-    list-style: none;
-    padding: 0;
-    margin: 0 0 10px;
-}
-
-.investment-info li {
-    font-family: 'Montserrat';
-    font-size: 14px;
-    margin: 5px 0;
-}
-
-.investment-tags {
-    font-family: 'Montserrat';
-    display: flex;
-    gap: 6px;
-}
-
-.tag {
-    margin-left: -4px;
-    margin-top: 10px;
-    font-family: 'Montserrat';
-    font-size: 12px;
-    padding: 5px 10px;
-    border-radius: 20px;
-    background: #ffffff;
-    color: #676e4f;
-    display: inline-block;
-    border: 1px solid #676e4f;
-}
-
-.join-now-btn {
-    font-family: 'Montserrat';
-    background: #676e4f;
-    color: #fff;
-    font-size: 16px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    margin-top: 20px;
-}
-
-.join-now-btn:hover {
-    background: #9e8240;
-}
-
-.event-section {
-    font-family: 'Montserrat';
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
-}
-
-.event-heading {
-    font-family: 'Montserrat';
-    font-size: 28px;
-    font-weight: bold;
-    color: #b3a045;
-    margin-bottom: 10px;
-}
-
-.event-subheading {
-    font-family: 'Montserrat';
-    font-size: 16px;
-    color: #676e4f;
-    margin-bottom: 30px;
-}
-
-.event-container {
-    display: flex;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 30px auto;
     max-width: 1090px;
-    margin: 20px auto;
-}
-.event-left {
-    background-color: #f8f8f8;
-    padding: 20px;
-    min-width: 180px;
 }
 
-
-.reserve-button {
-    font-family: 'Montserrat';
-    background: #676e4f;
-    color: #fff;
-    font-size: 16px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    margin: 20px 0;
-}
-
-.reserve-button:hover {
-    background: #9e8240;
-}
-
-.past-events-heading {
+      .upcoming-events-label {
     font-family: 'Montserrat';
     font-size: 20px;
     font-weight: bold;
-    margin-top: 30px;
-    color: #676e4f;
+    color: #3f4921;
 }
 
-.past-events {
-    font-family: 'Montserrat';
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
-    margin-top: 20px;
+     .highlight-bar {
+    width: 167px;
+    height: 6px;
+    background-color: #b4a16f;
+    margin-bottom: 10px; /* Adds spacing between the bar and the text */
 }
 
-.past-event-card {
-    width: 300px;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.past-event-card img {
-    width: 100%;
-    height: auto;
-}
-
-/* Unique container wrapper */
-.unique-container-wrapper {
-    background: #f6f2ee;
-    text-align: center;
-    padding: 20px;
-}
-
-/* Header title */
-.unique-header-title {
-    font-family: 'Playfair Display';
-    font-size: 2.2em;
-    color: #b59a5e;
-    margin-bottom: 20px;
-}
-
-/* Card styling */
-.unique-card-box {
-  background-color: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  padding: 25px;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.unique-card-heading {
-    font-family: 'Montserrat';
-    font-size: 24px;
-    color: #444c34;
-    margin-bottom: 20px;
-}
-
-/* List styles */
-.unique-card-list {
-    font-family: 'Montserrat';
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    margin-left: 111px;
-    text-align: left;
-}
-
-.unique-card-item {
-    font-family: 'Montserrat';
-    font-size: 20px;
-    color: #444c34;
-    margin-bottom: 15px;
-    display: flex
-;
-    align-items: center;
-}
-
-.unique-check-icon {
-  color: #444c34;
-  font-weight: bold;
-  margin-right: 10px;
-}
-
-/* Button styling */
-.unique-cta-button {
-    font-family: 'Montserrat';
-    background-color: #b59a5e;
-    color: white;
-    border: none;
-    border-radius: 20px;
-    padding: 8px 14px;
-    font-size: 16px;
-    cursor: pointer;
-    margin-top: 20px;
-    transition: background-color 0.3s ease;
-}
-
-.unique-cta-button:hover {
-  background-color: #a48853;
-}
-
-
-
-/* Banner Container */
-.unique-banner-container {
-  display: flex;
-  width: 100%;
-  background-color: #4b4e3d; /* Dark green background */
-  position: relative;
-}
-
-/* Left Section: Text Content */
-.unique-banner-left {
-    font-family: 'Montserrat';
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  background-color: rgba(75, 78, 61, 0.9); /* Dark green with slight transparency */
-  z-index: 1;
-}
-
-.unique-banner-overlay {
-  padding: 50px;
-  color: white;
-}
-
-.unique-banner-title {
-    font-family: 'Playfair Display';
-    font-size: 3.6rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-    line-height: 1.2;
-    text-align: left;
-}
-
-.unique-banner-description {
-    font-size: 17px;
-    font-family: 'Montserrat';
-    line-height: 1.1;
-    margin-bottom: 30px;
-    color: #e8e8e8;
-    text-align: left;
-}
-
-.unique-banner-button {
-    font-family: 'Montserrat';
-    background-color: #b59a5e;
-    color: white;
-    border: none;
-    border-radius: 30px;
-    padding: 10px 30px;
-    font-size: 1.6rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-left: -7em;
-    font-weight: bold;
-}
-
-.unique-banner-button:hover {
-  background-color: #a48853;
-}
-
-/* Right Section: Image */
-.unique-banner-right {
-  flex: 1;
-  overflow: hidden;
-  position: relative;
-}
-
-.unique-banner-image {
-  width: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-/* Transparency between sections */
-.unique-banner-container::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  width: 35px; /* Adjust the width of the transparency gradient */
-  background: linear-gradient(to right, rgba(75, 78, 61, 41), rgba(75, 78, 61, 0));
-  z-index: 2;
-  height: 100%;
-}
-
-
-
-
+      .gold {
+        border-top: 2px solid #DCB854;
+      }
     </style>
-</head>
-<body>
-        <div class="unique-banner-container">
-    <!-- Left Section: Text Content -->
-    <div class="unique-banner-left">
-      <div class="unique-banner-overlay">
-        <h1 class="unique-banner-title">Changing the Way Money Creates Impact</h1>
-        <p class="unique-banner-description">
-          Access exclusive vetted private investments that deliver competitive financial returns while driving meaningful social and environmental change.
-        </p>
-        <button class="unique-banner-button">Create an investor account now</button>
-      </div>
+
+    <div class="welcome-container">
+        <h1>Welcome to RISE Impact Investing Community</h1>
+        <p><i>BETA Version 1.0</i></p>
+        <p>We are more than a network—we’re your partner in driving measurable impact through private investments.</p>
+        <p>Here, you’ll gain exclusive access to curated deal flow across key sectors like clean energy, real estate, and sustainable farming. Our community is built for serious investors ready to align their portfolios with their purpose and make a tangible difference.</p>
+        <p>Whether you’re exploring new opportunities or looking to expand your impact, we provide the resources, connections, and insights you need to act with confidence.</p>
+    </div>
+    
+    <div class="premium-container">
+    <div class="premium-text">
+        <h2>Unlock Premium and Exclusive Benefits</h2>
+        <ul>
+            <li>Exclusive Access to the Impact Investing Masterclass</li>
+            <li>Exclusive and Tailored High-Impact Deals</li>
+            <li>Exclusive Masterclasses, Articles, and News</li>
+            <li>Exclusive Events and In-Person Investors' Dinners and more!</li>
+        </ul>
+    </div>
+    <div>
+      <a href="https://impactinvestingcommunity.com/s" target="_blank">
+        <button class="premium-button">Upgrade to Premium</button>
+        </a>
+    </div>
     </div>
 
-    <!-- Right Section: Image -->
-    <div class="unique-banner-right">
-      <img src="https://impactinvestingcommunity.com/uploads/default/original/1X/b12e5d10f97c1f197484c712062fd4911acc2e60.jpeg" alt="Group of people" class="unique-banner-image">
-    </div>
-  </div>
-
-    <div class="banner">
-        <div class="content">
-            <div class="text">
-                <h1>Changing the Way Money Creates Impact</h1>
-                <p>
-                    Access exclusive vetted private investments that deliver competitive financial 
-                    returns while driving meaningful social and environmental change.
-                </p>
-                <button>Create an investor account now</button>
-            </div>
-            <div class="image">
-                <img src="https://impactinvestingcommunity.com/uploads/default/original/1X/b12e5d10f97c1f197484c712062fd4911acc2e60.jpeg" alt="Group of people">
-            </div>
-        </div>
-    </div>
-
-<section class="access-section">
-    <h2 class="section-title1">Exclusive Access to Private Market Investments</h2>
-    <div class="access-container">
-      <div class="access-box">
-        <div class="icon-container">
-          <img src="https://impactinvestingcommunity.com/uploads/default/original/1X/ce4c8e577ec7979de2c12baa576b239d15314bd3.png" alt="Expert Sourcing Icon">
-        </div>
-        <h3 class="box-title">Expert sourcing & accessible minimums</h3>
-        <p class="box-description">
-          Gain exclusive access to rigorously vetted opportunities starting at $10K, designed for purpose-driven investors.
-        </p>
-      </div>
-      <div class="access-box">
-        <div class="icon-container">
-          <img src="https://impactinvestingcommunity.com/uploads/default/original/1X/95ef80406d63696f6e2e9e91133b98d85f9385b8.png" alt="Streamlined Process Icon">
-        </div>
-        <h3 class="box-title">Streamlined Process</h3>
-        <p class="box-description">
-          Our platform takes the complexity out of private market investing—what used to take days now takes minutes.
-        </p>
-      </div>
-      <div class="access-box">
-        <div class="icon-container">
-          <img src="https://impactinvestingcommunity.com/uploads/default/original/1X/bed42375fea7c4326c9e3b668b1422a920ee02f8.png" alt="Competitive Advantage Icon">
-        </div>
-        <h3 class="box-title">Competitive Advantage</h3>
-        <p class="box-description">
-          Stay ahead of the rising demand for impact investments with opportunities aligned to your values and financial goals.
-        </p>
-      </div>
-    </div>
-  </section>
-
-<div class="container1">
-    <div class="sectionn individuals">
-        <img src="https://impactinvestingcommunity.com/uploads/default/original/1X/8b5bf83c529d36c9a9f5451027692aa7206a12e8.png" alt="Family Image">
-        <h3>Individuals <br> &amp; Families</h3>
-        <p>Access private investments designed to accelerate the social and environmental transformation you care about while building your financial future.</p>
-    </div>
-    <div class="sectionn advisors">
-        <img src="https://impactinvestingcommunity.com/uploads/default/original/1X/b8742797737e75582b7d9bb135674574bb7761d7.png" alt="Advisors Image">
-        <h3>Financial Advisors <br> &amp; Family Offices</h3>
-        <p>Access private investments designed to accelerate the social and environmental transformation you care about while building your financial future.</p>
-    </div>
-    <div class="sectionn donors">
-        <img src="https://impactinvestingcommunity.com/uploads/default/original/1X/794d764bfb9d5d006585cf430dd3e2e214df6bdb.png" alt="Donors Image">
-        <h3>Donor-Advised Funds <br> &amp; Community Foundations</h3>
-        <p>Provide donors with strategic, vetted options to put philanthropic capital to work for measurable, lasting outcomes.</p>
-    </div>
-</div>
-
-<div class="opportunities-section">
-    <h2 class="section-title">Opportunities That Align with What Matters Most to You</h2>
-    <p class="section-description">
-      Our curated portfolio includes a diverse range of private investments across asset classes and impact themes, allowing you to support causes close to your heart while achieving your financial objectives.
-    </p>
-    <div class="opportunities-grid">
-      <div class="opportunity-item">
-        <img src="https://impactinvestingcommunity.com/uploads/default/original/1X/aa6d4353281fc650c0d903b60f9a74fec73b07f5.png" alt="Affordable Housing">
-        <p class="opportunity-title">Affordable Housing</p>
-      </div>
-      <div class="opportunity-item">
-        <img src="https://impactinvestingcommunity.com/uploads/default/original/1X/c95e261545ab58672bb1644ba902782484ff4bb5.png" alt="Clean Energy">
-        <p class="opportunity-title">Clean Energy</p>
-      </div>
-      <div class="opportunity-item">
-        <img src="https://impactinvestingcommunity.com/uploads/default/original/1X/7041e42c8bc4db9b77bb1d21468b15f347d571ec.png" alt="Regenerative Agriculture">
-        <p class="opportunity-title">Regenerative Agriculture</p>
-      </div>
-      <div class="opportunity-item">
-        <img src="https://impactinvestingcommunity.com/uploads/default/original/1X/c58c943a8acc288d9200fb54727a921b09a7d3d8.png" alt="Education and Equity">
-        <p class="opportunity-title">Education and Equity</p>
-      </div>
-    </div>
-    <p class="section-footer">
-      Each opportunity is carefully evaluated to ensure it meets rigorous standards for both impact and financial performance, giving you confidence in the change your investments create.
-    </p>
-  </div>
-
-<section class="purpose-section">
-    <h2 class="purpose-heading">How We Help You Invest with Purpose</h2>
-    <div class="purpose-grid">
-      <div class="purpose-item">
-        <img src="https://impactinvestingcommunity.com/uploads/default/original/1X/2446aaac4dab63c382a1344b41d3d4bb2bb35207.png" alt="Tailored Experience Icon" class="purpose-icon">
-        <h3 class="purpose-title">A Tailored Experience</h3>
-        <p class="purpose-description">
-          We work alongside you and your trusted advisors to identify and select investments that align with your values and financial strategy.
-        </p>
-      </div>
-      <div class="purpose-item">
-        <img src="https://impactinvestingcommunity.com/uploads/default/original/1X/33857453f4aa5c53a1b2544433d2fd3472bed98a.png" alt="Expert Guidance Icon" class="purpose-icon">
-        <h3 class="purpose-title">Expert Guidance</h3>
-        <p class="purpose-description">
-          With deep expertise across sectors, our team provides insights to help you navigate opportunities and make informed decisions.
-        </p>
-      </div>
-      <div class="purpose-item">
-        <img src="https://impactinvestingcommunity.com/uploads/default/original/1X/f98723f40739cdf2820049dcc4d66f48445f8b9b.png" alt="Transparent Reporting Icon" class="purpose-icon">
-        <h3 class="purpose-title">Transparent Reporting</h3>
-        <p class="purpose-description">
-          After your investment is made, our detailed reporting keeps you connected to the measurable impact your capital is driving.
-        </p>
-      </div>
-      <div class="purpose-item">
-        <img src="https://impactinvestingcommunity.com/uploads/default/original/1X/526da53f919113b47d63f6cc6dbd9f334810b553.png" alt="Simplified Access Icon" class="purpose-icon">
-        <h3 class="purpose-title">Simplified Access</h3>
-        <p class="purpose-description">
-          From due diligence to deal execution, we streamline the entire process so you can focus on what matters—creating a legacy of impact.
-        </p>
-      </div>
-    </div>
-  </section>
-
-   <section class="impact-community">
-    <h2 class="impact-heading">Why Investors Choose the Impact Investing Community</h2>
-    <ul class="impact-list">
-      <li class="impact-item">
-        <span class="impact-icon">✔</span>
-        <strong>Exclusive Access:</strong> Gain entry to private deals not available through traditional networks.
-      </li>
-      <li class="impact-item">
-        <span class="impact-icon">✔</span>
-        <strong>Purpose-Driven Options:</strong> Explore opportunities across diverse impact themes, tailored to your personal and financial goals.
-      </li>
-      <li class="impact-item">
-        <span class="impact-icon">✔</span>
-        <strong>Comprehensive Support:</strong> From deal discovery to ongoing reporting, we provide a seamless experience.
-      </li>
-      <li class="impact-item">
-        <span class="impact-icon">✔</span>
-        <strong>Measurable Outcomes:</strong> Track the results of your investments through detailed impact updates.
-      </li>
-    </ul>
-  </section>
-
-  <section class="impact-investing">
-    <h2 class="investing-heading">Take the Next Step Toward Impactful Investing</h2>
-    <h2 class="investing-heading1">Your capital has the power to create change. 
-      <br>Let us help you find investments that bring your vision to life.</h2>
-    <p class="investing-subheading">
-      Your capital has the power to create change.<br>
-      Let us help you find investments that bring your vision to life.
-    </p>
-
-    <!-- Timeline -->
-    <div class="timeline">
-      <div class="timeline-step">
-        <div class="step-circle">1</div>
-        <div class="timeline-box">
-          <h3 class="step-title">Initial Consultation</h3>
-          <p class="step-description">
-            Book a complimentary consultation to discuss your goals and receive personalized, hand-selected impact investment opportunities, curated to align with your financial and social objectives.
-          </p>
+    <div class="impact-cards-container">
+        <a href="https://impactinvestingcommunity.com/c/free-educational-videos" target="_blank">
+      <div class="impact-card">
+        <img src="https://impactinvestingcommunity.com/uploads/default/original/1X/3bb1c72463c52fbaad0d4c13b0e3dcc48397a49d.png" alt="Learn Impact Investing for Free" class="card-image">
+        <div class="card-overlay">
+          <p>EXPLORE LEGACY-BUILDING EDUCATIONAL VIDEOS</p>
         </div>
       </div>
-      <div class="timeline-step">
-        <div class="step-circle">2</div>
-        <div class="timeline-box">
-          <h3 class="step-title">Access Deal Flow</h3>
-          <p class="step-description">
-            Receive personalized, curated impact investment opportunities tailored to align with your vision for both financial and social returns.
-          </p>
+      </a>
+      <a href="https://impactinvestingcommunity.com/c/private-opportunities/23" target="_blank">
+      <div class="impact-card">
+        <img src="https://impactinvestingcommunity.com/uploads/default/original/1X/d398c07e8efdf9de08fe8c3a293c6ec9204fefb7.png" alt="Discover List of Impact Investment Opportunities" class="card-image">
+        <div class="card-overlay">
+          <p>DISCOVER EXCLUSIVE IMPACT INVESTMENT OPPORTUNITIES</p>
         </div>
       </div>
-      <div class="timeline-step">
-        <div class="step-circle">3</div>
-        <div class="timeline-box">
-          <h3 class="step-title">Support and Reporting</h3>
-          <p class="step-description">
-            Benefit from quarterly reports and ongoing consultations, ensuring that your portfolio meets both financial and social impact goals. Stay informed and prepared to seize new opportunities.
-          </p>
-        </div>
-      </div>
+      </a>
     </div>
 
-    <!-- Call to Action -->
-    <div class="custom-buttons-container">
-        <button class="custom-btn custom-btn-green">Schedule a Call</button>
-        <button class="custom-btn custom-btn-yellow">Create Your Account</button>
+    <!-- Upcoming Events Section Added Here -->
+    <div class="upcoming-events-container">
+        <div class="highlight-bar"></div> <!-- The bar comes first -->
+      <span class="upcoming-events-label">Upcoming Events</span>
     </div>
-  </section>
-
-    <div class="investment-container">
-        <h1 class="investment-heading">
-            Discover Impact Investments That Deliver<br> Financial and Societal Returns
-        </h1>
-
-        <div class="investment-card">
-            <div class="investment-image">
-                <img src="https://i.ibb.co/LkDghsc/house.png" alt="Affordable Housing Fund">
-                <div class="investment-tags">
-                    <span class="tag">Housing</span>
-                    <span class="tag">Community</span>
-                </div>
-            </div>
-            <div class="investment-details">
-                <h2 class="investment-title">Affordable Housing Fund</h2>
-                <p class="investment-description">
-                    <span class="icon">
-                        <img src="https://impactinvestingcommunity.com/uploads/default/original/1X/ac1c1f278be20eb1b516f8aabc4ce9f5d3deeb8c.png" alt="Info Icon" style="height: 26px;"></span>
-                    This property is near proximity to employment hubs and green, promoting sustainable living.
-                </p>
-                <ul class="investment-info">
-                    <li>
-                        <span class="icon">
-                            <img src="https://impactinvestingcommunity.com/uploads/default/original/1X/5b17773698f4051d9cedaebd5d100cca8c95614c.png" alt="Info Icon" style="height: 26px;"></span>
-                        Projected Return: <strong>22%</strong>
-                    </li>
-                    <li>
-                        <span class="icon">
-                            <img src="https://impactinvestingcommunity.com/uploads/default/original/1X/cc19705f07e72fd2310ac96fad10c943031ac942.png" alt="Info Icon" style="height: 26px;"></span>
-                        Investment Rate: <strong>min $100</strong>
-                    </li>
-                    <li>
-                        <span class="icon">
-                            <img src="https://impactinvestingcommunity.com/uploads/default/original/1X/edb6bdfb62fe4c49e680ab1d0e2653a88a70ae41.png" alt="Info Icon" style="margin-left: 5px;height: 25px;"></span>
-                        Investment Term: <strong>5 years</strong>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="investment-card">
-            <div class="investment-image">
-                <img src="https://static.wixstatic.com/media/c97daa_9ecee13907c94fb489bb7e392a2e953e~mv2.png/v1/fill/w_705,h_705,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/c97daa_9ecee13907c94fb489bb7e392a2e953e~mv2.png" alt="Climate Solutions">
-                <div class="investment-tags">
-                    <span class="tag">Environmental</span>
-                </div>
-            </div>
-            <div class="investment-details">
-                <h2 class="investment-title">Marketplace for impact investing in climate solutions</h2>
-                <p class="investment-description">
-                    <span class="icon">
-                        <img src="https://impactinvestingcommunity.com/uploads/default/original/1X/ac1c1f278be20eb1b516f8aabc4ce9f5d3deeb8c.png" alt="Info Icon" style="height: 26px;"></span>
-                    Powered by heroic entrepreneurs and innovators who are not content to wait for big energy and leaders in government to get their act together.
-                </p>
-                <ul class="investment-info">
-                    <li>
-                        <span class="icon">
-                            <img src="https://impactinvestingcommunity.com/uploads/default/original/1X/5b17773698f4051d9cedaebd5d100cca8c95614c.png" alt="Info Icon" style="height: 26px;"></span>
-                        Projected Return: <strong>22%</strong>
-                    </li>
-                    <li>
-                        <span class="icon">
-                            <img src="https://impactinvestingcommunity.com/uploads/default/original/1X/cc19705f07e72fd2310ac96fad10c943031ac942.png" alt="Info Icon" style="height: 26px;"></span>
-                        Investment Rate: <strong>min $50,000</strong>
-                    </li>
-                    <li>
-                        <span class="icon">
-                            <img src="https://impactinvestingcommunity.com/uploads/default/original/1X/edb6bdfb62fe4c49e680ab1d0e2653a88a70ae41.png" alt="Info Icon" style="margin-left: 5px;height: 25px;"></span>
-                        Investment Term: <strong>5-7 years</strong>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <button class="join-now-btn">Join Now to Access More Exclusive Deals</button>
-    </div>
-
-    <div class="event-section">
-        <h2 class="event-heading">Gain Insider Access to the Latest Opportunities</h2>
-        <p class="event-subheading">Join live sessions featuring founders and fund managers presenting vetted impact investments.</p>
-
 <!-- First event -->
-<a href="https://impactinvestingcommunity.com/c/private-opportunities/mastery-series/70" target="_blank">
+<a href="https://impactinvestingcommunity.com/t/impact-circle/179" target="_blank">
     <div class="event-container">
       <div class="event-left">
         <h2>OCT 24</h2>
@@ -1407,7 +237,7 @@ body {
         <!-- hidden<p id="going-event-1">10 going</p> -->
       </div>
       <div class="event-right">
-        <img src="https://impactinvestingcommunity.com/uploads/default/original/1X/b5969ef931dfd5fc1151df2f44ce734f4101e364.png" alt="Event Banner" style="width: 100%; height: auto;">
+        <img src="https://impactinvestingcommunity.com/uploads/default/original/1X/344454ba592c2ea70655c7888bc5134806f17d2e.png" alt="Event Banner" style="width: 100%; height: auto;">
       </div>
     </div>
 </a>
@@ -1428,13 +258,46 @@ body {
 </a> 
 
 <!-- Third event -->
-<a href="https://impactinvestingcommunity.com/c/private-opportunities/mastery-series/70" target="_blank">
+<a href="https://impactinvestingcommunity.com/t/investing-in-renewable-energy-why-it-matters-and-the-future-of-renewable-energy-investments/240" target="_blank">
+    <div class="hide">
     <div class="event-container">
       <div class="event-left">
-        <h2>JAN 23 2025</h2>
+        <h2>DEC 5</h2>
         <p>12:00 PM PST</p>
         <p>LinkedIn Live</p>
         <!--<p id="going-event-3">25 going</p> -->
+      </div>
+      <div class="event-right">
+        <img src="https://impactinvestingcommunity.com/uploads/default/original/1X/d290b8000bd746efbf8f21090b2d2e43a73efdff.png" alt="Event Banner" style="width: 100%; height: auto;">
+      </div>
+    </div>
+    </div>
+</a>
+
+<!-- Fourth event -->
+<a href="https://impactinvestingcommunity.com/t/investing-in-why-it-matters-and-the-future-of-renewable-energy-investments/307" target="_blank">
+    <div class="hide">
+    <div class="event-container">
+      <div class="event-left">
+        <h2>DEC 12</h2>
+        <p>12:00 PM PST</p>
+        <p>LinkedIn Live</p>
+        <!--<p id="going-event-4">25 going</p>-->
+      </div>
+      <div class="event-right">
+        <img src="https://impactinvestingcommunity.com/uploads/default/original/1X/ab2951141a82ebec4cc34362a9deae52638d00f7.png" alt="Event Banner" style="width: 100%; height: auto;">
+      </div>
+    </div>
+    </div>
+</a>
+<!-- Fifth event -->
+<a href="https://impactinvestingcommunity.com/t/the-metrics-that-matter-how-to-spot-opportunities-for-profit-and-purpose/312" target="_blank">
+    <div class="event-container">
+      <div class="event-left">
+        <h2>JAN 23</h2>
+        <p>12:00 PM PST</p>
+        <p>LinkedIn Live</p>
+        <!--<p id="going-event-4">25 going</p>-->
       </div>
       <div class="event-right">
         <img src="https://impactinvestingcommunity.com/uploads/default/original/1X/b5969ef931dfd5fc1151df2f44ce734f4101e364.png" alt="Event Banner" style="width: 100%; height: auto;">
@@ -1442,44 +305,48 @@ body {
     </div>
 </a>
 
-        <button class="reserve-button">Reserve Your Spot in the Next Forum</button>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+  function updateGoingCount(apiUrl, elementId) {
+    fetch(apiUrl, {
+      headers: {
+        'Accept': 'application/json'
+      }
+    })
+    .then(response => response.json())
+    .then(data => {
 
-        <h3 class="past-events-heading">Past Events</h3>
-        <div class="past-events">
-            <div class="past-event-card">
-                <img src="https://impactinvestingcommunity.com/uploads/default/original/1X/344454ba592c2ea70655c7888bc5134806f17d2e.png" alt="Past Event">
-            </div>
-            <div class="past-event-card">
-                <img src="https://impactinvestingcommunity.com/uploads/default/original/1X/981c0c8fcd9ee50ccbac065985e54c2207409eee.JPG" alt="Past Event">
-            </div>
-            <div class="past-event-card">
-                <img src="https://impactinvestingcommunity.com/uploads/default/original/1X/d290b8000bd746efbf8f21090b2d2e43a73efdff.png" alt="Past Event">
-            </div>
-                    </div>
-    </div>
-         <div class="unique-container-wrapper">
-    <h1 class="unique-header-title">Tailored Resources for Every Stage of Your Impact Journey</h1>
-    <div class="unique-card-box">
-      <h2 class="unique-card-heading">Offer Premium Members Access To:</h2>
-      <ul class="unique-card-list">
-        <li class="unique-card-item">
-          <span class="unique-check-icon">✔</span> Exclusive articles, guides, and webinars.
-        </li>
-        <li class="unique-card-item">
-          <span class="unique-check-icon">✔</span> Insights on impact trends, legal structures, and portfolio management.
-        </li>
-        <li class="unique-card-item">
-          <span class="unique-check-icon">✔</span> Practical tools like an Investment Calculator.
-        </li>
-      </ul>
-      <button class="unique-cta-button">Upgrade to Premium for Exclusive Resources</button>
-    </div>
-  </div>
+      const post = data.post_stream.posts[0];
+      
+      if (post && post.event && post.event.stats) {
+
+        const goingCount = post.event.stats.going;
 
 
+        document.getElementById(elementId).textContent = `${goingCount} going`;
+      } else {
+        console.error(`Could not find the "going" count in API response for ${elementId}`);
+      }
+    })
+    .catch(error => {
+      console.error('Error fetching API data:', error);
+    });
+  }
 
-</body>
-</html>
+
+  const events = [
+    { apiUrl: "https://impactinvestingcommunity.com/t/leveraging-familey-offices-building-relationships-and-driving-impact/288.json", elementId: "going-event-1" },
+    { apiUrl: "https://impactinvestingcommunity.com/t/creating-passive-income-with-purpose-how-to-achieve-financial-freedom-while-making-a-positive-impact/179.json", elementId: "going-event-2" },
+    { apiUrl: "https://impactinvestingcommunity.com/t/investing-in-why-it-matters-and-the-future-of-renewable-energy-investments/307.json", elementId: "going-event-4" },
+    { apiUrl: "https://impactinvestingcommunity.com/t/investing-in-renewable-energy-why-it-matters-and-the-future-of-renewable-energy-investments/240.json", elementId: "going-event-3" }
+  ];
+
+
+  events.forEach(event => {
+    updateGoingCount(event.apiUrl, event.elementId);
+  });
+});
+</script>
 </section>
 {{/if}}
 
