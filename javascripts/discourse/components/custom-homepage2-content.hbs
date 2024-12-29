@@ -203,13 +203,31 @@
     </div>
     </div>
 
-  <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background-color: #000; border-radius: 10px;">
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background-color: #000; border-radius: 10px;">
+  <!-- Thumbnail Image -->
+  <img 
+    src="https://impactinvestingcommunity.com/uploads/default/original/1X/1ec56551b487fa92c40ba3225696701998be3ad1.jpg" 
+    alt="Video Thumbnail" 
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; cursor: pointer; border-radius: 10px;" 
+    onclick="playVideo(this)"
+  >
+  <!-- Video -->
   <iframe 
     src="https://drive.google.com/file/d/19kaMQfAjLx9Osk8t7mzByacw0IvewBqb/preview" 
-    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;" 
-    allow="autoplay">
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; display: none;" 
+    allow="autoplay" 
+    id="videoFrame">
   </iframe>
 </div>
+
+<script>
+  function playVideo(thumbnail) {
+    // Hide the thumbnail
+    thumbnail.style.display = 'none';
+    // Show the video iframe
+    document.getElementById('videoFrame').style.display = 'block';
+  }
+</script>
 
 
 
