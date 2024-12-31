@@ -213,10 +213,12 @@
   >
   <!-- Video -->
   <iframe 
-    src="https://drive.google.com/file/d/19kaMQfAjLx9Osk8t7mzByacw0IvewBqb/preview" 
+    src="" 
     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; display: none;" 
-    allow="autoplay" 
-    id="videoFrame">
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    referrerpolicy="strict-origin-when-cross-origin" 
+    id="videoFrame" 
+    allowfullscreen>
   </iframe>
 </div>
 
@@ -224,10 +226,16 @@
   function playVideo(thumbnail) {
     // Hide the thumbnail
     thumbnail.style.display = 'none';
+
+    // Set the YouTube video iframe src with autoplay
+    const videoFrame = document.getElementById('videoFrame');
+    videoFrame.src = "https://www.youtube.com/embed/2ThUMZ8Dp1Y?si=sMK1KPjOLLzELdxQ&autoplay=1";
+
     // Show the video iframe
-    document.getElementById('videoFrame').style.display = 'block';
+    videoFrame.style.display = 'block';
   }
 </script>
+
 
 
 
